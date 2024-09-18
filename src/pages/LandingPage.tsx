@@ -10,7 +10,7 @@ const LandingPage: React.FC = () => {
       {/* Hero Section */}
       <div className="relative">
         {/* Hero Text */}
-        <div className="absolute inset-0 bg-black/50 w-full h-full z-10 text-white lg:p-32 p-6 flex flex-col justify-center">
+        <div className="absolute inset-0 bg-black/50 w-full h-full z-10 text-white lg:p-32 py-6 px-4 flex flex-col justify-center">
           <p className="lg:text-9xl text-7xl font-bold text-st-light-brown">25%</p>
           <p className="lg:text-6xl text-3xl font-bold mt-4 ">Today's Special</p>
           <p className="lg:text-4xl text-xl lg:max-w-[70%] xl:mt-10 mt-4 font-light">
