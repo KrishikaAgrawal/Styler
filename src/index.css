@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.slick-slide > div {
+  margin: 0 8px;
+}
+
+.slick-other-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+.middle-slide {
+  transform: scale(1.2); /* Adjust the scale as needed */
+}
+
+@media (max-width: 1024px) {
+  /* Medium screens */
+  .slick-slide > div {
+    margin: 0 8px; /* Increase margin for medium screens */
+  }
+}
+
+@media (max-width: 640px) {
+  /* Small screens */
+  .slick-slide > div {
+    margin: 0 24px; /* Further increase margin for small screens */
+  }
+}
