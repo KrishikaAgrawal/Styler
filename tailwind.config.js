@@ -4,17 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'Gloock': ['Gloock', 'sans-serif'],
+        Gloock: ["Gloock", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
-      colors:{
-        'st-accent-brown':'#8C4D33',
-        'st-light-brown':'#FFF2ED',
-        'st-mild-brown':'#F4F0F0',
-        'st-mid-brown':'#8C4D33',
-        'st-dark-brown':'#531A02'
-      }
+      colors: {
+        "st-accent-brown": "#8C4D33",
+        "st-light-brown": "#FFF2ED",
+        "st-mild-brown": "#F4F0F0",
+        "st-mid-brown": "#8C4D33",
+        "st-dark-brown": "#531A02",
+      },
     },
   },
   plugins: [],
-}
-
+};
