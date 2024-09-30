@@ -14,6 +14,9 @@ export default {
         "st-mid-brown": "#8C4D33",
         "st-dark-brown": "#531A02",
       },
+      boxShadow: {
+        "custom-shadow": "0px 0px 60px 0px rgba(0, 0, 0, 0.05)",
+      },
     },
   },
   plugins: [],
