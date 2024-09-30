@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
+<<<<<<< HEAD
 @tailwind utilities;
+=======
+@tailwind utilities;  
+
+>>>>>>> origin/master
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+<<<<<<< HEAD
 }
 
 .slick-slide > div {
@@ -33,3 +39,6 @@
     margin: 0 24px; /* Further increase margin for small screens */
   }
 }
+=======
+}
+>>>>>>> origin/master
