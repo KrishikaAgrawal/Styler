@@ -1,4 +1,5 @@
-import LandingPage from "@/pages";
+// import LandingPage from "@/pages";
+import HomePage from "@/pages";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -6,7 +7,8 @@ const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/" element={<LandingPage />} /> */}
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );
