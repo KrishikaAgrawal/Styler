@@ -440,13 +440,13 @@ const HomePage: React.FC = () => {
             </div>
             <div className="flex gap-7 p-4 border rounded-2xl font-inter items-center">
               <img
-                src={feature1}
+                src={feature2}
                 alt=""
                 className="lg:w-64 min-w-36 lg:min-w-64 h-fit"
               />
               <div className="flex flex-col gap-5 justify-center">
                 <p className="font-bold text-2xl text-[#531A02]">
-                  Custom Gown Design
+                  Virtual & In-Person Consultations
                 </p>
                 <p className="font text-[#727272]">
                   Et purus duis sollicitudin dignissim habitant. Egestas nulla
@@ -465,13 +465,13 @@ const HomePage: React.FC = () => {
             </div>
             <div className="flex gap-7 p-4 border rounded-2xl font-inter items-center">
               <img
-                src={feature1}
+                src={feature3}
                 alt=""
                 className="lg:w-64 min-w-36 lg:min-w-64 h-fit"
               />
               <div className="flex flex-col gap-5 justify-center">
                 <p className="font-bold text-2xl text-[#531A02]">
-                  Custom Gown Design
+                  Virtual & In-Person Consultations
                 </p>
                 <p className="font text-[#727272]">
                   Et purus duis sollicitudin dignissim habitant. Egestas nulla
@@ -490,13 +490,13 @@ const HomePage: React.FC = () => {
             </div>
             <div className="flex gap-7 p-4 border rounded-2xl font-inter items-center">
               <img
-                src={feature1}
+                src={feature4}
                 alt=""
                 className="lg:w-64 min-w-36 lg:min-w-64 h-fit"
               />
               <div className="flex flex-col gap-5 justify-center">
                 <p className="font-bold text-2xl text-[#531A02]">
-                  Custom Gown Design
+                  Personalized Ready-to-Wear Customization{" "}
                 </p>
                 <p className="font text-[#727272]">
                   Et purus duis sollicitudin dignissim habitant. Egestas nulla
