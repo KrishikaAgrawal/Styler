@@ -30,12 +30,24 @@ import feature1 from "../assets/homePage/feature1.png";
 import feature2 from "../assets/homePage/feature2.png";
 import feature3 from "../assets/homePage/feature3.png";
 import feature4 from "../assets/homePage/feature4.png";
+import Coaching1 from "../assets/homePage/Coaching1.png";
+import Coaching2 from "../assets/homePage/coaching2.png";
+import Coaching3 from "../assets/homePage/coaching3.png";
+import Coaching4 from "../assets/homePage/Coaching4.png";
+import Coaching5 from "../assets/homePage/Coaching5.png";
+import Coaching6 from "../assets/homePage/coaching6.png";
+import quote from "../assets/homePage/quote.png";
+import testimonial1 from "../assets/homePage/testimonial1.png";
 
 const HomePage: React.FC = () => {
   const [showMore, setShowMore] = useState<boolean>(false);
+  const [showMoreCoaching, setShowMoreCoaching] = useState<boolean>(false);
 
   const handleToggle = () => {
     setShowMore((prev) => !prev);
+  };
+  const handleToggleCoaching = () => {
+    setShowMoreCoaching(!showMoreCoaching);
   };
   return (
     <div className="overflow-x-hidden">
@@ -510,6 +522,260 @@ const HomePage: React.FC = () => {
                       className="transform -rotate-45 w-5"
                     />
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* About Designs Coaching */}
+        <div className="flex md:px-16 lg:px-20 lg:py-16 md:py-12 px-5 py-8 flex-col font-inter items-center bg-[#F4F0F0]">
+          <p className="text-3xl md:text-4xl font-bold overflow text-center text-[#531A02]">
+            About Designs Coaching
+          </p>
+          <p className="text-[#727272] text-center md:mt-6 mt-4 md:mb-10 mb-6">
+            IELTS score is internationally recognized as an English Language
+            proficiency requirement for higher education, in almost all
+            countries including the USA, the United Kingdom, Australia, Canada,
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="flex bg-white rounded-2xl w-full h-fit ">
+              <img src={Coaching1} alt="" className=" w-5/12" />
+              <div className="flex flex-col lg:gap-4 p-5 gap-2">
+                <h3 className=" text-[#531A02] font-semibold text-lg">
+                  Elegant Evening Gown
+                </h3>
+                <p className="text-[#727272] pb-2 ">
+                  There are many variati of passages of engineer
+                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-sm font-semibold text-[#531A02]">
+                    Read More
+                  </p>
+                  <img src={brownArrow} className=" transform h-2 -rotate-45" />
+                </div>
+              </div>
+            </div>
+            <div className="flex bg-white rounded-2xl w-full h-fit ">
+              <img src={Coaching2} alt="" className=" w-5/12" />
+              <div className="flex flex-col lg:gap-4 p-5 gap-2">
+                <h3 className=" text-[#531A02] font-semibold text-lg">
+                  Classic Wedding Dress
+                </h3>
+                <p className="text-[#727272] pb-2 ">
+                  There are many variati of passages of engineer
+                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-sm font-semibold text-[#531A02]">
+                    Read More
+                  </p>
+                  <img src={brownArrow} className=" transform h-2 -rotate-45" />
+                </div>
+              </div>
+            </div>
+            <div className="flex bg-white rounded-2xl w-full h-fit ">
+              <img src={Coaching3} alt="" className=" w-5/12" />
+              <div className="flex flex-col lg:gap-4 p-5 gap-2">
+                <h3 className=" text-[#531A02] font-semibold text-lg">
+                  Chic Cocktail Dress{" "}
+                </h3>
+                <p className="text-[#727272] pb-2 ">
+                  There are many variati of passages of engineer
+                </p>
+                <div className="flex items-center gap-2">
+                  <p className="text-sm font-semibold text-[#531A02]">
+                    Read More
+                  </p>
+                  <img src={brownArrow} className=" transform h-2 -rotate-45" />
+                </div>
+              </div>
+            </div>
+            <div
+              className={`${showMoreCoaching ? "block" : "hidden"} md:block`}
+            >
+              <div className="flex bg-white rounded-2xl w-full h-fit ">
+                <img src={Coaching4} alt="" className=" w-5/12" />
+                <div className="flex flex-col lg:gap-4 p-5 gap-2">
+                  <h3 className=" text-[#531A02] font-semibold text-lg">
+                    Tailored Business Suit
+                  </h3>
+                  <p className="text-[#727272] pb-2 ">
+                    There are many variati of passages of engineer
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm font-semibold text-[#531A02]">
+                      Read More
+                    </p>
+                    <img
+                      src={brownArrow}
+                      className=" transform h-2 -rotate-45"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className={`${showMoreCoaching ? "block" : "hidden"} md:block`}
+            >
+              <div className="flex bg-white rounded-2xl w-full h-fit ">
+                <img src={Coaching5} alt="" className=" w-5/12" />
+                <div className="flex flex-col lg:gap-4 p-5 gap-2">
+                  <h3 className=" text-[#531A02] font-semibold text-lg">
+                    Bohemian Summer Dress
+                  </h3>
+                  <p className="text-[#727272] pb-2 ">
+                    There are many variati of passages of engineer
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm font-semibold text-[#531A02]">
+                      Read More
+                    </p>
+                    <img
+                      src={brownArrow}
+                      className=" transform h-2 -rotate-45"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className={`${showMoreCoaching ? "block" : "hidden"} md:block`}
+            >
+              <div className="flex bg-white rounded-2xl w-full h-fit ">
+                <img src={Coaching6} alt="" className=" w-5/12" />
+                <div className="flex flex-col lg:gap-4 p-5 gap-2">
+                  <h3 className=" text-[#531A02] font-semibold text-lg">
+                    Luxury Velvet Jumpsuit
+                  </h3>
+                  <p className="text-[#727272] pb-2 ">
+                    There are many variati of passages of engineer
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm font-semibold text-[#531A02]">
+                      Read More
+                    </p>
+                    <img
+                      src={brownArrow}
+                      className=" transform h-2 -rotate-45"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#531A02] border-[#531A02] border gap-3"
+              onClick={handleToggleCoaching}
+            >
+              <p>{showMoreCoaching ? "View Less" : "View More"}</p>
+              <img className="w-4 h-3" src={brownArrow} alt="" />
+            </button>
+          </div>
+        </div>
+
+        {/* Client Testimonials */}
+        <div className="flex md:px-16 lg:px-20 lg:py-16 md:py-12 px-5 py-8 flex-col font-inter items-center bg-[#531A02]">
+          <p className="text-3xl md:text-4xl font-bold overflow text-center text-white">
+            Client Testimonials
+          </p>
+          <p className=" text-center md:mt-6 mt-4 md:mb-10 mb-6 text-white lg:w-1/2">
+            IELTS score is internationally recognized as an English Language
+            proficiency requirement for higher education, in almost all
+            countries including the USA, the United Kingdom, Australia, Canada,
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+            <div className="flex flex-col bg-white p-5 gap-4 rounded-2xl">
+              <img src={quote} alt="" className="w-10" />
+              <p className="text-[#727272] text-lg leading-8">
+                We have been operating for over an go providin top-notch
+                services to our is a clients and build strong track record in
+                the industry.We have been operating in for over a decad providi
+                ina
+              </p>
+              <div className="flex gap-3 my-4">
+                <img src={testimonial1} alt="" className="h-14" />
+                <div className="flex flex-col text-[#531A02]">
+                  <h1 className="text-lg font-bold ">Albert Flores</h1>
+                  <p className="text-sm opacity-70">Medical Assistant</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col bg-white p-5 gap-4 rounded-2xl">
+              <img src={quote} alt="" className="w-10" />
+              <p className="text-[#727272] text-lg leading-8">
+                We have been operating for over an go providin top-notch
+                services to our is a clients and build strong track record in
+                the industry.We have been operating in for over a decad providi
+                ina
+              </p>
+              <div className="flex gap-3 my-4">
+                <img src={testimonial1} alt="" className="h-14" />
+                <div className="flex flex-col text-[#531A02]">
+                  <h1 className="text-lg font-bold ">Albert Flores</h1>
+                  <p className="text-sm opacity-70">Medical Assistant</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col bg-white p-5 gap-4 rounded-2xl">
+              <img src={quote} alt="" className="w-10" />
+              <p className="text-[#727272] text-lg leading-8">
+                We have been operating for over an go providin top-notch
+                services to our is a clients and build strong track record in
+                the industry.We have been operating in for over a decad providi
+                ina
+              </p>
+              <div className="flex gap-3 my-4">
+                <img src={testimonial1} alt="" className="h-14" />
+                <div className="flex flex-col text-[#531A02]">
+                  <h1 className="text-lg font-bold ">Albert Flores</h1>
+                  <p className="text-sm opacity-70">Medical Assistant</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col bg-white p-5 gap-4 rounded-2xl">
+              <img src={quote} alt="" className="w-10" />
+              <p className="text-[#727272] text-lg leading-8">
+                We have been operating for over an go providin top-notch
+                services to our is a clients and build strong track record in
+                the industry.We have been operating in for over a decad providi
+                ina
+              </p>
+              <div className="flex gap-3 my-4">
+                <img src={testimonial1} alt="" className="h-14" />
+                <div className="flex flex-col text-[#531A02]">
+                  <h1 className="text-lg font-bold ">Albert Flores</h1>
+                  <p className="text-sm opacity-70">Medical Assistant</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col bg-white p-5 gap-4 rounded-2xl">
+              <img src={quote} alt="" className="w-10" />
+              <p className="text-[#727272] text-lg leading-8">
+                We have been operating for over an go providin top-notch
+                services to our is a clients and build strong track record in
+                the industry.We have been operating in for over a decad providi
+                ina
+              </p>
+              <div className="flex gap-3 my-4">
+                <img src={testimonial1} alt="" className="h-14" />
+                <div className="flex flex-col text-[#531A02]">
+                  <h1 className="text-lg font-bold ">Albert Flores</h1>
+                  <p className="text-sm opacity-70">Medical Assistant</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col bg-white p-5 gap-4 rounded-2xl">
+              <img src={quote} alt="" className="w-10" />
+              <p className="text-[#727272] text-lg leading-8">
+                We have been operating for over an go providin top-notch
+                services to our is a clients and build strong track record in
+                the industry.We have been operating in for over a decad providi
+                ina
+              </p>
+              <div className="flex gap-3 my-4">
+                <img src={testimonial1} alt="" className="h-14" />
+                <div className="flex flex-col text-[#531A02]">
+                  <h1 className="text-lg font-bold ">Albert Flores</h1>
+                  <p className="text-sm opacity-70">Medical Assistant</p>
                 </div>
               </div>
             </div>
