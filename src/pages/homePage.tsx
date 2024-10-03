@@ -38,6 +38,10 @@ import Coaching5 from "../assets/homePage/Coaching5.png";
 import Coaching6 from "../assets/homePage/coaching6.png";
 import quote from "../assets/homePage/quote.png";
 import testimonial1 from "../assets/homePage/testimonial1.png";
+import journey1 from "../assets/LandingPage/journey1.png";
+import calender from "../assets/LandingPage/calender.png";
+import user from "../assets/LandingPage/user.png";
+import ready from "../assets/homePage/ready.png";
 
 const HomePage: React.FC = () => {
   const [showMore, setShowMore] = useState<boolean>(false);
@@ -779,6 +783,116 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Journeys of Discovery Uncovering Hidden */}
+        <h1 className="font-Gloock lg:w-1/2 text-[#531A02] md:text-5xl text-4xl mx-5 my-14 md:mx-16 lg:mx-24 ">
+          Journeys of Discovery Uncovering Hidden
+        </h1>
+        <div className="mx-5 md:mx-40 lg:mx-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+          <div className="w-full border rounded-2xl border-[#E3DBD8]">
+            <img src={journey1} alt="" className="w-full" />
+            <div className="p-6 ">
+              <div className="flex justify-between">
+                <div className="flex gap-2 items-center justify-between">
+                  <img src={calender} alt="" className="h-4 " />
+                  <div className="text-[#727272]">October 19, 2022</div>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <img src={user} alt="" className="h-4" />
+                  <div className="text-[#727272]">By admin</div>
+                </div>
+              </div>
+              <h2 className=" mt-5 mb-3 font-bold text-2xl text-[#531A02]">
+                World of Wander Discovering Diverse Landscapes
+              </h2>
+              <div className="text-[#727272]">
+                Lorem Ipsum is simply dummy text the printing and typese Lorem
+                Ipsum
+              </div>
+              <div className="flex items-center font-semibold mt-6 text-[#531A02] gap-3">
+                <p>Read More</p>
+                <img className="w-3 h-3" src={brownArrow} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="w-full border rounded-2xl border-[#E3DBD8]">
+            <img src={journey1} alt="" className="w-full" />
+            <div className="p-6 ">
+              <div className="flex justify-between">
+                <div className="flex gap-2 items-center justify-between">
+                  <img src={calender} alt="" className="h-4 " />
+                  <div className="text-[#727272]">October 19, 2022</div>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <img src={user} alt="" className="h-4" />
+                  <div className="text-[#727272]">By admin</div>
+                </div>
+              </div>
+              <h2 className=" mt-5 mb-3 font-bold text-2xl text-[#531A02]">
+                World of Wander Discovering Diverse Landscapes
+              </h2>
+              <div className="text-[#727272]">
+                Lorem Ipsum is simply dummy text the printing and typese Lorem
+                Ipsum
+              </div>
+              <div className="flex items-center font-semibold mt-6 text-[#531A02] gap-3">
+                <p>Read More</p>
+                <img className="w-3 h-3" src={brownArrow} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="w-full border rounded-2xl border-[#E3DBD8]">
+            <img src={journey1} alt="" className="w-full" />
+            <div className="p-6 ">
+              <div className="flex justify-between">
+                <div className="flex gap-2 items-center justify-between">
+                  <img src={calender} alt="" className="h-4 " />
+                  <div className="text-[#727272]">October 19, 2022</div>
+                </div>
+                <div className="flex gap-2 items-center">
+                  <img src={user} alt="" className="h-4" />
+                  <div className="text-[#727272]">By admin</div>
+                </div>
+              </div>
+              <h2 className=" mt-5 mb-3 font-bold text-2xl text-[#531A02]">
+                World of Wander Discovering Diverse Landscapes
+              </h2>
+              <div className="text-[#727272]">
+                Lorem Ipsum is simply dummy text the printing and typese Lorem
+                Ipsum
+              </div>
+              <div className="flex items-center font-semibold mt-6 text-[#531A02] gap-3">
+                <p>Read More</p>
+                <img className="w-3 h-3" src={brownArrow} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Are you ready to start ? */}
+        <div className="flex flex-col lg:flex-row md:m-16 my-16  md:gap-10  p-5 lg:px-8 lg:py-10 items-center bg-[#531A02]  md:rounded-2xl">
+          <div className="lg:w-2/3 flex flex-col gap-5 md:gap-8 py-10">
+            <h1 className="font-bold lg:text-6xl md:text-4xl text-3xl text-white">
+              Are you ready to start ?
+            </h1>
+            <p className="text-lg text-white">
+              Custom Software Development Tailored Solutions for Your Business
+              Custom Software Development Tailored Solutions
+            </p>
+            <div className="flex w-full md:gap-8 gap-3">
+              <input
+                className="border w-2/3 bg-[#531A02] text-white  md:p-4 px-4 py-2 rounded-3xl md:rounded-full"
+                placeholder="Enter Email"
+              />
+              <button className="bg-white text-[#531A02] font-bold text-sm wrap w-1/3 md:p-4 px-4 py-2 rounded-3xl md:rounded-full">
+                Contact Us
+              </button>
+            </div>
+          </div>
+          <div>
+            <img src={ready} alt="" className="" />
           </div>
         </div>
       </div>
