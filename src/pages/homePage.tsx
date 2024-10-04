@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { STNavbar } from "@/components/common";
+// import { HomePgNavbar } from "@/components/common";
+import HomePgNavbar from "@/components/common/HomePgNavbar";
 import STFooter from "@/components/common/STFooter";
 
 // import image
@@ -55,7 +56,7 @@ const HomePage: React.FC = () => {
   };
   return (
     <div className="overflow-x-hidden">
-      <STNavbar />
+      <HomePgNavbar />
 
       <div className="min-h-screen flex flex-col">
         {/* hero section */}
