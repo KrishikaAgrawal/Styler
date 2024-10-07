@@ -19,5 +19,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // function ({ addUtilities }) {
+    //   addUtilities({
+    //     ".custom-checkbox": {
+    //       "@apply appearance-none w-4 h-4 border border-gray-300 rounded": {},
+    //     },
+    //     ".custom-checkbox:checked": {
+    //       "@apply bg-[#531A02] border-[#531A02]": {},
+    //     },
+    //   });
+    // },
+  ],
 };

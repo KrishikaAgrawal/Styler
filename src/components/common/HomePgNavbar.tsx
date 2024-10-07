@@ -39,12 +39,16 @@ const HomePgNavbar: React.FC = () => {
 
         {/* Action Buttons for Large Screens */}
         <div className="hidden lg:flex gap-3">
-          <button className="py-2 font-bold px-8 rounded-full border border-[#531A02] text-[#531A02]">
-            Login
-          </button>
-          <button className="py-2 px-8 font-bold rounded-full bg-[#531A02] text-white">
-            Sign Up
-          </button>
+          <NavLink to="/Login">
+            <button className="py-2 font-bold px-8 rounded-full border border-[#531A02] text-[#531A02]">
+              Login
+            </button>
+          </NavLink>
+          <NavLink to="/Signup">
+            <button className="py-2 px-8 font-bold rounded-full bg-[#531A02] text-white">
+              Sign Up
+            </button>
+          </NavLink>
         </div>
       </div>
 

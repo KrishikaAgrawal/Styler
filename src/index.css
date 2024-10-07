@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -33,4 +32,28 @@
   .slick-slide > div {
     margin: 0 24px; /* Further increase margin for small screens */
   }
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 1rem; /* 4 * 0.25rem (1rem) = 16px */
+  height: 1rem; /* 4 * 0.25rem (1rem) = 16px */
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.25rem; /* rounded */
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #531a02;
+  border-color: #531a02;
+}
+
+.custom-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
 }
