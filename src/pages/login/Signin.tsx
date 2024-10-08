@@ -9,7 +9,7 @@ import SignupImg from "../../assets/Login/signupImg.png";
 import instagram from "../../assets/Login/instagram.png";
 import facebook from "../../assets/Login/facebook.png";
 
-const Signup: React.FC = () => {
+const Signin: React.FC = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -28,7 +28,7 @@ const Signup: React.FC = () => {
           />
         </div>
 
-        <div className="flex flex-col p-5 justify-center items-center md:w-1/2">
+        <div className="flex flex-col p-5  justify-center items-center md:w-1/2 ">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="bg-[#8C4D33] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
@@ -38,7 +38,7 @@ const Signup: React.FC = () => {
           </div>
           {/* Create your account */}
           <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#531A02] ">
-            Create Your Account
+            Login to Your Account
           </h1>
 
           {/* input */}
@@ -88,11 +88,14 @@ const Signup: React.FC = () => {
           </div>
 
           {/* sign up button */}
-          <a href="/Profile1" className=" w-full">
-            <button className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
-              <p className=" font-inter font-semibold text-white">Sign up</p>
-            </button>
-          </a>
+          <button className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+            <p className=" font-inter font-semibold text-white">Sign in</p>
+          </button>
+
+          <p className="text-[#531A02] font-inter font-semibold text-sm mt-4">
+            Forgot the password?
+          </p>
+
           {/* or continue with */}
           <div className="relative flex items-center my-4 w-full">
             <div className="absolute inset-0 flex items-center">
@@ -117,14 +120,14 @@ const Signup: React.FC = () => {
           </div>
 
           {/* sign in option */}
-          <p className="text-[#A0A2A2] text-center font-medium pt-4 ">
-            Already have an account?
+          <p className="text-[#A0A2A2] text-center font-medium pt-3 ">
+            Don’t have an account?
             <a
-              href="/Signin"
+              href="/signup"
               className="text-[#531A02] font-semibold text-lg cursor-pointer"
             >
               {" "}
-              Sign in
+              Sign up
             </a>
           </p>
         </div>
@@ -133,4 +136,4 @@ const Signup: React.FC = () => {
   );
 };
 
-export default Signup;
+export default Signin;

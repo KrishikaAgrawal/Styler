@@ -42,11 +42,14 @@ const Login: React.FC = () => {
               or
             </div>
           </div>
-          <button className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+          <a
+            href="/Signin"
+            className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full"
+          >
             <p className=" font-inter font-semibold text-white">
               Sign in with email
             </p>
-          </button>
+          </a>
           <p className="text-[#A0A2A2] text-center font-medium ">
             Don’t have an account?
             <a

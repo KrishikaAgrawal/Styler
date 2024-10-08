@@ -57,3 +57,11 @@
   font-size: 0.75rem;
   line-height: 0.75rem;
 }
+
+.custom-select-placeholder {
+  color: #a0a2a2;
+}
+
+.custom-select-option {
+  color: #000000;
+}
