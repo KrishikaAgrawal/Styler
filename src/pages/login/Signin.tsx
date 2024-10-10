@@ -92,9 +92,12 @@ const Signin: React.FC = () => {
             <p className=" font-inter font-semibold text-white">Sign in</p>
           </button>
 
-          <p className="text-[#531A02] font-inter font-semibold text-sm mt-4">
+          <a
+            href="/ForgotPassword"
+            className="text-[#531A02] font-inter font-semibold text-sm mt-4"
+          >
             Forgot the password?
-          </p>
+          </a>
 
           {/* or continue with */}
           <div className="relative flex items-center my-4 w-full">

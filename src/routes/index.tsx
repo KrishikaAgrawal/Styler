@@ -6,6 +6,7 @@ import Signin from "@/pages/login/Signin";
 import Profile1 from "@/pages/login/Profile1";
 import Profile2 from "@/pages/login/Profile2";
 import Otp from "@/pages/login/Otp";
+import ForgotPassword from "@/pages/login/ForgotPassword";
 
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -24,6 +25,7 @@ const Router: React.FC = () => {
         <Route path="/Profile2" element={<Profile2 />} />
         <Route path="/Otp" element={<Otp />} />
         <Route path="/LandingPage" element={<LandingPage />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );
