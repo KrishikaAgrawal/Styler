@@ -2,17 +2,18 @@ import React, { useState } from "react";
 
 import "../../index.css";
 
+import { FaArrowRight } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaCalendar } from "react-icons/fa6";
-import { Dropdown, DropdownProps } from "semantic-ui-react";
+// import { Dropdown, DropdownProps } from "semantic-ui-react";
 import Profile from "../../assets/Login/Profile.png";
 import image from "../../assets/Login/image.png";
 
-interface CountryOption {
+/* interface CountryOption {
   key: string;
   value: string;
   flag: string;
-}
+} */
 
 const Profile1: React.FC = () => {
   // to handle profile image
@@ -47,7 +48,7 @@ const Profile1: React.FC = () => {
     }
   };
   // to handle ph no.
-  const [countryCode, setCountryCode] = useState<string>("+1");
+  /*   const [countryCode, setCountryCode] = useState<string>("+1");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
   const options: CountryOption[] = [
     { key: "us", value: "+1", flag: "us" },
@@ -58,7 +59,7 @@ const Profile1: React.FC = () => {
   ];
   const handleCountryCodeChange = (data: DropdownProps) => {
     setCountryCode(data.value as string);
-  };
+  }; */
 
   // to handle font color of Gender
   const [isPlaceholderGender, setIsPlaceholderGender] = useState(true);
@@ -69,15 +70,24 @@ const Profile1: React.FC = () => {
   };
 
   return (
-    <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0]">
-      <div className="flex flex-col h-screen md:h-5/6 md:px-10 lg:w-2/3 md:flex-row bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
+    <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] ">
+      <div className="flex flex-col h-screen md:h-fit md:px-5 lg:w-2/3 md:flex-row bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
         {/* Page image */}
-        <div className="md:flex flex-col py-10 w-1/4 h-2/5 md:h-full hidden ">
-          <img
-            src={Profile}
-            alt=""
-            className="md:rounded-2xl w-full h-full object-cover"
-          />
+        <div className="flex flex-col py-5 md:w-1/4 ">
+          <div className="flex gap-4 pb-5">
+            <a href="/Signup">
+              <FaArrowRight className="text-[#531A02] bg-[#FFF2ED] rounded-full p-2 h-7 w-7 transform rotate-180" />
+            </a>
+            <p className="text-2xl font-bold">Fill Your Profile</p>
+          </div>
+
+          <div className="md:flex flex-col h-[500px] hidden ">
+            <img
+              src={Profile}
+              alt=""
+              className="md:rounded-2xl w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* form */}
@@ -102,7 +112,7 @@ const Profile1: React.FC = () => {
                 }}
               >
                 {!selectedImage && (
-                  <span className="text-gray-400 text-lg">+</span>
+                  <span className="text-gray-400 text-2xl">+</span>
                 )}
               </div>
             </label>
@@ -110,7 +120,7 @@ const Profile1: React.FC = () => {
           <div className="flex flex-col w-full gap-3">
             {/* Prefix */}
             <select
-              className={`pl-4 pr-10 py-4 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none  ${
+              className={`pl-4 pr-10 py-2 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none  ${
                 isPlaceholder
                   ? "custom-select-placeholder"
                   : "custom-select-option"
@@ -130,7 +140,7 @@ const Profile1: React.FC = () => {
             {/* Full Name */}
             <input
               type="text"
-              className="px-4 py-4 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none"
+              className="px-4 py-2 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none"
               placeholder="Full Name"
             />
             {/* Email */}
@@ -138,7 +148,7 @@ const Profile1: React.FC = () => {
               <IoMdMail className="absolute right-3 text-gray-400 " />
               <input
                 type="email"
-                className="px-4 py-4 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none"
+                className="px-4 py-2 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none"
                 placeholder="Email"
               />
             </div>
@@ -151,7 +161,7 @@ const Profile1: React.FC = () => {
               <input
                 type="text"
                 id="customDateInput"
-                className="pl-4 pr-2 py-4 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none"
+                className="pl-4 pr-2 py-2 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none"
                 placeholder="Date of Birth"
                 value={date}
                 onChange={handleDateChange}
@@ -161,7 +171,7 @@ const Profile1: React.FC = () => {
             </div>
             {/* Ph. No. */}
             <div className="flex items-center border border-[#EFEEEE] bg-[#FCFCFC] rounded-2xl">
-              <Dropdown
+              {/*               <Dropdown
                 selection
                 options={options}
                 value={countryCode}
@@ -173,18 +183,18 @@ const Profile1: React.FC = () => {
                     className="ui mini flag "
                   />
                 )}
-              />
+              /> */}
               <input
                 type="tel"
-                value={phoneNumber}
-                onChange={(event) => setPhoneNumber(event.target.value)}
-                className="px-4  w-full rounded-r-2xl bg-transparent focus:outline-none"
+                // value={phoneNumber}
+                // onChange={(event) => setPhoneNumber(event.target.value)}
+                className="px-4 py-2 w-full rounded-r-2xl bg-transparent focus:outline-none"
                 placeholder="Phone Number"
               />
             </div>
             {/* Gender */}
             <select
-              className={`pl-4 pr-10 py-4 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none  ${
+              className={`pl-4 pr-10 py-2 w-full rounded-2xl border border-[#EFEEEE] bg-[#FCFCFC] focus:outline-none  ${
                 isPlaceholderGender
                   ? "custom-select-placeholder"
                   : "custom-select-option"
@@ -200,9 +210,11 @@ const Profile1: React.FC = () => {
               <option value="Other">Other</option>
             </select>
           </div>
-          <button className="flex p-4 mt-10 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
-            <p className=" font-inter font-semibold text-white">Continue</p>
-          </button>
+          <a href="/Profile2" className="w-full">
+            <button className="flex p-4 mt-10 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+              <p className=" font-inter font-semibold text-white">Continue</p>
+            </button>
+          </a>
         </div>
       </div>
     </div>
