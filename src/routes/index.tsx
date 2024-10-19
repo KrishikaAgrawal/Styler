@@ -1,3 +1,7 @@
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import "semantic-ui-css/semantic.min.css";
+
 import LandingPage from "@/pages/LandingPage";
 import HomePage from "@/pages";
 import Login from "@/pages/login/Login";
@@ -7,10 +11,10 @@ import Profile1 from "@/pages/login/Profile1";
 import Profile2 from "@/pages/login/Profile2";
 import Otp from "@/pages/login/Otp";
 import ForgotPassword from "@/pages/login/ForgotPassword";
-
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import "semantic-ui-css/semantic.min.css";
+import AboutUs from "@/pages/FooterLinks/AboutUs";
+import PartnerWithUs from "@/pages/FooterLinks/PartnerWithUs";
+import PrivacyPolicy from "@/pages/FooterLinks/PrivacyPolicy";
+import TermsAndConditions from "@/pages/FooterLinks/TermsAndConditions";
 
 const Router: React.FC = () => {
   return (
@@ -26,6 +30,10 @@ const Router: React.FC = () => {
         <Route path="/Otp" element={<Otp />} />
         <Route path="/LandingPage" element={<LandingPage />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/PartnerWithUs" element={<PartnerWithUs />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
       </Routes>
     </BrowserRouter>
   );

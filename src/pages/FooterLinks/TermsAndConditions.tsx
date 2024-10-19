@@ -10,7 +10,7 @@ const TermsAndConditions: React.FC = () => {
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (window.scrollY >= sectionTop - 50) {
+      if (window.scrollY >= sectionTop - 100) {
         currentSection = section.getAttribute("id");
       }
     });
@@ -30,14 +30,42 @@ const TermsAndConditions: React.FC = () => {
       <div className="w-fit whitespace-nowrap p-4 bg-[#F3F1F0] sticky top-0 h-fit lg:flex flex-col hidden ">
         <ul className="space-y-2">
           <li>
-            <a href="#Information">
+            <a href="#BookingServices">
+              <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
+                <p className="text-[#5A3F2C] font-medium">Booking Services</p>
+                <FaChevronRight
+                  className={`${
+                    activeSection === "BookingServices"
+                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                  } p-1 rounded-full w-5 h-5`}
+                />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#PaymentServices">
+              <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
+                <p className="text-[#5A3F2C] font-medium">Payment Services</p>
+                <FaChevronRight
+                  className={`${
+                    activeSection === "PaymentServices"
+                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                  } p-1 rounded-full w-5 h-5`}
+                />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#Cancellation">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#5A3F2C] font-medium">
-                  Information We Collect
+                  Cancellation and Rescheduling
                 </p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Information"
+                    activeSection === "Cancellation"
                       ? "bg-[#5A3F2C] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#5A3F2C]"
                   } p-1 rounded-full w-5 h-5`}
@@ -46,14 +74,14 @@ const TermsAndConditions: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Use">
+            <a href="#Return">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#5A3F2C] font-medium">
-                  How We Use Your Information
+                  Return and Refund Policy
                 </p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Use"
+                    activeSection === "Return"
                       ? "bg-[#5A3F2C] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#5A3F2C]"
                   } p-1 rounded-full w-5 h-5`}
@@ -62,42 +90,12 @@ const TermsAndConditions: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Sharing">
-              <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
-                  Sharing Your Information
-                </p>
-                <FaChevronRight
-                  className={`${
-                    activeSection === "Sharing"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
-                  } p-1 rounded-full w-5 h-5`}
-                />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#Security">
-              <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Data Security </p>
-                <FaChevronRight
-                  className={`${
-                    activeSection === "Security"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
-                  } p-1 rounded-full w-5 h-5`}
-                />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#Rights">
+            <a href="#Responsibilities">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#5A3F2C] font-medium">Your Rights</p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Rights"
+                    activeSection === "Responsibilities"
                       ? "bg-[#5A3F2C] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#5A3F2C]"
                   } p-1 rounded-full w-5 h-5`}
@@ -106,14 +104,14 @@ const TermsAndConditions: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Technologies">
+            <a href="#Limitations">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#5A3F2C] font-medium">
-                  Cookies and Tracking Technologies
+                  Service Limitations
                 </p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Technologies"
+                    activeSection === "Limitations"
                       ? "bg-[#5A3F2C] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#5A3F2C]"
                   } p-1 rounded-full w-5 h-5`}
@@ -122,28 +120,28 @@ const TermsAndConditions: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Links">
-              <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Third-Party Links</p>
-                <FaChevronRight
-                  className={`${
-                    activeSection === "Links"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
-                  } p-1 rounded-full w-5 h-5`}
-                />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#Changes">
+            <a href="#Liability">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#5A3F2C] font-medium">
-                  Changes to This Privacy Policy
+                  Liability and Dispute Reputation
                 </p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Changes"
+                    activeSection === "Liability"
+                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                  } p-1 rounded-full w-5 h-5`}
+                />
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#Contact">
+              <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
+                <p className="text-[#5A3F2C] font-medium">Contact Our Team</p>
+                <FaChevronRight
+                  className={`${
+                    activeSection === "Contact"
                       ? "bg-[#5A3F2C] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#5A3F2C]"
                   } p-1 rounded-full w-5 h-5`}
@@ -156,17 +154,26 @@ const TermsAndConditions: React.FC = () => {
 
       {/* Content */}
       <div className=" font-inter">
-        <h2 className="text-5xl mb-16 font-bold">Privacy Policy</h2>
-        <p className="text-[#727272] mb-7 ">
-          Styler is committed to protecting your privacy and ensuring that your
-          personal information is handled securely and responsibly. This Privacy
-          Policy outlines how we collect, use, disclose, and safeguard your
-          information when you use our platform.
-        </p>
+        <h2 className="text-5xl mb-10 text-[#531A02] font-Gloock">
+          Terms and Conditions
+        </h2>
 
-        <section id="Information">
-          <h2 className=" font-semibold text-3xl mb-4">
-            Information We Collect
+        <section>
+          <h2 className=" font-semibold text-3xl mb-4">Styler </h2>
+          <p className="text-[#727272]">
+            Styler is your go-to site for personalized tailoring. We provide
+            custom sewing, adjustments, and garment repairs. Our service
+            offerings enable experienced stylists to you, allowing you to get
+            bespoke stitching, fitting, Pico, and more. Through your use of
+            Styler, you agree to the Terms & Conditions, that regulate when you
+            interact with our website and services. Please examine them
+            carefully before commencing.
+          </p>
+        </section>
+
+        <section id="BookingServices">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">
+            Booking Services
           </h2>
           <p className="text-[#727272]">
             We may collect the following types of information:
@@ -174,7 +181,7 @@ const TermsAndConditions: React.FC = () => {
               <li>
                 Personal Information: Name, email address, shipping address,
                 phone number, and payment details when you create an account,
-                place an order, or contact us.{" "}
+                place an order, or contact us.
               </li>
               <li>
                 Usage Data: Information about how you interact with our
@@ -182,7 +189,6 @@ const TermsAndConditions: React.FC = () => {
                 taken within the app or website.
               </li>
               <li>
-                {" "}
                 Cookies and Tracking Technologies: We use cookies to collect
                 information about your browsing behavior to improve user
                 experience and provide personalized services.
@@ -191,130 +197,126 @@ const TermsAndConditions: React.FC = () => {
           </p>
         </section>
 
-        <section id="Use">
+        <section id="PaymentServices">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            How We Use Your Information
+            Payment Services{" "}
           </h2>
           <p className="text-[#727272]">
-            We may use the information we collect for various purposes,
-            including:
+            In-app purchases via credit/debit cards, UPI, or mobile wallets, as
+            well as Cash on Delivery (COD), which is paid for after the service
+            is rendered, are among the several payment methods that Styler
+            offers. You will receive a confirmation once your online payment is
+            finalized, and full payment is expected upfront unless you opt for
+            COD. The final price will include additional charges for urgent or
+            special requests. All prices include GST, and any additional charges
+            will be clearly stated before payment.
+          </p>
+        </section>
+
+        <section id="Cancellation">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">
+            Cancellation and Rescheduling
+          </h2>
+          <p className="text-[#727272]">
             <ul className="list-disc pl-5 mt-2">
               <li>
-                Order Processing: To fulfill your orders, manage payments, and
-                provide customer support.
+                Cancellation Policy: Appointments can be canceled without
+                penalty up to 24 hours in advance; thereafter, a fee of INR 700
+                will apply.
               </li>
               <li>
-                Personalization: To tailor recommendations and services based on
-                your preferences.
+                Rescheduling Policy: You can reschedule for free up to 12 hours
+                before your appointment, but multiple requests may result in
+                additional fees depending on availability.
               </li>
               <li>
-                Communication: To send you updates, promotional offers, and
-                other relevant information related to your use of the platform.
-              </li>
-              <li>
-                Analytics: To monitor usage patterns, improve our platform, and
-                develop new features.
-              </li>
-              <li>
-                {" "}
-                Security: To protect against fraud, unauthorized access, and
-                other illegal activities.
+                No-show Policy: If you are unavailable at the appointed time and
+                have not rescheduled, you will be charged INR 500.
               </li>
             </ul>
           </p>
         </section>
 
-        <section id="Sharing">
+        <section id="Return">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Sharing Your Information
+            Return and Refund Policy
           </h2>
           <p className="text-[#727272]">
-            We do not sell your personal information. However, we may share your
-            data with:
             <ul className="list-disc pl-5 mt-2">
               <li>
-                Service Providers: Third-party companies that help us operate
-                the platform, such as payment processors, delivery services, and
-                analytics providers.
+                Custom clothing is not returnable. Reimbursement may be issued
+                for major design differences, defects, or improper fit.
               </li>
               <li>
-                Designers and Tailors: When you place an order, your relevant
-                details may be shared with the designer or tailor to complete
-                your custom garment or fabric order.
+                Refunds must be requested within 7 days after delivery and will
+                be granted in 10-15 working days to the corresponding payment
+                method or as application credit.
               </li>
               <li>
-                Legal Requirements: We may disclose information if required by
-                law, regulation, or legal process, or to protect the rights,
-                property, or safety of Styler, our users, or others.
+                Minor adjustments are free for 15 days. Larger problems may
+                necessitate a new fitting session.
+              </li>
+              <li>
+                Pico embroidery and minor adjustments, which are non-refundable
+                once finished.
               </li>
             </ul>
           </p>
         </section>
-        <section id="Security">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">Data Security</h2>
-          <p className="text-[#727272]">
-            We implement industry-standard security measures to protect your
-            personal information. This includes encryption, secure servers, and
-            regular audits of our systems to prevent unauthorized access, data
-            breaches, or misuse of your information.
-          </p>
-        </section>
-        <section id="Rights">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">Your Rights</h2>
-          <p className="text-[#727272]">
-            You have the right to:
-            <ul className="list-disc pl-5 mt-2">
-              <li>
-                Access Your Data: Request a copy of the personal information we
-                hold about you.
-              </li>
-              <li>
-                A Update Your Information: Correct or update your personal
-                information at any time.
-              </li>
-              <li>
-                Delete Your Data: Request the deletion of your personal
-                information, subject to certain legal obligations.
-              </li>
-              <li>
-                Opt-Out of Marketing: Unsubscribe from our promotional emails or
-                communications at any time.
-              </li>
-            </ul>
-          </p>
-        </section>
-        <section id="Technologies">
+
+        <section id="Responsibilities">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Cookies and Tracking Technologies
+            User Responsibilities
           </h2>
           <p className="text-[#727272]">
-            We use cookies to enhance your experience on our platform. You can
-            control the use of cookies by adjusting your browser settings, but
-            please note that disabling cookies may limit certain features of our
-            website.
+            Customers must be available for the tailor's visit, provide accurate
+            design details, and inspect the garment within 7 days to report any
+            flaws. Styler cannot be held accountable for any delays or issues
+            caused by the customer's incorrect data.
           </p>
         </section>
-        <section id="Links">
+
+        <section id="Limitations">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Third-Party Links
+            Service Limitations
           </h2>
           <p className="text-[#727272]">
-            Our platform may contain links to third-party websites. This Privacy
-            Policy does not apply to those external websites, and we encourage
-            you to review the privacy policies of any third-party sites you
-            visit.
+            Styler endeavors to offer high-quality, timely service. However, we
+            do not guarantee the availability of specific tailors at all times.
+            Tailoring quality depends on the accuracy of the measurements
+            provided during the initial fitting session. Styler is not
+            responsible for delays caused by external factors such as fabric
+            sourcing, customer indecisiveness, or miscommunications regarding
+            design preferences.
           </p>
         </section>
-        <section id="Changes">
+
+        <section id="Liability">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Changes to This Privacy Policy
+            Liability and Dispute Reputation
           </h2>
           <p className="text-[#727272]">
-            We may update this Privacy Policy from time to time. Any changes
-            will be posted on this page, and we will notify you of significant
-            changes by email or through a notice on our platform. Please review
-            this policy periodically to stay informed about how we protect your
-            information.
+            Styler's liability in disputes is limited to the amount paid for
+            services rendered. Customers should initially contact customer
+            service with their grievances. Unresolved matters would be handled
+            in Delhi courts under Indian law. If the problem is not handled
+            satisfactorily, you may contact Styler management at
+          </p>
+        </section>
+
+        <section id="Contact">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">
+            Contact Our Team
+          </h2>
+          <p className="text-[#727272]">
+            If any problem is not handled satisfactorily, you may contact Styler
+            management at the client query by mailing us at{" "}
+            <a
+              href="mailto:info@stylerapp.in"
+              className="text-[#531A02] font-medium underline"
+            >
+              info@stylerapp.in
+            </a>
           </p>
         </section>
       </div>

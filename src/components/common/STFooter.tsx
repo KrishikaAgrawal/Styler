@@ -8,11 +8,11 @@ const STFooter: React.FC = () => {
   // State to handle toggling dropdown for small screens
   const [openSections, setOpenSections] = useState<{ [key: string]: boolean }>({
     company: false,
-    customerService: false,
-    explore: false,
-    account: false,
-    social: false,
+    products: false,
+    customer: false,
+    partner: false,
     legal: false,
+    services: false,
   });
 
   const toggleSection = (section: string) => {
@@ -21,13 +21,15 @@ const STFooter: React.FC = () => {
       [section]: !prevState[section],
     }));
   };
-
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
-    <div className="bg-st-mild-brown lg:px-32 px-4 py-16">
+    <div className="bg-st-mild-brown lg:px-16 px-4 py-8">
       {/* Logo and Newsletter */}
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-0">
+      <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-6 lg:gap-0">
         {/* Logo */}
-        <div className="flex font-Gloock items-center gap-3">
+        <div className="flex font-Gloock items-center lg:w-1/3 gap-3">
           <p className="bg-st-accent-brown text-white w-16 h-16 flex justify-center items-center rounded-full text-4xl">
             S
           </p>
@@ -35,23 +37,25 @@ const STFooter: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="bg-st-mid-brown/20 text-st-mid-brown p-3 flex flex-col lg:flex-row gap-4 lg:gap-8 rounded-lg items-center">
-          <p className="text-lg lg:text-xl font-medium">Newsletter Sign Up</p>
-          <div className="border border-st-mid-brown p-2 bg-white rounded-lg flex gap-2 lg:gap-4 font-medium w-full lg:w-auto">
-            <input
-              className=" text-st-mid-brown w-full lg:w-auto"
-              type="text"
-              placeholder="Your Email"
-            />
-            <button className="bg-st-accent-brown text-white p-2 rounded-lg px-6 text-sm">
-              Sign Up
-            </button>
+        <div className="bg-st-mid-brown/20 text-st-mid-brown justify-between lg:w-2/3 p-3 lg:px-5 rounded-lg">
+          <div className="w-full  flex flex-col lg:flex-row gap-4 lg:gap-8  items-center justify-between">
+            <p className="text-lg lg:text-xl font-medium">Newsletter Sign Up</p>
+            <div className="border border-st-mid-brown p-2 bg-white rounded-lg flex gap-2 lg:gap-4 font-medium w-full lg:w-2/3 justify-between pl-5">
+              <input
+                className=" text-st-mid-brown w-full lg:w-auto"
+                type="text"
+                placeholder="Enter your email here..."
+              />
+              <button className="bg-st-accent-brown w-fit whitespace-nowrap text-white p-2 rounded-lg px-6 text-sm">
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Link Stacks - Dropdown on small screens */}
-      <div className="lg:grid lg:grid-cols-6 gap-8 mt-16">
+      <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 lg:px-8">
         {/* Company Section */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
@@ -60,84 +64,128 @@ const STFooter: React.FC = () => {
           >
             Company
           </button>
-          <div className={`flex-col items-center gap-1 ${openSections.company ? 'flex' : 'hidden'} lg:flex`}>
-            <Link to="/">About Us</Link>
-            <Link to="/">Careers</Link>
-            <Link to="/">Blog</Link>
-            <Link to="/">Sustainability</Link>
-            <Link to="/">Partner With Us</Link>
+          <div
+            className={`flex-col items-center gap-1 ${
+              openSections.company ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/AboutUs" onClick={handleClick}>
+              About Us
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Careers
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Blog
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Press
+            </Link>
+            <Link to="/PartnerWithUs" onClick={handleClick}>
+              Partner With Us
+            </Link>
           </div>
         </div>
 
+        {/* Products Section */}
+        <div className="lg:flex flex-col items-center gap-1">
+          <button
+            className="text-st-mid-brown font-bold lg:cursor-default"
+            onClick={() => toggleSection("products")}
+          >
+            Products
+          </button>
+          <div
+            className={`flex-col items-center gap-1 ${
+              openSections.products ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/" onClick={handleClick}>
+              Custom Clothing
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Fabric Selection
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Bridal Wear
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Formal Suits
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Order Tracking
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Payment Options
+            </Link>
+          </div>
+        </div>
         {/* Customer Service Section */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-st-mid-brown font-bold lg:cursor-default"
-            onClick={() => toggleSection("customerService")}
+            onClick={() => toggleSection("customer")}
           >
-            Customer Service
+            Customer Support
           </button>
-          <div className={`flex-col items-center gap-1 ${openSections.customerService ? 'flex' : 'hidden'} lg:flex`}>
-            <Link to="/">Help & Support</Link>
-            <Link to="/">FAQs</Link>
-            <Link to="/">Returns & Refunds</Link>
-            <Link to="/">Shipping & Delivery</Link>
-            <Link to="/">Contact Us</Link>
+          <div
+            className={`flex-col items-center gap-1 ${
+              openSections.customer ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/" onClick={handleClick}>
+              Help Center
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              FAQs
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Shipping & Delivery
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Returns & Refunds
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Order Tracking
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Payment Options
+            </Link>
           </div>
         </div>
 
-        {/* Explore Section */}
+        {/* Partner With Us */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-st-mid-brown font-bold lg:cursor-default"
-            onClick={() => toggleSection("explore")}
+            onClick={() => toggleSection("partner")}
           >
-            Explore
+            Partner With Us
           </button>
-          <div className={`flex-col items-center gap-1 ${openSections.explore ? 'flex' : 'hidden'} lg:flex`}>
-            <Link to="/">Designers & Tailors</Link>
-            <Link to="/">Branded Clothing</Link>
-            <Link to="/">Consultations</Link>
-            <Link to="/">Custom Services</Link>
-            <Link to="/">Gift Cards</Link>
+          <div
+            className={`flex-col items-center gap-1 ${
+              openSections.partner ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/" onClick={handleClick}>
+              Designer Partnerships
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Tailor Collaborations
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Supplier Opportunities
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Affiliate Program
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Join as a Partner
+            </Link>
           </div>
         </div>
 
-        {/* Account Section */}
-        <div className="lg:flex flex-col items-center gap-1">
-          <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
-            onClick={() => toggleSection("account")}
-          >
-            Account
-          </button>
-          <div className={`flex-col items-center gap-1 ${openSections.account ? 'flex' : 'hidden'} lg:flex`}>
-            <Link to="/">My Profile</Link>
-            <Link to="/">My Orders</Link>
-            <Link to="/">Wishlist</Link>
-            <Link to="/">Manage Addresses</Link>
-            <Link to="/">Settings</Link>
-          </div>
-        </div>
-
-        {/* Social Media Section */}
-        <div className="lg:flex flex-col items-center gap-1">
-          <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
-            onClick={() => toggleSection("social")}
-          >
-            Social Media
-          </button>
-          <div className={`flex-col items-center gap-1 ${openSections.social ? 'flex' : 'hidden'} lg:flex`}>
-            <Link to="/">Facebook</Link>
-            <Link to="/">LinkedIn</Link>
-            <Link to="/">Twitter</Link>
-            <Link to="/">Instagram</Link>
-            <Link to="/">YouTube</Link>
-          </div>
-        </div>
-
-        {/* Legal Section */}
+        {/* Legal */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-st-mid-brown font-bold lg:cursor-default"
@@ -145,11 +193,57 @@ const STFooter: React.FC = () => {
           >
             Legal
           </button>
-          <div className={`flex-col items-center gap-1 ${openSections.legal ? 'flex' : 'hidden'} lg:flex`}>
-            <Link to="/">Privacy Policy</Link>
-            <Link to="/">Terms of Service</Link>
-            <Link to="/">Cookie Policy</Link>
-            <Link to="/">Accessibility</Link>
+          <div
+            className={`flex-col items-center gap-1 ${
+              openSections.legal ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/PrivacyPolicy" onClick={handleClick}>
+              Privacy Policy
+            </Link>
+            <Link to="/TermsAndConditions" onClick={handleClick}>
+              Terms & Conditions
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Cookie Policy
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Accessibility Statement
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Intellectual Property
+            </Link>
+          </div>
+        </div>
+
+        {/* Our Services */}
+        <div className="lg:flex flex-col items-center gap-1">
+          <button
+            className="text-st-mid-brown font-bold lg:cursor-default"
+            onClick={() => toggleSection("services")}
+          >
+            Our Services
+          </button>
+          <div
+            className={`flex-col items-center gap-1 text-base text-center ${
+              openSections.services ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/" onClick={handleClick}>
+              Virtual Styling
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Personal Shopper
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Bespoke Tailoring
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Custom Alterations
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Fabric Dyeing & Printing
+            </Link>
           </div>
         </div>
       </div>
