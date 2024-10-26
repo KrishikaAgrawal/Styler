@@ -11,10 +11,14 @@ import Profile1 from "@/pages/login/Profile1";
 import Profile2 from "@/pages/login/Profile2";
 import Otp from "@/pages/login/Otp";
 import ForgotPassword from "@/pages/login/ForgotPassword";
+import ForgotPwOtp from "@/pages/login/ForgotPwOtp";
+import CreateNewPassword from "@/pages/login/CreateNewPassword";
 import AboutUs from "@/pages/FooterLinks/AboutUs";
 import PartnerWithUs from "@/pages/FooterLinks/PartnerWithUs";
 import PrivacyPolicy from "@/pages/FooterLinks/PrivacyPolicy";
 import TermsAndConditions from "@/pages/FooterLinks/TermsAndConditions";
+import Notification from "@/pages/header/Notification";
+import Wishlist from "@/pages/header/Wishlist";
 
 const Router: React.FC = () => {
   return (
@@ -34,6 +38,10 @@ const Router: React.FC = () => {
         <Route path="/PartnerWithUs" element={<PartnerWithUs />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+        <Route path="/ForgotPwOtp" element={<ForgotPwOtp />} />
+        <Route path="/CreateNewPassword" element={<CreateNewPassword />} />
+        <Route path="/Notification" element={<Notification />} />
+        <Route path="/Wishlist" element={<Wishlist />} />
       </Routes>
     </BrowserRouter>
   );

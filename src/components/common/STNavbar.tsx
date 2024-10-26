@@ -29,7 +29,9 @@ const STNavbar: React.FC = () => {
 
         {/* Navigation Links for Large Screens */}
         <div className="hidden lg:flex xl:gap-12 gap-6 font-medium font-Gloock xl:ml-32 text-sm">
-          <NavLink className={`border-b-2 border-st-accent-brown pb-2`} to="/">Home</NavLink>
+          <NavLink className={`border-b-2 border-st-accent-brown pb-2`} to="/">
+            Home
+          </NavLink>
           <NavLink to="/">Shop</NavLink>
           <NavLink to="/">Services</NavLink>
           <NavLink to="/">Orders</NavLink>
@@ -39,10 +41,14 @@ const STNavbar: React.FC = () => {
         {/* User Button Stack */}
         <div className="gap-4 hidden lg:flex">
           <div className="bg-st-light-brown w-9 h-9 flex justify-center items-center rounded-full hover:bg-st-accent-brown hover:text-white cursor-pointer active:scale-90 transition-all">
-            <BiBell size={20} />
+            <NavLink to="/Notification">
+              <BiBell size={20} />
+            </NavLink>
           </div>
           <div className="bg-st-light-brown w-9 h-9 flex justify-center items-center rounded-full hover:bg-st-accent-brown hover:text-white cursor-pointer active:scale-90 transition-all">
-            <BiHeart size={20} />
+            <NavLink to="/Wishlist">
+              <BiHeart size={20} />
+            </NavLink>
           </div>
           <div className="bg-st-light-brown w-9 h-9 flex justify-center items-center rounded-full hover:bg-st-accent-brown hover:text-white cursor-pointer active:scale-90 transition-all">
             <BiCart size={20} />
@@ -67,11 +73,21 @@ const STNavbar: React.FC = () => {
       {/* Mobile Navigation Links */}
       {isMenuOpen && (
         <div className="lg:hidden flex flex-col gap-4 mt-4 font-Gloock">
-          <NavLink to="/" className="block">Home</NavLink>
-          <NavLink to="/" className="block">Shop</NavLink>
-          <NavLink to="/" className="block">Services</NavLink>
-          <NavLink to="/" className="block">Orders</NavLink>
-          <NavLink to="/" className="block">Consultations</NavLink>
+          <NavLink to="/" className="block">
+            Home
+          </NavLink>
+          <NavLink to="/" className="block">
+            Shop
+          </NavLink>
+          <NavLink to="/" className="block">
+            Services
+          </NavLink>
+          <NavLink to="/" className="block">
+            Orders
+          </NavLink>
+          <NavLink to="/" className="block">
+            Consultations
+          </NavLink>
         </div>
       )}
     </nav>

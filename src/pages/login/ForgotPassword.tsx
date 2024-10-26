@@ -1,47 +1,32 @@
 import "../../index.css";
-// import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useState } from "react";
 
 import Profile from "../../assets/Login/Profile.png";
+
 import { FaArrowRight } from "react-icons/fa";
+import { AiOutlineMessage } from "react-icons/ai";
+import { IoMdMail } from "react-icons/io";
 
 const ForgotPassword: React.FC = () => {
-  const navigate = useNavigate();
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
-  const notify = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    event.preventDefault();
-    toast.success(" Successfully Registered !!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-    setTimeout(() => {
-      navigate("/LandingPage");
-    }, 5000);
+  const handleSelect = (option: string) => {
+    setSelectedOption(option);
   };
 
   return (
-    <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] ">
+    <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] font-inter ">
       <div className="flex flex-col h-screen md:h-fit md:px-5 lg:w-2/3 md:flex-row bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
         <div className="flex flex-col py-5 md:w-1/4 ">
           {/*Forgot password  */}
           <div className="flex gap-4 pb-5">
-            <a href="/Profile2">
+            <a href="/Signin">
               <FaArrowRight className="text-[#531A02] bg-[#FFF2ED] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
             <p className="text-2xl font-bold">Forgot Password</p>
           </div>
 
           {/* Page image */}
-
           <div className="md:flex flex-col h-[500px] hidden ">
             <img
               src={Profile}
@@ -56,14 +41,37 @@ const ForgotPassword: React.FC = () => {
             Select which contact details should we use to reset your password
           </p>
 
-          <a href="" className="w-full">
-            <button
-              className="flex p-4 mt-8 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full"
-              onClick={notify}
+          <div className="w-full gap-3 flex flex-col">
+            <div
+              className={`flex gap-6 items-center border-2 rounded-2xl w-full justify-center p-6 ${
+                selectedOption === "sms" ? "border-[#531A02]" : ""
+              }`}
+              onClick={() => handleSelect("sms")}
             >
+              <AiOutlineMessage className="text-[#531A02] text-lg rounded-full w-16 h-16 p-3 bg-[#FFF2ED]" />
+              <div className="flex flex-col ">
+                <p className="text-[#A0A2A2] text-xs">via SMS</p>
+                <p className="text-lg font-bold">+91 111 *******99</p>
+              </div>
+            </div>
+            <div
+              className={`flex gap-6 items-center border-2 rounded-2xl w-full justify-center p-6 ${
+                selectedOption === "email" ? "border-[#531A02]" : ""
+              }`}
+              onClick={() => handleSelect("email")}
+            >
+              <IoMdMail className="text-[#531A02] text-lg rounded-full w-16 h-16 p-3 bg-[#FFF2ED]" />
+              <div className="flex flex-col ">
+                <p className="text-[#A0A2A2] text-xs">via Email</p>
+                <p className="text-lg font-bold">neha****gh@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="/ForgotPwOtp" className="w-full">
+            <button className="flex p-4 mt-8 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
               <p className=" font-inter font-semibold text-white">Continue</p>
             </button>
-            <ToastContainer />
           </a>
         </div>
       </div>
