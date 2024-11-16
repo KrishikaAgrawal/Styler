@@ -31,13 +31,13 @@ const Signup: React.FC = () => {
         <div className="flex flex-col p-5 justify-center items-center md:w-1/2">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-[#8C4D33] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
+            <div className="bg-[#025195] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
               S
             </div>
             <div className="text-5xl font-Gloock">Styler.</div>
           </div>
           {/* Create your account */}
-          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#531A02] ">
+          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#025195] ">
             Create Your Account
           </h1>
 
@@ -89,7 +89,7 @@ const Signup: React.FC = () => {
 
           {/* sign up button */}
           <a href="/Profile1" className=" w-full">
-            <button className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+            <button className="flex p-4 items-center justify-center w-full bg-[#025195] gap-4 rounded-full">
               <p className=" font-inter font-semibold text-white">Sign up</p>
             </button>
           </a>
@@ -121,7 +121,7 @@ const Signup: React.FC = () => {
             Already have an account?
             <a
               href="/Signin"
-              className="text-[#531A02] font-semibold text-lg cursor-pointer"
+              className="text-[#025195] font-semibold text-lg cursor-pointer"
             >
               {" "}
               Sign in

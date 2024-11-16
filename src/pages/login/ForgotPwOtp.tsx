@@ -52,7 +52,7 @@ const ForgotPwOtp: React.FC = () => {
           {/*Enter OTP code  */}
           <div className="flex gap-4 pb-5">
             <a href="/ForgotPassword">
-              <FaArrowRight className="text-[#531A02] bg-[#FFF2ED] rounded-full p-2 h-7 w-7 transform rotate-180" />
+              <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
             <p className="text-2xl font-bold">Forgot Password</p>
           </div>
@@ -71,7 +71,7 @@ const ForgotPwOtp: React.FC = () => {
         <div className="flex flex-col p-5 justify-center items-center md:w-2/3 gap-3">
           <p className="text-[#A0A2A2] text-center py-6  text-lg ">
             Code has been sent to
-            <span className="text-[#531A02] font-semibold cursor-pointer">
+            <span className="text-[#025195] font-semibold cursor-pointer">
               {" "}
               +91 111 *******99
             </span>
@@ -86,7 +86,7 @@ const ForgotPwOtp: React.FC = () => {
                 value={value}
                 onChange={(e) => handleChange(e, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
-                className={`md:w-24 w-16 h-12 text-center text-xl border border-[#531A02] rounded-lg ${
+                className={`md:w-24 w-16 h-12 text-center text-xl border border-[#025195] rounded-lg ${
                   isMasked[index] && value ? "otp-mask" : ""
                 }`}
                 maxLength={1}
@@ -95,7 +95,7 @@ const ForgotPwOtp: React.FC = () => {
             ))}
           </div>
           <a href="/CreateNewPassword" className="w-full">
-            <button className="flex p-4 mt-8 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+            <button className="flex p-4 mt-8 items-center justify-center w-full bg-[#025195] gap-4 rounded-full">
               <p className=" font-inter font-semibold text-white">Continue</p>
             </button>
           </a>

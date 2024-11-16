@@ -25,28 +25,28 @@ const STFooter: React.FC = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <div className="bg-st-mild-brown lg:px-16 px-4 py-8">
+    <div className="bg-[#DEF9FF] lg:px-16 px-4 py-8">
       {/* Logo and Newsletter */}
       <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-6 lg:gap-0">
         {/* Logo */}
         <div className="flex font-Gloock items-center lg:w-1/3 gap-3">
-          <p className="bg-st-accent-brown text-white w-16 h-16 flex justify-center items-center rounded-full text-4xl">
+          <p className="bg-[#025195] text-white w-16 h-16 flex justify-center items-center rounded-full text-4xl">
             S
           </p>
           <p className="text-3xl lg:text-4xl">Styler.</p>
         </div>
 
         {/* Newsletter Signup */}
-        <div className="bg-st-mid-brown/20 text-st-mid-brown justify-between lg:w-2/3 p-3 lg:px-5 rounded-lg">
+        <div className="bg-[#025195]/20 text-[#025195] justify-between lg:w-2/3 p-3 lg:px-5 rounded-lg">
           <div className="w-full  flex flex-col lg:flex-row gap-4 lg:gap-8  items-center justify-between">
             <p className="text-lg lg:text-xl font-medium">Newsletter Sign Up</p>
-            <div className="border border-st-mid-brown p-2 bg-white rounded-lg flex gap-2 lg:gap-4 font-medium w-full lg:w-2/3 justify-between pl-5">
+            <div className="border border-[#025195] p-2 bg-white rounded-lg flex gap-2 lg:gap-4 font-medium w-full lg:w-2/3 justify-between pl-5">
               <input
-                className=" text-st-mid-brown w-full lg:w-auto"
+                className=" text-[#025195] w-full lg:w-auto"
                 type="text"
                 placeholder="Enter your email here..."
               />
-              <button className="bg-st-accent-brown w-fit whitespace-nowrap text-white p-2 rounded-lg px-6 text-sm">
+              <button className="bg-[#025195] w-fit whitespace-nowrap text-white p-2 rounded-lg px-6 text-sm">
                 Sign Up
               </button>
             </div>
@@ -59,7 +59,7 @@ const STFooter: React.FC = () => {
         {/* Company Section */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
+            className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("company")}
           >
             Company
@@ -90,7 +90,7 @@ const STFooter: React.FC = () => {
         {/* Products Section */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
+            className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("products")}
           >
             Products
@@ -123,7 +123,7 @@ const STFooter: React.FC = () => {
         {/* Customer Service Section */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
+            className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("customer")}
           >
             Customer Support
@@ -157,7 +157,7 @@ const STFooter: React.FC = () => {
         {/* Partner With Us */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
+            className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("partner")}
           >
             Partner With Us
@@ -188,7 +188,7 @@ const STFooter: React.FC = () => {
         {/* Legal */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
+            className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("legal")}
           >
             Legal
@@ -219,7 +219,7 @@ const STFooter: React.FC = () => {
         {/* Our Services */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
-            className="text-st-mid-brown font-bold lg:cursor-default"
+            className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("services")}
           >
             Our Services
@@ -250,25 +250,25 @@ const STFooter: React.FC = () => {
 
       {/* Social Media Icons */}
       <div className="flex justify-center gap-6 py-10 my-10 border-y border-black">
-        <div className="bg-st-dark-brown text-white p-4 md:p-5 rounded-full">
+        <div className="bg-[#025195] text-white p-4 md:p-5 rounded-full">
           <FaFacebook />
         </div>
-        <div className="bg-st-dark-brown text-white p-4 md:p-5 rounded-full">
+        <div className="bg-[#025195] text-white p-4 md:p-5 rounded-full">
           <FaLinkedin />
         </div>
-        <div className="bg-st-dark-brown text-white p-4 md:p-5 rounded-full">
+        <div className="bg-[#025195] text-white p-4 md:p-5 rounded-full">
           <FaSquareXTwitter />
         </div>
-        <div className="bg-st-dark-brown text-white p-4 md:p-5 rounded-full">
+        <div className="bg-[#025195] text-white p-4 md:p-5 rounded-full">
           <BsSpotify />
         </div>
-        <div className="bg-st-dark-brown text-white p-4 md:p-5 rounded-full">
+        <div className="bg-[#025195] text-white p-4 md:p-5 rounded-full">
           <BsYoutube />
         </div>
       </div>
 
       {/* Footer Text */}
-      <p className="flex justify-center text-st-mid-brown font-medium">
+      <p className="flex justify-center text-[#025195] font-medium">
         2024 Styler - All Rights Reserved
       </p>
     </div>

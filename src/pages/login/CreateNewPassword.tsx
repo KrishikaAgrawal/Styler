@@ -10,7 +10,7 @@ import { IoMdMail, IoIosLock, IoMdEyeOff, IoMdEye } from "react-icons/io";
 
 import SignupImg from "../../assets/Login/signupImg.png";
 
-const Signin: React.FC = () => {
+const CreateNewPassword: React.FC = () => {
   const navigate = useNavigate();
 
   const notify = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -48,7 +48,7 @@ const Signin: React.FC = () => {
         </div>
 
         <div className="flex flex-col p-5  justify-center items-center md:w-1/2 ">
-          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#531A02] ">
+          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#025195] ">
             Create New Password
           </h1>
           {/* input */}
@@ -99,7 +99,7 @@ const Signin: React.FC = () => {
 
           <a href="" className="w-full">
             <button
-              className="flex p-4 mt-8 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full"
+              className="flex p-4 mt-8 items-center justify-center w-full bg-[#025195] gap-4 rounded-full"
               onClick={notify}
             >
               <p className=" font-inter font-semibold text-white">Continue</p>
@@ -112,4 +112,4 @@ const Signin: React.FC = () => {
   );
 };
 
-export default Signin;
+export default CreateNewPassword;

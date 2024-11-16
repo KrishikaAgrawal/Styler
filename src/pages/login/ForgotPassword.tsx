@@ -21,7 +21,7 @@ const ForgotPassword: React.FC = () => {
           {/*Forgot password  */}
           <div className="flex gap-4 pb-5">
             <a href="/Signin">
-              <FaArrowRight className="text-[#531A02] bg-[#FFF2ED] rounded-full p-2 h-7 w-7 transform rotate-180" />
+              <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
             <p className="text-2xl font-bold">Forgot Password</p>
           </div>
@@ -44,11 +44,11 @@ const ForgotPassword: React.FC = () => {
           <div className="w-full gap-3 flex flex-col">
             <div
               className={`flex gap-6 items-center border-2 rounded-2xl w-full justify-center p-6 ${
-                selectedOption === "sms" ? "border-[#531A02]" : ""
+                selectedOption === "sms" ? "border-[#025195]" : ""
               }`}
               onClick={() => handleSelect("sms")}
             >
-              <AiOutlineMessage className="text-[#531A02] text-lg rounded-full w-16 h-16 p-3 bg-[#FFF2ED]" />
+              <AiOutlineMessage className="text-[#025195] text-lg rounded-full w-16 h-16 p-3 bg-[#DEF9FF]" />
               <div className="flex flex-col ">
                 <p className="text-[#A0A2A2] text-xs">via SMS</p>
                 <p className="text-lg font-bold">+91 111 *******99</p>
@@ -56,11 +56,11 @@ const ForgotPassword: React.FC = () => {
             </div>
             <div
               className={`flex gap-6 items-center border-2 rounded-2xl w-full justify-center p-6 ${
-                selectedOption === "email" ? "border-[#531A02]" : ""
+                selectedOption === "email" ? "border-[#025195]" : ""
               }`}
               onClick={() => handleSelect("email")}
             >
-              <IoMdMail className="text-[#531A02] text-lg rounded-full w-16 h-16 p-3 bg-[#FFF2ED]" />
+              <IoMdMail className="text-[#025195] text-lg rounded-full w-16 h-16 p-3 bg-[#DEF9FF]" />
               <div className="flex flex-col ">
                 <p className="text-[#A0A2A2] text-xs">via Email</p>
                 <p className="text-lg font-bold">neha****gh@gmail.com</p>
@@ -69,7 +69,7 @@ const ForgotPassword: React.FC = () => {
           </div>
 
           <a href="/ForgotPwOtp" className="w-full">
-            <button className="flex p-4 mt-8 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+            <button className="flex p-4 mt-8 items-center justify-center w-full bg-[#025195] gap-4 rounded-full">
               <p className=" font-inter font-semibold text-white">Continue</p>
             </button>
           </a>

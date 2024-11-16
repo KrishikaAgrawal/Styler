@@ -19,7 +19,7 @@ const Login: React.FC = () => {
         </div>
 
         <div className="flex flex-col gap-4 p-5 justify-center items-center md:w-1/2">
-          <h1 className="text-4xl font-Gloock text-center text-[#531A02] ">
+          <h1 className="text-4xl font-Gloock text-center text-[#025195] ">
             Let’s you in!
           </h1>
           <button className="flex border rounded-2xl border-[#EFEEEE] w-full p-3 items-center justify-center gap-4">
@@ -44,7 +44,7 @@ const Login: React.FC = () => {
           </div>
           <a
             href="/Signin"
-            className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full"
+            className="flex p-4 items-center justify-center w-full bg-[#025195] gap-4 rounded-full"
           >
             <p className=" font-inter font-semibold text-white">
               Sign in with email
@@ -54,7 +54,7 @@ const Login: React.FC = () => {
             Don’t have an account?
             <a
               href="/signup"
-              className="text-[#531A02] font-semibold text-lg cursor-pointer"
+              className="text-[#025195] font-semibold text-lg cursor-pointer"
             >
               {" "}
               Sign up

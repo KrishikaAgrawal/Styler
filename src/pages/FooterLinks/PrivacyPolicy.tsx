@@ -32,14 +32,14 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Information">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Information We Collect
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Information"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -48,14 +48,14 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Use">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   How We Use Your Information
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Use"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -64,14 +64,14 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Sharing">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Sharing Your Information
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Sharing"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -80,12 +80,12 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Security">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Data Security </p>
+                <p className="text-[#025195] font-medium">Data Security </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Security"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -94,12 +94,12 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Rights">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Your Rights</p>
+                <p className="text-[#025195] font-medium">Your Rights</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Rights"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -108,14 +108,14 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Technologies">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Cookies and Tracking Technologies
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Technologies"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -124,12 +124,12 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Links">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Third-Party Links</p>
+                <p className="text-[#025195] font-medium">Third-Party Links</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Links"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -138,14 +138,14 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Changes">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Changes to This Privacy Policy
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Changes"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -156,8 +156,10 @@ const PrivacyPolicy: React.FC = () => {
 
       {/* Content */}
       <div className=" font-inter">
-        <h2 className="text-5xl mb-16 font-bold">Privacy Policy</h2>
-        <p className="text-[#727272] mb-7 ">
+        <h2 className="text-5xl mb-16 font-bold text-[#025195]">
+          Privacy Policy
+        </h2>
+        <p className="text-[#546879] mb-7 ">
           Styler is committed to protecting your privacy and ensuring that your
           personal information is handled securely and responsibly. This Privacy
           Policy outlines how we collect, use, disclose, and safeguard your
@@ -168,7 +170,7 @@ const PrivacyPolicy: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4">
             Information We Collect
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We may collect the following types of information:
             <ul className="list-disc pl-5 mt-2">
               <li>
@@ -195,7 +197,7 @@ const PrivacyPolicy: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             How We Use Your Information
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We may use the information we collect for various purposes,
             including:
             <ul className="list-disc pl-5 mt-2">
@@ -228,7 +230,7 @@ const PrivacyPolicy: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Sharing Your Information
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We do not sell your personal information. However, we may share your
             data with:
             <ul className="list-disc pl-5 mt-2">
@@ -252,7 +254,7 @@ const PrivacyPolicy: React.FC = () => {
         </section>
         <section id="Security">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">Data Security</h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We implement industry-standard security measures to protect your
             personal information. This includes encryption, secure servers, and
             regular audits of our systems to prevent unauthorized access, data
@@ -261,7 +263,7 @@ const PrivacyPolicy: React.FC = () => {
         </section>
         <section id="Rights">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">Your Rights</h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             You have the right to:
             <ul className="list-disc pl-5 mt-2">
               <li>
@@ -287,7 +289,7 @@ const PrivacyPolicy: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Cookies and Tracking Technologies
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We use cookies to enhance your experience on our platform. You can
             control the use of cookies by adjusting your browser settings, but
             please note that disabling cookies may limit certain features of our
@@ -298,7 +300,7 @@ const PrivacyPolicy: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Third-Party Links
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             Our platform may contain links to third-party websites. This Privacy
             Policy does not apply to those external websites, and we encourage
             you to review the privacy policies of any third-party sites you
@@ -309,7 +311,7 @@ const PrivacyPolicy: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Changes to This Privacy Policy
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We may update this Privacy Policy from time to time. Any changes
             will be posted on this page, and we will notify you of significant
             changes by email or through a notice on our platform. Please review

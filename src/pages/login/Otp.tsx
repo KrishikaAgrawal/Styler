@@ -2,6 +2,8 @@ import "../../index.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import useUserContext from "@/context/useUserContext";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -10,7 +12,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Otp: React.FC = () => {
   const navigate = useNavigate();
-
+  const { setIsRegistered } = useUserContext();
   const notify = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
     toast.success(" Successfully Registered !!", {
@@ -23,8 +25,10 @@ const Otp: React.FC = () => {
       progress: undefined,
       theme: "light",
     });
+
     setTimeout(() => {
       navigate("/LandingPage");
+      setIsRegistered(true);
     }, 5000);
   };
 
@@ -75,7 +79,7 @@ const Otp: React.FC = () => {
           {/*Enter OTP code  */}
           <div className="flex gap-4 pb-5">
             <a href="/Profile2">
-              <FaArrowRight className="text-[#531A02] bg-[#FFF2ED] rounded-full p-2 h-7 w-7 transform rotate-180" />
+              <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
             <p className="text-2xl font-bold">Enter OTP code</p>
           </div>
@@ -94,17 +98,17 @@ const Otp: React.FC = () => {
         <div className="flex flex-col p-5 justify-center items-center md:w-2/3 gap-3">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-[#8C4D33] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
+            <div className="bg-[#025195] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
               S
             </div>
             <div className="text-5xl font-Gloock">Styler.</div>
           </div>
-          <h1 className="text-3xl mt-3 font-Gloock text-center text-[#531A02] ">
+          <h1 className="text-3xl mt-3 font-Gloock text-center text-[#025195] ">
             Add Your OTP Code
           </h1>
           <p className="text-[#A0A2A2] text-center py-6  text-lg ">
             Please enter the
-            <span className="text-[#531A02] font-semibold cursor-pointer">
+            <span className="text-[#025195] font-semibold cursor-pointer">
               {" "}
               OTP sent{" "}
             </span>
@@ -120,7 +124,7 @@ const Otp: React.FC = () => {
                 value={value}
                 onChange={(e) => handleChange(e, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
-                className={`w-24 h-12 text-center text-xl border border-[#531A02] rounded-lg ${
+                className={`w-24 h-12 text-center text-xl border border-[#025195] rounded-lg ${
                   isMasked[index] && value ? "otp-mask" : ""
                 }`}
                 maxLength={1}
@@ -130,7 +134,7 @@ const Otp: React.FC = () => {
           </div>
           <a href="" className="w-full">
             <button
-              className="flex p-4 mt-8 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full"
+              className="flex p-4 mt-8 items-center justify-center w-full bg-[#025195] gap-4 rounded-full"
               onClick={notify}
             >
               <p className=" font-inter font-semibold text-white">Continue</p>

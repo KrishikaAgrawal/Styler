@@ -31,13 +31,13 @@ const Signin: React.FC = () => {
         <div className="flex flex-col p-5  justify-center items-center md:w-1/2 ">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-[#8C4D33] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
+            <div className="bg-[#025195] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
               S
             </div>
             <div className="text-5xl font-Gloock">Styler.</div>
           </div>
           {/* Create your account */}
-          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#531A02] ">
+          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#025195] ">
             Login to Your Account
           </h1>
 
@@ -88,13 +88,15 @@ const Signin: React.FC = () => {
           </div>
 
           {/* sign up button */}
-          <button className="flex p-4 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
-            <p className=" font-inter font-semibold text-white">Sign in</p>
-          </button>
+          <a href="/LandingPage" className="w-full">
+            <button className="flex p-4 items-center justify-center w-full bg-[#025195] gap-4 rounded-full">
+              <p className=" font-inter font-semibold text-white">Sign in</p>
+            </button>
+          </a>
 
           <a
             href="/ForgotPassword"
-            className="text-[#531A02] font-inter font-semibold text-sm mt-4"
+            className="text-[#025195] font-inter font-semibold text-sm mt-4"
           >
             Forgot the password?
           </a>
@@ -126,8 +128,8 @@ const Signin: React.FC = () => {
           <p className="text-[#A0A2A2] text-center font-medium pt-3 ">
             Don’t have an account?
             <a
-              href="/signup"
-              className="text-[#531A02] font-semibold text-lg cursor-pointer"
+              href="/SignUp"
+              className="text-[#025195] font-semibold text-lg cursor-pointer"
             >
               {" "}
               Sign up

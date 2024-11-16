@@ -30,7 +30,7 @@
 @media (max-width: 640px) {
   /* Small screens */
   .slick-slide > div {
-    margin: 0 24px; /* Further increase margin for small screens */
+    margin: 0 8px; /* Further increase margin for small screens */
   }
 }
 
@@ -44,8 +44,8 @@
 }
 
 .custom-checkbox:checked {
-  background-color: #531a02;
-  border-color: #531a02;
+  background-color: #025195;
+  border-color: #025195;
 }
 
 .custom-checkbox:checked::after {

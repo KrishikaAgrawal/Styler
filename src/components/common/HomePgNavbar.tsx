@@ -4,7 +4,11 @@ import { NavLink } from "react-router-dom";
 
 const HomePgNavbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState<string>("/");
 
+  const handleLinkClick = (link: string) => {
+    setActiveLink(link);
+  };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     console.log("Menu Toggled:", isMenuOpen);
@@ -15,7 +19,9 @@ const HomePgNavbar: React.FC = () => {
       <div className="flex justify-between items-center h-full">
         {/* Logo */}
         <div className="flex font-Gloock items-center gap-2">
-          <p className="bg-st-accent-brown text-white w-7 h-7 flex justify-center items-center rounded-full text-xl"></p>
+          <p className="bg-[#025195] text-white w-7 h-7 flex justify-center items-center rounded-full text-xl">
+            S
+          </p>
           <p className="text-lg">Styler.</p>
         </div>
 
@@ -28,24 +34,68 @@ const HomePgNavbar: React.FC = () => {
 
         {/* Navigation Links for Large Screens */}
         <div className="hidden lg:flex xl:gap-12 gap-6 font-medium font-Gloock xl:ml-32 text-sm">
-          <NavLink className="border-b-2 border-st-accent-brown" to="/">
+          <NavLink
+            className={
+              activeLink === "/" ? "border-b-2 border-[#025195] pb-2" : ""
+            }
+            to="/"
+            onClick={() => handleLinkClick("/")}
+          >
             Home
           </NavLink>
-          <NavLink to="/About">About</NavLink>
-          <NavLink to="/Services">Services</NavLink>
-          <NavLink to="/Blog">Blog</NavLink>
-          <NavLink to="/Contact_Us">Contact Us</NavLink>
+          <NavLink
+            className={
+              activeLink === "/AboutUs"
+                ? "border-b-2 border-[#025195] pb-2"
+                : ""
+            }
+            to="/AboutUs"
+            onClick={() => handleLinkClick("/AboutUs")}
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            className={
+              activeLink === "/mostpopular"
+                ? "border-b-2 border-[#025195] pb-2"
+                : ""
+            }
+            to="/mostpopular"
+            onClick={() => handleLinkClick("/mostpopular")}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            className={
+              activeLink === "/Blog" ? "border-b-2 border-[#025195] pb-2" : ""
+            }
+            to="/Blog"
+            onClick={() => handleLinkClick("/Blog")}
+          >
+            Blog
+          </NavLink>
+          <NavLink
+            className={
+              activeLink === "/Contact_Us"
+                ? "border-b-2 border-[#025195] pb-2"
+                : ""
+            }
+            to="/Contact_Us"
+            onClick={() => handleLinkClick("/Contact_Us")}
+          >
+            ContactUs
+          </NavLink>
         </div>
 
         {/* Action Buttons for Large Screens */}
         <div className="hidden lg:flex gap-3">
           <NavLink to="/Login">
-            <button className="py-2 font-bold px-8 rounded-full border border-[#531A02] text-[#531A02]">
+            <button className="py-2 font-bold px-8 rounded-full border border-[#025195] text-[#025195]">
               Login
             </button>
           </NavLink>
           <NavLink to="/Signup">
-            <button className="py-2 px-8 font-bold rounded-full bg-[#531A02] text-white">
+            <button className="py-2 px-8 font-bold rounded-full bg-[#025195] text-white">
               Sign Up
             </button>
           </NavLink>
@@ -58,10 +108,10 @@ const HomePgNavbar: React.FC = () => {
           <NavLink to="/" className="block">
             Home
           </NavLink>
-          <NavLink to="/About" className="block">
+          <NavLink to="/AboutUs" className="block">
             About
           </NavLink>
-          <NavLink to="/Services" className="block">
+          <NavLink to="/MostPopular" className="block">
             Services
           </NavLink>
           <NavLink to="/Blog" className="block">

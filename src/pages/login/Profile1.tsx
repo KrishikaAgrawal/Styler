@@ -76,7 +76,7 @@ const Profile1: React.FC = () => {
         <div className="flex flex-col py-5 md:w-1/4 ">
           <div className="flex gap-4 pb-5">
             <a href="/Signup">
-              <FaArrowRight className="text-[#531A02] bg-[#FFF2ED] rounded-full p-2 h-7 w-7 transform rotate-180" />
+              <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
             <p className="text-2xl font-bold">Fill Your Profile</p>
           </div>
@@ -211,7 +211,7 @@ const Profile1: React.FC = () => {
             </select>
           </div>
           <a href="/Profile2" className="w-full">
-            <button className="flex p-4 mt-10 items-center justify-center w-full bg-[#531A02] gap-4 rounded-full">
+            <button className="flex p-4 mt-10 items-center justify-center w-full bg-[#025195] gap-4 rounded-full">
               <p className=" font-inter font-semibold text-white">Continue</p>
             </button>
           </a>

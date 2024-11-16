@@ -16,8 +16,8 @@ const Notification: React.FC = () => {
           <h1 className="font-semibold text-xl md:text-3xl mb-4">Today</h1>
           <div className="flex flex-col gap-4">
             <div className="flex p-3 gap-4 items-center shadow-custom rounded-2xl">
-              <div className="bg-[#FFF2ED] rounded-full h-fit">
-                <FaCheckCircle className="w-6 h-6  text-[#5A3F2C] rounded-full m-4" />
+              <div className="bg-[#DEF9FF] rounded-full h-fit">
+                <FaCheckCircle className="w-6 h-6  text-[#025195] rounded-full m-4" />
               </div>
               <div className="flex flex-col ">
                 <p className="font-bold text-lg md:text-xl">
@@ -34,8 +34,8 @@ const Notification: React.FC = () => {
           <h1 className="font-semibold text-xl md:text-3xl mb-4">Tomorrow</h1>
           <div className="flex flex-col gap-4">
             <div className="flex p-3 gap-4 items-center shadow-custom rounded-2xl">
-              <div className="bg-[#FFF2ED] rounded-full h-fit">
-                <FaCalendarDay className="w-6 h-6  text-[#5A3F2C]  m-4" />
+              <div className="bg-[#DEF9FF] rounded-full h-fit">
+                <FaCalendarDay className="w-6 h-6  text-[#025195]  m-4" />
               </div>
               <div className="flex flex-col ">
                 <p className="font-bold text-lg md:text-xl">
@@ -47,8 +47,8 @@ const Notification: React.FC = () => {
               </div>
             </div>
             <div className="flex p-3 gap-4 items-center shadow-custom rounded-2xl">
-              <div className="bg-[#FFF2ED] rounded-full h-fit">
-                <RiDiscountPercentFill className="w-6 h-6  text-[#5A3F2C] m-4" />
+              <div className="bg-[#DEF9FF] rounded-full h-fit">
+                <RiDiscountPercentFill className="w-6 h-6  text-[#025195] m-4" />
               </div>
               <div className="flex flex-col  ">
                 <p className="font-bold text-lg md:text-xl">
@@ -67,8 +67,8 @@ const Notification: React.FC = () => {
           </h1>
           <div className="flex flex-col gap-4">
             <div className="flex p-3 gap-4 items-center shadow-custom rounded-2xl">
-              <div className="bg-[#FFF2ED] rounded-full h-fit">
-                <GiDress className="w-6 h-6  text-[#5A3F2C]  m-4" />
+              <div className="bg-[#DEF9FF] rounded-full h-fit">
+                <GiDress className="w-6 h-6  text-[#025195]  m-4" />
               </div>
               <div className="flex flex-col ">
                 <p className="font-bold text-lg md:text-xl">
@@ -81,8 +81,8 @@ const Notification: React.FC = () => {
               </div>
             </div>
             <div className="flex p-3 gap-4 items-center shadow-custom rounded-2xl">
-              <div className="bg-[#FFF2ED] rounded-full h-fit">
-                <MdLocalShipping className="w-6 h-6  text-[#5A3F2C] m-4" />
+              <div className="bg-[#DEF9FF] rounded-full h-fit">
+                <MdLocalShipping className="w-6 h-6  text-[#025195] m-4" />
               </div>
               <div className="flex flex-col  ">
                 <p className="font-bold text-lg md:text-xl">Order Shipped</p>
@@ -92,8 +92,8 @@ const Notification: React.FC = () => {
               </div>
             </div>
             <div className="flex p-3 gap-4 items-center shadow-custom rounded-2xl">
-              <div className="bg-[#FFF2ED] rounded-full h-fit">
-                <IoPerson className="w-6 h-6  text-[#5A3F2C] m-4" />
+              <div className="bg-[#DEF9FF] rounded-full h-fit">
+                <IoPerson className="w-6 h-6  text-[#025195] m-4" />
               </div>
               <div className="flex flex-col  ">
                 <p className="font-bold text-lg md:text-xl">Profile Updated</p>

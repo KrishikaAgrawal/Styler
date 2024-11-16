@@ -8,7 +8,7 @@ import SpecialOffer4 from "../../assets/header/Specialoffer4.png";
 const SpecialOffer: React.FC = () => {
   return (
     <div className="p-5 md:p-12 font-inter">
-      <h1 className="font-Gloock text-[#531A02] mb-5 md:mb-10 text-3xl md:text-5xl">
+      <h1 className="font-Gloock text-[#025195] mb-5 md:mb-10 text-3xl md:text-5xl">
         SPECIAL OFFERS
       </h1>
       <div className="flex flex-col gap-8 md:gap-10 ">

@@ -32,12 +32,12 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#BookingServices">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Booking Services</p>
+                <p className="text-[#025195] font-medium">Booking Services</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "BookingServices"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -46,12 +46,12 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#PaymentServices">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Payment Services</p>
+                <p className="text-[#025195] font-medium">Payment Services</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "PaymentServices"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -60,14 +60,14 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#Cancellation">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Cancellation and Rescheduling
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Cancellation"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -76,14 +76,14 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#Return">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Return and Refund Policy
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Return"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -92,12 +92,12 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#Responsibilities">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Your Rights</p>
+                <p className="text-[#025195] font-medium">Your Rights</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Responsibilities"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -106,14 +106,14 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#Limitations">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Service Limitations
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Limitations"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -122,14 +122,14 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#Liability">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">
+                <p className="text-[#025195] font-medium">
                   Liability and Dispute Reputation
                 </p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Liability"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -138,12 +138,12 @@ const TermsAndConditions: React.FC = () => {
           <li>
             <a href="#Contact">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#5A3F2C] font-medium">Contact Our Team</p>
+                <p className="text-[#025195] font-medium">Contact Our Team</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Contact"
-                      ? "bg-[#5A3F2C] text-[#F3F1F0]"
-                      : "bg-[#F3F1F0] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#F3F1F0]"
+                      : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
                 />
               </div>
@@ -154,13 +154,13 @@ const TermsAndConditions: React.FC = () => {
 
       {/* Content */}
       <div className=" font-inter">
-        <h2 className="text-5xl mb-10 text-[#531A02] font-Gloock">
+        <h2 className="text-5xl mb-10 text-[#025195] font-Gloock">
           Terms and Conditions
         </h2>
 
         <section>
           <h2 className=" font-semibold text-3xl mb-4">Styler </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             Styler is your go-to site for personalized tailoring. We provide
             custom sewing, adjustments, and garment repairs. Our service
             offerings enable experienced stylists to you, allowing you to get
@@ -175,7 +175,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Booking Services
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             We may collect the following types of information:
             <ul className="list-disc pl-5 mt-2">
               <li>
@@ -201,7 +201,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Payment Services{" "}
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             In-app purchases via credit/debit cards, UPI, or mobile wallets, as
             well as Cash on Delivery (COD), which is paid for after the service
             is rendered, are among the several payment methods that Styler
@@ -217,7 +217,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Cancellation and Rescheduling
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             <ul className="list-disc pl-5 mt-2">
               <li>
                 Cancellation Policy: Appointments can be canceled without
@@ -241,7 +241,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Return and Refund Policy
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             <ul className="list-disc pl-5 mt-2">
               <li>
                 Custom clothing is not returnable. Reimbursement may be issued
@@ -268,7 +268,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             User Responsibilities
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             Customers must be available for the tailor's visit, provide accurate
             design details, and inspect the garment within 7 days to report any
             flaws. Styler cannot be held accountable for any delays or issues
@@ -280,7 +280,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Service Limitations
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             Styler endeavors to offer high-quality, timely service. However, we
             do not guarantee the availability of specific tailors at all times.
             Tailoring quality depends on the accuracy of the measurements
@@ -295,7 +295,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Liability and Dispute Reputation
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             Styler's liability in disputes is limited to the amount paid for
             services rendered. Customers should initially contact customer
             service with their grievances. Unresolved matters would be handled
@@ -308,7 +308,7 @@ const TermsAndConditions: React.FC = () => {
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
             Contact Our Team
           </h2>
-          <p className="text-[#727272]">
+          <p className="text-[#546879]">
             If any problem is not handled satisfactorily, you may contact Styler
             management at the client query by mailing us at{" "}
             <a

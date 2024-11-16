@@ -149,13 +149,13 @@ const PartnerWithUs: React.FC = () => {
   return (
     <div>
       {/* Hero section */}
-      <div className="flex flex-col lg:flex-row gap-10 md:gap-16 py-10 px-5 md:px-5 lg:py-16 lg:px-14 bg-[#F4F0F0] w-full">
+      <div className="flex flex-col lg:flex-row gap-10 md:gap-16 py-10 px-5 md:px-5 lg:py-16 lg:px-14 bg-[#F3FDFF] w-full">
         <div className="flex flex-col lg:w-1/2 gap-8 lg:gap-14  justify-center">
-          <p className="font-Gloock text-[#5A3F2C] text-xl md:text-3xl lg:text-5xl">
+          <p className="font-Gloock text-[#025195] text-xl md:text-3xl lg:text-5xl">
             Partner with Styler – Elevate Your Brand, Reach Exclusive Clients,
             and Showcase Your Craft
           </p>
-          <p className="text-[#807E7E] font-medium text-xs md:text-base font-inter">
+          <p className="text-[#546879] font-medium text-xs md:text-base font-inter">
             At Styler, we connect talented designers and tailors with a global
             audience seeking custom, high-quality fashion. As a partner, you’ll
             have the opportunity to showcase your unique designs, grow your
@@ -164,7 +164,7 @@ const PartnerWithUs: React.FC = () => {
             requests seamlessly. Join us and take your fashion business to the
             next level.
           </p>{" "}
-          <button className="flex w-fit rounded-full items-center justify-center px-8 md:px-16 md:py-4 py-3 text-white bg-[#531A02] text-sm md:text-lg font-semibold border gap-3">
+          <button className="flex w-fit rounded-full items-center justify-center px-8 md:px-16 md:py-4 py-3 text-white bg-[#025195] text-sm md:text-lg font-semibold border gap-3">
             Get Started
           </button>
         </div>
@@ -182,7 +182,7 @@ const PartnerWithUs: React.FC = () => {
                   alt=""
                   className=" relative h-auto  z-10"
                 />
-                <div className="absolute right-2 bottom-2 md:-right-32 md:bottom-20 z-40 flex bg-[#5A3F2C] font-inter w-fit rounded-2xl text-white py-3 px-2 md:py-6 md:px-4 gap-2">
+                <div className="absolute right-2 bottom-2 md:-right-32 md:bottom-20 z-40 flex bg-[#025195] font-inter w-fit rounded-2xl text-white py-3 px-2 md:py-6 md:px-4 gap-2">
                   <h1 className="text-xs md:text-2xl font-bold">100 +</h1>
                   <p className="md:text-lg text-xs "> Partners</p>
                 </div>
@@ -203,10 +203,10 @@ const PartnerWithUs: React.FC = () => {
                 <span className="font-bold md:text-sm text-xs">1k+</span>
               </div>
             </div>
-            <h1 className="font-extrabold text-4xl md:text-6xl text-[#5A3F2C]">
+            <h1 className="font-extrabold text-4xl md:text-6xl text-[#025195]">
               1k+
             </h1>
-            <p className="text-[#5A3F2C] text-xs md:text-base">
+            <p className="text-[#025195] text-xs md:text-base">
               Visiters per month
             </p>
           </div>
@@ -216,11 +216,11 @@ const PartnerWithUs: React.FC = () => {
       {/* Create, Customize, and Elevate */}
       <div className="flex flex-col lg:flex-row gap-10 md:gap-16 py-10 px-5 md:px-10 lg:py-16 lg:px-14">
         <div className="flex flex-col lg:w-2/3 justify-center gap-5">
-          <h1 className="font-Gloock text-[#5A3F2C] text-2xl md:text-4xl lg:text-6xl">
+          <h1 className="font-Gloock text-[#025195] text-2xl md:text-4xl lg:text-6xl">
             Fashion as Unique as You Are – Create, Customize, and Elevate Your
             Style with Styler.
           </h1>
-          <p className="font-inter text-[#525252] text-xs md:text-xl">
+          <p className="font-inter text-[#546879] text-xs md:text-xl">
             We care about your financial achievements and thats why we help with
             your fiancial planning
           </p>
@@ -230,7 +230,7 @@ const PartnerWithUs: React.FC = () => {
 
       {/* Partner with Us */}
       <div className="flex flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-14 bg-[#F4F0F0]">
-        <h1 className="font-Gloock text-[#5A3F2C] text-2xl md:text-3xl text-center lg:text-left lg:text-5xl">
+        <h1 className="font-Gloock text-[#025195] text-2xl md:text-3xl text-center lg:text-left lg:text-5xl">
           Partner with Us
         </h1>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 ">
@@ -239,14 +239,13 @@ const PartnerWithUs: React.FC = () => {
               <img src={Partner1} alt="" className=" w-full z-10 cover " />
             </div>
             <div className="flex flex-col -mt-28  ml-10  z-20  ">
-              <h1 className="bg-white pt-5 px-4 rounded-tl-2xl text-[#5A3F2C] font-Gloock md:text-xl ">
-                Showcase Your Portfolio
+              <h1 className="bg-white pt-5 px-4 rounded-tl-2xl text-[#025195] font-Gloock md:text-xl ">
+                Demonstrate Your Portfolio{" "}
               </h1>
               <div className="flex bg-white p-4 pb-5 gap-5 rounded-b-2xl">
-                <p className="text text-[#727272] font-inter text-xs md:text-sm">
-                  Create a stunning profile to showcase your designs, services,
-                  and past work. Attract clients with an elegant digital
-                  portfolio that highlights your unique style and craftsmanship.
+                <p className="text text-[#546879] font-inter text-xs md:text-sm">
+                  Your portfolio represents your voice and skills. organize some
+                  of your best work and highlight your expertise.
                 </p>
                 <MdArrowOutward className="w-20 h-fit p-3 border rounded-2xl" />
               </div>
@@ -257,14 +256,15 @@ const PartnerWithUs: React.FC = () => {
               <img src={Partner2} alt="" className=" w-full z-10 cover " />
             </div>
             <div className="flex flex-col -mt-28  ml-10  z-20  ">
-              <h1 className="bg-white pt-5 px-4 rounded-tl-2xl text-[#5A3F2C] font-Gloock md:text-xl ">
-                Showcase Your Portfolio
+              <h1 className="bg-white pt-5 px-4 rounded-tl-2xl text-[#025195] font-Gloock md:text-xl ">
+                Simple Sales Management{" "}
               </h1>
               <div className="flex bg-white p-4 pb-5 gap-5 rounded-b-2xl">
-                <p className="text text-[#727272] font-inter text-xs md:text-sm">
-                  Create a stunning profile to showcase your designs, services,
-                  and past work. Attract clients with an elegant digital
-                  portfolio that highlights your unique style and craftsmanship.
+                <p className="text text-[#546879] font-inter text-xs md:text-sm">
+                  Our complete order handling system provides real-time
+                  tracking, easy client detail management, quick work
+                  organizing, and rich reports to improve your tailoring
+                  operations.
                 </p>
                 <MdArrowOutward className="w-20 h-fit p-3 border rounded-2xl" />
               </div>
@@ -275,14 +275,14 @@ const PartnerWithUs: React.FC = () => {
               <img src={Partner3} alt="" className=" w-full z-10 cover " />
             </div>
             <div className="flex flex-col -mt-28  ml-10  z-20  ">
-              <h1 className="bg-white pt-5 px-4 rounded-tl-2xl text-[#5A3F2C] font-Gloock md:text-xl ">
-                Showcase Your Portfolio
+              <h1 className="bg-white pt-5 px-4 rounded-tl-2xl text-[#025195] font-Gloock md:text-xl ">
+                Performances Analytics
               </h1>
               <div className="flex bg-white p-4 pb-5 gap-5 rounded-b-2xl">
-                <p className="text text-[#727272] font-inter text-xs md:text-sm">
-                  Create a stunning profile to showcase your designs, services,
-                  and past work. Attract clients with an elegant digital
-                  portfolio that highlights your unique style and craftsmanship.
+                <p className="text text-[#546879] font-inter text-xs md:text-sm">
+                  Assess productivity by analyzing sales patterns, reviewing
+                  performance indicators, and pinpointing potential for
+                  improvement.
                 </p>
                 <MdArrowOutward className="w-20 h-fit p-3 border rounded-2xl" />
               </div>
@@ -292,53 +292,49 @@ const PartnerWithUs: React.FC = () => {
       </div>
 
       {/* Grow your brand */}
-      <div className="flex flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-14 lg:mx-28 lg:my-16 bg-[#F8EEE7] lg:rounded-[50px]">
-        <h1 className="text-[#5A3F2C] font-Gloock text-2xl lg:text-4xl">
+      <div className="flex flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-14 lg:mx-28 lg:my-16 bg-[#DEF9FF] lg:rounded-[50px]">
+        <h1 className="text-[#025195] font-Gloock text-2xl lg:text-4xl">
           Grow your brand and reach new heights with Styler’s global platform!
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
           <div className="flex font-inter bg-white rounded-2xl w-full h-fit flex-col gap-3 p-6">
-            <BsPersonFill className="bg-[#5A3F2C] text-white w-14 h-14 rounded-2xl p-4" />
-            <h2 className="text-[#5A3F2C] text-lg font-extrabold">
-              Expand Your Client Reach
+            <BsPersonFill className="bg-[#025195] text-white w-14 h-14 rounded-2xl p-4" />
+            <h2 className="text-[#025195] text-lg font-extrabold">
+              Promotional Aid{" "}
             </h2>
-            <p className="text-[#727272] text-xs">
-              Gain exposure to a global clientele seeking custom, high-quality
-              fashion. Styler connects you with clients who value personalized
-              designs, helping you grow your business beyond local markets.
+            <p className="text-[#546879] text-xs">
+              Soak up while we showcase your portfolio on our web page.
             </p>
-            <div className="flex gap-2 items-center text-[#5A3F2C] ">
+            <div className="flex gap-2 items-center text-[#025195] ">
               <p className="text-sm font-semibold">Learn More</p>
               <FaArrowRightLong />
             </div>
           </div>
           <div className="flex font-inter bg-white rounded-2xl w-full h-fit flex-col gap-3 p-6">
-            <BsPersonFill className="bg-[#5A3F2C] text-white w-14 h-14 rounded-2xl p-4" />
-            <h2 className="text-[#5A3F2C] text-lg font-extrabold">
-              Expand Your Client Reach
+            <BsPersonFill className="bg-[#025195] text-white w-14 h-14 rounded-2xl p-4" />
+            <h2 className="text-[#025195] text-lg font-extrabold">
+              The scaling and compliance
             </h2>
-            <p className="text-[#727272] text-xs">
-              Gain exposure to a global clientele seeking custom, high-quality
-              fashion. Styler connects you with clients who value personalized
-              designs, helping you grow your business beyond local markets.
+            <p className="text-[#546879] text-xs">
+              Let us support your efforts to expand your business and inflate
+              your overall creative area.
             </p>
-            <div className="flex gap-2 items-center text-[#5A3F2C] ">
+            <div className="flex gap-2 items-center text-[#025195] ">
               <p className="text-sm font-semibold">Learn More</p>
               <FaArrowRightLong />
             </div>
           </div>
           <div className="flex font-inter bg-white rounded-2xl w-full h-fit flex-col gap-3 p-6">
-            <BsPersonFill className="bg-[#5A3F2C] text-white w-14 h-14 rounded-2xl p-4" />
-            <h2 className="text-[#5A3F2C] text-lg font-extrabold">
-              Expand Your Client Reach
+            <BsPersonFill className="bg-[#025195] text-white w-14 h-14 rounded-2xl p-4" />
+            <h2 className="text-[#025195] text-lg font-extrabold">
+              Effective price setting{" "}
             </h2>
-            <p className="text-[#727272] text-xs">
-              Gain exposure to a global clientele seeking custom, high-quality
-              fashion. Styler connects you with clients who value personalized
-              designs, helping you grow your business beyond local markets.
+            <p className="text-[#546879] text-xs">
+              We provide quality at an economical price while simultaneously
+              guaranteeing that it is advantageous to our partners.
             </p>
-            <div className="flex gap-2 items-center text-[#5A3F2C] ">
+            <div className="flex gap-2 items-center text-[#025195] ">
               <p className="text-sm font-semibold">Learn More</p>
               <FaArrowRightLong />
             </div>
@@ -346,16 +342,15 @@ const PartnerWithUs: React.FC = () => {
 
           <div className={`${showMoreGrow ? "block" : "hidden"} md:block`}>
             <div className="flex font-inter bg-white rounded-2xl w-full h-fit flex-col gap-3 p-6">
-              <BsPersonFill className="bg-[#5A3F2C] text-white w-14 h-14 rounded-2xl p-4" />
-              <h2 className="text-[#5A3F2C] text-lg font-extrabold">
-                Expand Your Client Reach
+              <BsPersonFill className="bg-[#025195] text-white w-14 h-14 rounded-2xl p-4" />
+              <h2 className="text-[#025195] text-lg font-extrabold">
+                Explicit urge to operate
               </h2>
-              <p className="text-[#727272] text-xs">
-                Gain exposure to a global clientele seeking custom, high-quality
-                fashion. Styler connects you with clients who value personalized
-                designs, helping you grow your business beyond local markets.
+              <p className="text-[#546879] text-xs">
+                We will make certain, you receive a healthy count of client
+                orders.
               </p>
-              <div className="flex gap-2 items-center text-[#5A3F2C] ">
+              <div className="flex gap-2 items-center text-[#025195] ">
                 <p className="text-sm font-semibold">Learn More</p>
                 <FaArrowRightLong />
               </div>
@@ -363,16 +358,15 @@ const PartnerWithUs: React.FC = () => {
           </div>
           <div className={`${showMoreGrow ? "block" : "hidden"} md:block`}>
             <div className="flex font-inter bg-white rounded-2xl w-full h-fit flex-col gap-3 p-6">
-              <BsPersonFill className="bg-[#5A3F2C] text-white w-14 h-14 rounded-2xl p-4" />
-              <h2 className="text-[#5A3F2C] text-lg font-extrabold">
-                Expand Your Client Reach
+              <BsPersonFill className="bg-[#025195] text-white w-14 h-14 rounded-2xl p-4" />
+              <h2 className="text-[#025195] text-lg font-extrabold">
+                Forefront innovation
               </h2>
-              <p className="text-[#727272] text-xs">
-                Gain exposure to a global clientele seeking custom, high-quality
-                fashion. Styler connects you with clients who value personalized
-                designs, helping you grow your business beyond local markets.
+              <p className="text-[#546879] text-xs">
+                We use the most cutting-edge technologies to create distinctive,
+                intuitive web pages.
               </p>
-              <div className="flex gap-2 items-center text-[#5A3F2C] ">
+              <div className="flex gap-2 items-center text-[#025195] ">
                 <p className="text-sm font-semibold">Learn More</p>
                 <FaArrowRightLong />
               </div>
@@ -380,16 +374,16 @@ const PartnerWithUs: React.FC = () => {
           </div>
           <div className={`${showMoreGrow ? "block" : "hidden"} md:block`}>
             <div className="flex font-inter bg-white rounded-2xl w-full h-fit flex-col gap-3 p-6">
-              <BsPersonFill className="bg-[#5A3F2C] text-white w-14 h-14 rounded-2xl p-4" />
-              <h2 className="text-[#5A3F2C] text-lg font-extrabold">
-                Expand Your Client Reach
+              <BsPersonFill className="bg-[#025195] text-white w-14 h-14 rounded-2xl p-4" />
+              <h2 className="text-[#025195] text-lg font-extrabold">
+                Resilient collaboration
               </h2>
-              <p className="text-[#727272] text-xs">
-                Gain exposure to a global clientele seeking custom, high-quality
-                fashion. Styler connects you with clients who value personalized
-                designs, helping you grow your business beyond local markets.
+              <p className="text-[#546879] text-xs">
+                {" "}
+                We adhere to knowing your company's purpose and goal and
+                assisting you in achieving your targets.
               </p>
-              <div className="flex gap-2 items-center text-[#5A3F2C] ">
+              <div className="flex gap-2 items-center text-[#025195] ">
                 <p className="text-sm font-semibold">Learn More</p>
                 <FaArrowRightLong />
               </div>
@@ -397,7 +391,7 @@ const PartnerWithUs: React.FC = () => {
           </div>
         </div>
         <button
-          className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#531A02] border-[#531A02] border gap-3"
+          className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#025195] border-[#025195] border gap-3"
           onClick={handleToggleGrow}
         >
           <p>{showMoreGrow ? "View Less" : "View More"}</p>
@@ -406,23 +400,23 @@ const PartnerWithUs: React.FC = () => {
       </div>
 
       {/* How It Works */}
-      <div className="flex flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-24 bg-[#F4F0F0] ">
-        <h1 className="font-Gloock text-[#5A3F2C] text-4xl lg:text-7xl text-center">
+      <div className="flex flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-24 bg-[#F3FDFF] ">
+        <h1 className="font-Gloock text-[#025195] text-4xl lg:text-7xl text-center">
           How It Works
         </h1>
         <div className="flex w-full items-center flex-col lg:flex-row font-inter gap-10 lg:gap-20 ">
           <div className="flex flex-col lg:w-1/2 gap-6">
             <div className="flex  md:flex-row flex-col gap-3 bg-white rounded-2xl p-4 md:p-6 ">
               <div className="flex items-center justify-center ">
-                <p className="rounded-full text-white flex bg-[#5A3F2C] font-extrabold text-4xl p-3 w-fit h-fit">
+                <p className="rounded-full text-white flex bg-[#025195] font-extrabold text-4xl p-3 w-fit h-fit">
                   01
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#5A3F2C] text-xl font-bold mb-3">
+                <h3 className="text-[#025195] text-xl font-bold mb-3">
                   Sign Up & Create Your Account
                 </h3>
-                <p className="text-[#727272] ">
+                <p className="text-[#546879] ">
                   Register on the Styler platform by providing your basic
                   details. Once verified, you'll gain access to the designer
                   portal.
@@ -431,15 +425,15 @@ const PartnerWithUs: React.FC = () => {
             </div>
             <div className="flex  md:flex-row flex-col gap-3 bg-white rounded-2xl p-4 md:p-6 ">
               <div className="flex items-center justify-center ">
-                <p className="rounded-full text-white flex bg-[#5A3F2C] font-extrabold text-4xl p-3 w-fit h-fit">
+                <p className="rounded-full text-white flex bg-[#025195] font-extrabold text-4xl p-3 w-fit h-fit">
                   02
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#5A3F2C] text-xl font-bold mb-3">
+                <h3 className="text-[#025195] text-xl font-bold mb-3">
                   Set Up Your Profile{" "}
                 </h3>
-                <p className="text-[#727272] ">
+                <p className="text-[#546879] ">
                   Build a professional profile by showcasing your portfolio,
                   listing your services, and adding pricing details. Highlight
                   your unique style to attract clients.
@@ -448,15 +442,15 @@ const PartnerWithUs: React.FC = () => {
             </div>
             <div className="flex  md:flex-row flex-col gap-3 bg-white rounded-2xl p-4 md:p-6 ">
               <div className="flex items-center justify-center ">
-                <p className="rounded-full text-white flex bg-[#5A3F2C] font-extrabold text-4xl p-3 w-fit h-fit">
+                <p className="rounded-full text-white flex bg-[#025195] font-extrabold text-4xl p-3 w-fit h-fit">
                   03
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#5A3F2C] text-xl font-bold mb-3">
+                <h3 className="text-[#025195] text-xl font-bold mb-3">
                   Receive Custom Requests{" "}
                 </h3>
-                <p className="text-[#727272] ">
+                <p className="text-[#546879] ">
                   Clients will reach out to you with custom design or alteration
                   requests. Review their specifications, provide a quote, and
                   suggest timelines.
@@ -465,15 +459,15 @@ const PartnerWithUs: React.FC = () => {
             </div>
             <div className="flex  md:flex-row flex-col gap-3 bg-white rounded-2xl p-4 md:p-6 ">
               <div className="flex items-center justify-center ">
-                <p className="rounded-full text-white flex bg-[#5A3F2C] font-extrabold text-4xl p-3 w-fit h-fit">
+                <p className="rounded-full text-white flex bg-[#025195] font-extrabold text-4xl p-3 w-fit h-fit">
                   04
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#5A3F2C] text-xl font-bold mb-3">
+                <h3 className="text-[#025195] text-xl font-bold mb-3">
                   Manage Orders & Consultations
                 </h3>
-                <p className="text-[#727272] ">
+                <p className="text-[#546879] ">
                   Seamlessly handle orders through the platform. Schedule
                   consultations (virtual or in-person), collaborate on design
                   details, and track the progress of each project.
@@ -482,15 +476,15 @@ const PartnerWithUs: React.FC = () => {
             </div>
             <div className="flex  md:flex-row flex-col gap-3 bg-white rounded-2xl p-4 md:p-6 ">
               <div className="flex items-center justify-center ">
-                <p className="rounded-full text-white flex bg-[#5A3F2C] font-extrabold text-4xl p-3 w-fit h-fit">
+                <p className="rounded-full text-white flex bg-[#025195] font-extrabold text-4xl p-3 w-fit h-fit">
                   05
                 </p>
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[#5A3F2C] text-xl font-bold mb-3">
+                <h3 className="text-[#025195] text-xl font-bold mb-3">
                   Deliver & Get Paid
                 </h3>
-                <p className="text-[#727272] ">
+                <p className="text-[#546879] ">
                   Complete the order and arrange delivery through Styler’s
                   system. Once the client is satisfied, receive payment securely
                   through the platform.
@@ -503,12 +497,12 @@ const PartnerWithUs: React.FC = () => {
       </div>
 
       {/* Success Stories */}
-      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-60 items-center bg-[#5A3F2C] ">
+      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-60 items-center bg-[#025195] ">
         <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-2/3 text-center ">
           Designer Success Stories – How Styler Transformed Their Business
         </h1>
         <div className="flex w-full items-center flex-col  md:flex-row font-inter -space-y-10 md:-space-x-14">
-          <div className="flex flex-col text-[#5A3F2C] z-20 md:mr-0 mr-10 font-inter shadow-2xl bg-white lg:w-2/3 lg:p-12 p-5 rounded-2xl lg:gap-12 gap-5">
+          <div className="flex flex-col text-[#025195] z-20 md:mr-0 mr-10 font-inter shadow-2xl bg-white lg:w-2/3 lg:p-12 p-5 rounded-2xl lg:gap-12 gap-5">
             <p className="lg:text-2xl text-lg">
               Leverage agile frameworks to provide a robust syns is for strategy
               foster Leverage agile frameworks to provide a robust synopsis for
@@ -521,14 +515,14 @@ const PartnerWithUs: React.FC = () => {
                   <p className="md:text-[22px] text-lg font-bold">
                     Ava Thompson
                   </p>
-                  <p className="text-[#727272] text-sm md:text-base whitespace-nowrap">
+                  <p className="text-[#546879] text-sm md:text-base whitespace-nowrap">
                     Lead Designer at Luxe Couture
                   </p>
                 </div>
               </div>
               <div className="flex gap-2 justify-end">
-                <FaArrowLeftLong className="text-[#5A3F2C] bg-[#F1F5EB] w-10 h-10 rounded-full p-3" />
-                <FaArrowRightLong className="text-[#F1F5EB] bg-[#5A3F2C] w-10 h-10 rounded-full p-3" />
+                <FaArrowLeftLong className="text-[#025195] bg-[#DEF9FF] w-10 h-10 rounded-full p-3" />
+                <FaArrowRightLong className="text-[#DEF9FF] bg-[#025195] w-10 h-10 rounded-full p-3" />
               </div>
             </div>
           </div>
@@ -541,8 +535,8 @@ const PartnerWithUs: React.FC = () => {
       </div>
 
       {/* FAQs */}
-      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-24 items-center bg-[#F4F0F0] ">
-        <h1 className="font-Gloock text-[#5A3F2C] text-2xl lg:text-4xl lg:w-1/2 text-center ">
+      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-24 items-center bg-[#F3FDFF] ">
+        <h1 className="font-Gloock text-[#025195] text-2xl lg:text-4xl lg:w-1/2 text-center ">
           Partner FAQs – Everything You Need to Know
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
@@ -554,14 +548,14 @@ const PartnerWithUs: React.FC = () => {
               } rounded-2xl px-4 md:px-6 transition-all duration-300`}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-[#5A3F2C] text-sm md:text-lg font-semibold">
+                <h3 className="text-[#025195] text-sm md:text-lg font-semibold">
                   {item.question}
                 </h3>
                 <IoIosArrowForward
                   className={`w-10 h-10 p-3 ${
                     isActive(item.id)
-                      ? "bg-[#5A3F2C] text-[#F1F5EB] -rotate-90"
-                      : "bg-[#F1F5EB] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#DEF9FF] -rotate-90"
+                      : "bg-[#DEF9FF] text-[#025195]"
                   } rounded-full transition-transform duration-300`}
                   onMouseEnter={() => handleMouseEnter(item.id)}
                   onMouseLeave={handleMouseLeave}
@@ -569,7 +563,7 @@ const PartnerWithUs: React.FC = () => {
                 />
               </div>
               {isActive(item.id) && (
-                <p className="text-[#727272] text-xs md:text-base w-4/5 transition-opacity duration-300">
+                <p className="text-[#546879] text-xs md:text-base w-4/5 transition-opacity duration-300">
                   {item.content}
                 </p>
               )}
@@ -589,14 +583,14 @@ const PartnerWithUs: React.FC = () => {
                 } rounded-2xl px-4 md:px-6 transition-all duration-300`}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-[#5A3F2C] text-sm md:text-lg font-semibold">
+                  <h3 className="text-[#025195] text-sm md:text-lg font-semibold">
                     {item2.question}
                   </h3>
                   <IoIosArrowForward
                     className={`w-10 h-10 p-3 ${
                       isActive(item2.id)
-                        ? "bg-[#5A3F2C] text-[#F1F5EB] -rotate-90"
-                        : "bg-[#F1F5EB] text-[#5A3F2C]"
+                        ? "bg-[#025195] text-[#DEF9FF] -rotate-90"
+                        : "bg-[#DEF9FF] text-[#025195]"
                     } rounded-full transition-transform duration-300`}
                     onMouseEnter={() => handleMouseEnter(item2.id)}
                     onMouseLeave={handleMouseLeave}
@@ -604,7 +598,7 @@ const PartnerWithUs: React.FC = () => {
                   />
                 </div>
                 {isActive(item2.id) && (
-                  <p className="text-[#727272] text-xs md:text-base w-4/5 transition-opacity duration-300">
+                  <p className="text-[#546879] text-xs md:text-base w-4/5 transition-opacity duration-300">
                     {item2.content}
                   </p>
                 )}
@@ -613,7 +607,7 @@ const PartnerWithUs: React.FC = () => {
           ))}
 
           <button
-            className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#531A02] border-[#531A02] border gap-3"
+            className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#025195] border-[#025195] border gap-3"
             onClick={handleToggleFAQ}
           >
             <p>{showMoreFAQ ? "View Less" : "View More"}</p>
@@ -623,15 +617,15 @@ const PartnerWithUs: React.FC = () => {
 
       {/* Logos */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 py-10 px-10 md:px-16 lg:py-16 lg:px-60 ">
-        <img src={logo1} alt="" className="h-8 lg:h-10 " />
-        <img src={logo2} alt="" className="h-8 lg:h-10 " />
-        <img src={logo3} alt="" className="h-8 lg:h-10 " />
-        <img src={logo4} alt="" className="h-8 lg:h-10 " />
-        <img src={logo5} alt="" className="h-8 lg:h-10 " />
+        <img src={logo1} alt="" className="h-8 lg:h-10 flex  " />
+        <img src={logo2} alt="" className="h-8 lg:h-10 flex  " />
+        <img src={logo3} alt="" className="h-8 lg:h-10 flex  " />
+        <img src={logo4} alt="" className="h-8 lg:h-10 flex  " />
+        <img src={logo5} alt="" className="h-8 lg:h-10 flex  " />
       </div>
 
       {/* Explore partners */}
-      <div className="flex flex-col w-full bg-[#5A3F2C] text-white lg:flex-row gap-10 md:gap-16 py-10 px-10 lg:py-16 lg:px-14 font-inter">
+      <div className="flex flex-col w-full bg-[#025195] text-white lg:flex-row gap-10 md:gap-16 py-10 px-10 lg:py-16 lg:px-14 font-inter">
         <div className="lg:w-1/2 flex flex-col justify-center">
           <div className="flex items-center gap-3">
             <h3 className=" text-sm ">EXPLORE PARTNERS</h3>

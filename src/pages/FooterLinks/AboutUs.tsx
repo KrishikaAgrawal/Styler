@@ -130,7 +130,7 @@ const AboutUs: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-10 md:gap-16 py-10 px-5 md:px-5 lg:py-16 lg:px-14 bg-[#F4F0F0] w-full">
         <img src={About} alt="" className="lg:w-1/2 p-10" />
         <div className="flex flex-col lg:w-1/2 gap-5 lg:gap-7  justify-center">
-          <p className="font-Gloock text-[#5A3F2C] text-xl md:text-3xl lg:text-5xl">
+          <p className="font-Gloock text-[#025195] text-xl md:text-3xl lg:text-5xl">
             Give your Aura, the design it seeks.
           </p>
           <p className="text-[#807E7E] font-medium text-xs md:text-base font-inter">
@@ -139,14 +139,14 @@ const AboutUs: React.FC = () => {
             article of perfect clothing, it reflects who you are most of the
             time. Shine away with style in every way possible.
           </p>
-          <button className="flex w-fit rounded-full items-center justify-center px-8 md:px-16 md:py-4 py-3 text-white bg-[#531A02] text-sm md:text-lg font-semibold border gap-3">
+          <button className="flex w-fit rounded-full items-center justify-center px-8 md:px-16 md:py-4 py-3 text-white bg-[#025195] text-sm md:text-lg font-semibold border gap-3">
             Explore More
           </button>
         </div>
       </div>
 
       {/* Watch how our designers/ stylists make your dream a reality. */}
-      <div className="flex flex-col lg:flex-row gap-10 md:gap-16 mx-5 my-5 lg:my-16 md:my-10 md:mx-10 bg-[#5A3F2C] lg:mx-16 justify-center  rounded-2xl lg:rounded-[50px] p-5 lg:pb-0 ">
+      <div className="flex flex-col lg:flex-row gap-10 md:gap-16 mx-5 my-5 lg:my-16 md:my-10 md:mx-10 bg-[#025195] lg:mx-16 justify-center  rounded-2xl lg:rounded-[50px] p-5 lg:pb-0 ">
         <div className="flex flex-col lg:w-1/2 justify-center lg:gap-20 gap-5 lg:items-end items-center ">
           <h1 className="font-Gloock text-xl md:text-4xl lg:text-5xl  text-white lg:w-4/5 text-center lg:text-left md:w-2/3 ">
             Watch how our designers/ stylists make your dream a reality.
@@ -157,7 +157,7 @@ const AboutUs: React.FC = () => {
               <FaArrowRightLong className="w-2 h-2 md:w-3 md:h-3 " />
             </button>
             <div className="md:gap-2 gap-1 flex flex-row items-center">
-              <FaPlay className="text-white w-8 h-8 p-2 md:w-10 md:h-10 rounded-full md:p-3 bg-[#6A5241]" />
+              <FaPlay className="text-white w-8 h-8 p-2 md:w-10 md:h-10 rounded-full md:p-3 bg-[#1b629f ]" />
               <p className="text-white font-inter md:text-lg text-base">
                 Watch Our Videos
               </p>
@@ -171,10 +171,10 @@ const AboutUs: React.FC = () => {
 
       {/* Who we are */}
       <div className="relative">
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[#5A3F2C]"></div>
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-[#025195]"></div>
         <div className="relative flex flex-col z-10 lg:flex-row gap-10 md:gap-16 mx-5 mt-5 lg:mt-16 md:mt-10 md:mx-10 bg-[#fff] lg:mx-20 justify-center  p-5 lg:p-14 md:p-10 ">
           <div className="flex md:w-1/2 flex-col font-inter">
-            <p className="text-sm text-[#531A02] mb-3 ">WHO WE ARE</p>
+            <p className="text-sm text-[#025195] mb-3 ">WHO WE ARE</p>
             <p className="text-2xl md:text-3xl font-bold overflow">
               Striving to make people look confident and charismatic
             </p>
@@ -210,7 +210,7 @@ const AboutUs: React.FC = () => {
                 via faith, quality, and contentment.
               </p>{" "}
             </div>
-            <button className=" w-fit rounded-full px-4 md:px-8 py-2 md:py-4 text-white bg-[#5A3F2C] gap-3">
+            <button className=" w-fit rounded-full px-4 md:px-8 py-2 md:py-4 text-white bg-[#025195] gap-3">
               <p>Read More</p>
             </button>
           </div>
@@ -221,7 +221,7 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Become one of us! */}
-      <div className="flex flex-col gap-0  px-5 py-16 lg:px-16 bg-[#5A3F2C] text-white font-inter">
+      <div className="flex flex-col gap-0  px-5 py-16 lg:px-16 bg-[#025195] text-white font-inter">
         <div className="flex md:mx-16 lg:mx-20 lg:py-16 md:py-12 px-5 py-8 flex-col font-inter items-center">
           <p className="text-[10px] text-sm font-inter">BECOME ONE OF US!</p>
 
@@ -235,7 +235,7 @@ const AboutUs: React.FC = () => {
         </div>
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-14">
           <div className="flex  gap-3 ">
-            <p className="text-[#ab867d] text-[100px] font-bold">1</p>
+            <p className="text-[#848eac] text-[100px] font-bold">1</p>
             <div className="flex flex-col gap-3">
               <h1 className="text-2xl lg:text-3xl font-semibold">
                 Worldwide Scope
@@ -249,7 +249,7 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
           <div className="flex  gap-3 ">
-            <p className="text-[#ab867d] text-[100px] font-bold">2</p>
+            <p className="text-[#848eac] text-[100px] font-bold">2</p>
             <div className="flex flex-col gap-3">
               <h1 className="text-2xl lg:text-3xl font-semibold">
                 Showcase Your Expertise
@@ -263,7 +263,7 @@ const AboutUs: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-3 ">
-            <p className="text-[#ab867d] text-[100px] font-bold">3</p>
+            <p className="text-[#848eac] text-[100px] font-bold">3</p>
             <div className="flex flex-col gap-3">
               <h1 className="text-2xl lg:text-3xl font-semibold">
                 Streamlined Business Tools
@@ -281,11 +281,11 @@ const AboutUs: React.FC = () => {
 
       {/* Milestones of Excellence */}
       <div className="flex items-center flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-44 bg-[#F4F0F0] ">
-        <h1 className="font-inter font-bold w-4/5 text-[#5A3F2C] text-xl md:text-2xl lg:text-4xl text-center">
+        <h1 className="font-inter font-bold w-4/5 text-[#025195] text-xl md:text-2xl lg:text-4xl text-center">
           Milestones of Excellence – Celebrating Our Journey and Impact in the
           Fashion World!
         </h1>
-        <div className="flex w-full items-center flex-col lg:flex-row font-inter gap-10 lg:gap-20 text-[#5A3F2C] ">
+        <div className="flex w-full items-center flex-col lg:flex-row font-inter gap-10 lg:gap-20 text-[#025195] ">
           {/* <div className="flex flex-col lg:w-1/2 gap-6"></div> */}
           <img src={MilestoneImg} alt="" className="h-fit lg:w-1/2" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7 lg:w-1/2 w-full">
@@ -293,7 +293,7 @@ const AboutUs: React.FC = () => {
               <img
                 src={Milestone1}
                 alt=""
-                className="rounded-full bg-[#5A3F2C] p-3"
+                className="rounded-full bg-[#025195] p-3"
               />
               <div className="flex flex-col">
                 <h1 className="text-5xl font-bold">200+</h1>
@@ -304,7 +304,7 @@ const AboutUs: React.FC = () => {
               <img
                 src={Milestone2}
                 alt=""
-                className="rounded-full bg-[#5A3F2C] p-3"
+                className="rounded-full bg-[#025195] p-3"
               />
               <div className="flex flex-col">
                 <h1 className="text-5xl font-bold">20+</h1>
@@ -315,7 +315,7 @@ const AboutUs: React.FC = () => {
               <img
                 src={Milestone3}
                 alt=""
-                className="rounded-full bg-[#5A3F2C] p-3"
+                className="rounded-full bg-[#025195] p-3"
               />
               <div className="flex flex-col">
                 <h1 className="text-5xl font-bold">10k+</h1>
@@ -326,7 +326,7 @@ const AboutUs: React.FC = () => {
               <img
                 src={Milestone4}
                 alt=""
-                className="rounded-full bg-[#5A3F2C] p-3"
+                className="rounded-full bg-[#025195] p-3"
               />
               <div className="flex flex-col">
                 <h1 className="text-5xl font-bold">900+</h1>
@@ -362,9 +362,9 @@ const AboutUs: React.FC = () => {
                 There are many variations of passages of Lorem Ipsum available
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
+                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -377,9 +377,9 @@ const AboutUs: React.FC = () => {
                 There are many variations of passages of Lorem Ipsum available
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
+                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -392,9 +392,9 @@ const AboutUs: React.FC = () => {
                 There are many variations of passages of Lorem Ipsum available
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
+                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -407,9 +407,9 @@ const AboutUs: React.FC = () => {
                 There are many variations of passages of Lorem Ipsum available
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
+                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -422,9 +422,9 @@ const AboutUs: React.FC = () => {
                 There are many variations of passages of Lorem Ipsum available
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
+                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -437,9 +437,9 @@ const AboutUs: React.FC = () => {
                 There are many variations of passages of Lorem Ipsum available
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#5A3F2C] rounded-full" />
+                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -447,11 +447,11 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Mission Vision */}
-      <div className="flex flex-col  gap-10 md:gap-14 py-10 px-5 md:px-5 lg:py-16 lg:px-28 bg-[#F4F0F0] w-full">
+      <div className="flex flex-col  gap-10 md:gap-14 py-10 px-5 md:px-5 lg:py-16 lg:px-28 bg-[#F3FDFF] w-full">
         <div className="flex flex-col-reverse lg:flex-row gap-10">
           <img src={Mission} alt="" className="lg:w-1/2" />
           <div className="flex flex-col lg:w-1/2 gap-5 lg:gap-7  justify-center">
-            <p className="text-center font-Gloock text-[#5A3F2C] text-xl md:text-3xl lg:text-5xl">
+            <p className="text-center font-Gloock text-[#025195] text-xl md:text-3xl lg:text-5xl">
               Our mission
             </p>
             <div className="flex flex-col gap-3 ">
@@ -472,7 +472,7 @@ const AboutUs: React.FC = () => {
         </div>
         <div className="flex flex-col lg:flex-row gap-10 lg:w-full">
           <div className="flex flex-col lg:w-1/2 gap-5 lg:gap-7 justify-center">
-            <p className="text-center font-Gloock text-[#5A3F2C] text-xl md:text-3xl lg:text-5xl">
+            <p className="text-center font-Gloock text-[#025195] text-xl md:text-3xl lg:text-5xl">
               Our Vision
             </p>
             <div className="flex flex-col gap-3 ">
@@ -524,12 +524,12 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Success Stories */}
-      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-60 items-center bg-[#5A3F2C] ">
+      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-60 items-center bg-[#025195] ">
         <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-2/3 text-center ">
           Designer Success Stories – How Styler Transformed Their Business
         </h1>
         <div className="flex w-full items-center flex-col  md:flex-row font-inter -space-y-10 md:-space-x-14">
-          <div className="flex flex-col text-[#5A3F2C] z-20 md:mr-0 mr-10 font-inter shadow-2xl bg-white lg:w-2/3 lg:p-12 p-5 rounded-2xl lg:gap-12 gap-5">
+          <div className="flex flex-col text-[#025195] z-20 md:mr-0 mr-10 font-inter shadow-2xl bg-white lg:w-2/3 lg:p-12 p-5 rounded-2xl lg:gap-12 gap-5">
             <p className="lg:text-2xl text-lg">
               Leverage agile frameworks to provide a robust syns is for strategy
               foster Leverage agile frameworks to provide a robust synopsis for
@@ -548,8 +548,8 @@ const AboutUs: React.FC = () => {
                 </div>
               </div>
               <div className="flex gap-2 justify-end">
-                <FaArrowLeftLong className="text-[#5A3F2C] bg-[#F1F5EB] w-10 h-10 rounded-full p-3" />
-                <FaArrowRightLong className="text-[#F1F5EB] bg-[#5A3F2C] w-10 h-10 rounded-full p-3" />
+                <FaArrowLeftLong className="text-[#025195] bg-[#F1F5EB] w-10 h-10 rounded-full p-3" />
+                <FaArrowRightLong className="text-[#F1F5EB] bg-[#025195] w-10 h-10 rounded-full p-3" />
               </div>
             </div>
           </div>
@@ -562,27 +562,27 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* FAQs */}
-      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-24 items-center bg-[#F4F0F0] ">
-        <h1 className="font-Gloock text-[#5A3F2C] text-2xl lg:text-4xl lg:w-1/2 text-center ">
+      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-24 items-center bg-[#F3FDFF] ">
+        <h1 className="font-Gloock text-[#025195] text-2xl lg:text-4xl lg:w-1/2 text-center ">
           Partner FAQs – Everything You Need to Know
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
           {items.map((item: Item) => (
             <div
               key={item.id}
-              className={`h-full rounded-tr-[50px] rounded-bl-[50px] ${
+              className={`h-fit ${
                 isActive(item.id) ? "bg-[#F8EEE7] py-6" : "bg-white py-6"
               } rounded-2xl px-4 md:px-6 transition-all duration-300`}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-[#5A3F2C] text-sm md:text-lg font-semibold">
+                <h3 className="text-[#025195] text-sm md:text-lg font-semibold">
                   {item.question}
                 </h3>
                 <IoIosArrowForward
                   className={`w-10 h-10 p-3 ${
                     isActive(item.id)
-                      ? "bg-[#5A3F2C] text-[#F1F5EB] -rotate-90"
-                      : "bg-[#F1F5EB] text-[#5A3F2C]"
+                      ? "bg-[#025195] text-[#DEF9FF] -rotate-90"
+                      : "bg-[#DEF9FF] text-[#025195]"
                   } rounded-full transition-transform duration-300`}
                   onMouseEnter={() => handleMouseEnter(item.id)}
                   onMouseLeave={handleMouseLeave}
@@ -590,7 +590,7 @@ const AboutUs: React.FC = () => {
                 />
               </div>
               {isActive(item.id) && (
-                <p className="text-[#727272] text-xs md:text-base w-4/5 transition-opacity duration-300">
+                <p className="text-[#546879] text-xs md:text-base w-4/5 transition-opacity duration-300">
                   {item.content}
                 </p>
               )}
@@ -610,14 +610,14 @@ const AboutUs: React.FC = () => {
                 } rounded-2xl px-4 md:px-6 transition-all duration-300`}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-[#5A3F2C] text-sm md:text-lg font-semibold">
+                  <h3 className="text-[#025195] text-sm md:text-lg font-semibold">
                     {item2.question}
                   </h3>
                   <IoIosArrowForward
                     className={`w-10 h-10 p-3 ${
                       isActive(item2.id)
-                        ? "bg-[#5A3F2C] text-[#F1F5EB] -rotate-90"
-                        : "bg-[#F1F5EB] text-[#5A3F2C]"
+                        ? "bg-[#025195] text-[#DEF9FF] -rotate-90"
+                        : "bg-[#DEF9FF] text-[#025195]"
                     } rounded-full transition-transform duration-300`}
                     onMouseEnter={() => handleMouseEnter(item2.id)}
                     onMouseLeave={handleMouseLeave}
@@ -625,7 +625,7 @@ const AboutUs: React.FC = () => {
                   />
                 </div>
                 {isActive(item2.id) && (
-                  <p className="text-[#727272] text-xs md:text-base w-4/5 transition-opacity duration-300">
+                  <p className="text-[#546879] text-xs md:text-base w-4/5 transition-opacity duration-300">
                     {item2.content}
                   </p>
                 )}
@@ -634,7 +634,7 @@ const AboutUs: React.FC = () => {
           ))}
 
           <button
-            className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#531A02] border-[#531A02] border gap-3"
+            className="flex mt-6 md:hidden bg-white text-sm font-semibold rounded-full items-center justify-center px-4 md:px-8 py-4 text-[#025195] border-[#025195] border gap-3"
             onClick={handleToggleFAQ}
           >
             <p>{showMoreFAQ ? "View Less" : "View More"}</p>
@@ -652,7 +652,7 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Join Our Community*/}
-      <div className="flex flex-col w-full bg-[#5A3F2C] text-white lg:flex-row gap-10 md:gap-16 py-10 px-10 lg:py-16 lg:px-14 font-inter">
+      <div className="flex flex-col w-full bg-[#025195] text-white lg:flex-row gap-10 md:gap-16 py-10 px-10 lg:py-16 lg:px-14 font-inter">
         <div className="lg:w-2/3 flex flex-col justify-center">
           <h1 className="text-center font-bold md:text-start text-3xl md:text-6xl mb-8 md:mb-12">
             Join Our Community
