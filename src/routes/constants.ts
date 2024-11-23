@@ -17,9 +17,13 @@ import Profile1 from "@/pages/login/Profile1";
 import Profile2 from "@/pages/login/Profile2";
 import Signin from "@/pages/login/Signin";
 import Signup from "@/pages/login/Signup";
+import AddMeasurements from "@/pages/Services/Booking/AddMeasurements";
 import Booking from "@/pages/Services/Booking/Booking";
+import InPersonConsultation from "@/pages/Services/Booking/Consultation/InPersonConsultation";
+import VirtualConsultation from "@/pages/Services/Booking/Consultation/VirtualConsultation";
 import DesignerDetails from "@/pages/Services/DesignerDetails";
 import MostPopular from "@/pages/Services/MostPopular";
+import Order from "@/pages/Services/Order/Order";
 
 interface RoutDocument {
   href: string;
@@ -113,6 +117,22 @@ const ROUTES: RoutDocument[] = [
   {
     href: "Booking",
     page: Booking,
+  },
+  {
+    href: "AddMeasurements",
+    page: AddMeasurements,
+  },
+  {
+    href: "InPerson",
+    page: InPersonConsultation,
+  },
+  {
+    href: "Virtual",
+    page: VirtualConsultation,
+  },
+  {
+    href: "OrderDetails",
+    page: Order,
   },
 ];
 

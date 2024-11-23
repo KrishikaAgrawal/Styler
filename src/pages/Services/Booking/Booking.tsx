@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import otherServices from "../../../assets/Services/Booking/otherServices.png";
 
@@ -6,18 +7,36 @@ import { IoIosStarHalf } from "react-icons/io";
 import { IoIosStar } from "react-icons/io";
 
 type ServiceName = "Tailoring" | "Alterations" | "Custom Designs";
-type MeasurementsName = "N/A" | "Add Measurements";
-type ConsultationName = "In-Person" | "Virtual";
+type MeasurementsName = "N/A" | "Add Measurements" | null;
+type ConsultationName = "In-Person" | "Virtual" | null;
 
 const Booking: React.FC = () => {
+  const navigate = useNavigate();
+
+  // Measurement
+  const [selectedMeasurements, setSelectedMeasurements] =
+    useState<MeasurementsName>(null);
+  const handleMeasurements = () => {
+    setSelectedMeasurements("Add Measurements");
+    navigate("/AddMeasurements");
+  };
+
+  // Services
   const [selectedService, setSelectedService] =
     useState<ServiceName>("Tailoring");
-  const [selectedMeasurements, setSelectedMeasurements] =
-    useState<MeasurementsName>("N/A");
 
+  // Consultation
   const [selectedConsultation, setSelectedConsultation] =
-    useState<ConsultationName>("In-Person");
+    useState<ConsultationName>(null);
 
+  const handleInPerson = () => {
+    setSelectedConsultation("In-Person");
+    navigate("/InPerson");
+  };
+  const handleVirtual = () => {
+    setSelectedConsultation("Virtual");
+    navigate("/Virtual");
+  };
   return (
     <div className="px-5 font-inter lg:px-24">
       <h1 className=" text-4xl lg:text-5xl text-[#025195] font-Gloock mb-8 lg:mb-12 mt-5">
@@ -122,7 +141,7 @@ const Booking: React.FC = () => {
                 ? "text-white bg-[#025195]"
                 : "text-[#025195] "
             }`}
-            onClick={() => setSelectedMeasurements("Add Measurements")}
+            onClick={handleMeasurements}
           >
             Add Measurements
           </button>
@@ -140,7 +159,7 @@ const Booking: React.FC = () => {
                 ? "text-white bg-[#025195]"
                 : "text-[#025195] "
             }`}
-            onClick={() => setSelectedConsultation("In-Person")}
+            onClick={handleInPerson}
           >
             In-Person
           </button>
@@ -150,7 +169,7 @@ const Booking: React.FC = () => {
                 ? "text-white bg-[#025195]"
                 : "text-[#025195] "
             }`}
-            onClick={() => setSelectedConsultation("Virtual")}
+            onClick={handleVirtual}
           >
             Virtual
           </button>

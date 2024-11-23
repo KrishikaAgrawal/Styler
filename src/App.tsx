@@ -20,13 +20,16 @@
 import Router from "./routes/Router";
 
 import { UserProvider } from "@/context/UserContext";
+import { FormDataProvider } from "@/context/FormDataContext";
 
 function App() {
   return (
     <>
-      <UserProvider>
-        <Router />
-      </UserProvider>
+      <FormDataProvider>
+        <UserProvider>
+          <Router />
+        </UserProvider>
+      </FormDataProvider>
     </>
   );
 }
