@@ -55,7 +55,7 @@ const Order: React.FC = () => {
 
   // Location
   const handleLocation = () => {
-    navigate("/");
+    navigate("/Address");
   };
 
   return (
@@ -116,7 +116,7 @@ const Order: React.FC = () => {
       <div className="flex justify-between mt-5">
         <div className="flex flex-col gap-1">
           <h1 className="text-[#025195] font-Gloock text-lg lg:text-2xl ">
-            Location{" "}
+            Location
           </h1>
           <p className=" text-sm lg:text-lg">
             Address: 123 Business Lane, Suite 456, Cityville, ST, 12345

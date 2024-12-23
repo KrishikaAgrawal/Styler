@@ -1,12 +1,17 @@
 // import HomePage from "@/pages";
-import HomePage from "@/pages";
+// import HomePage from "@/pages";
+import AppointmentCancellation from "@/pages/Appointment/AppointmentCancellation";
+import Appointments from "@/pages/Appointment/Appointments";
 import AboutUs from "@/pages/FooterLinks/AboutUs";
 import PartnerWithUs from "@/pages/FooterLinks/PartnerWithUs";
 import PrivacyPolicy from "@/pages/FooterLinks/PrivacyPolicy";
 import TermsAndConditions from "@/pages/FooterLinks/TermsAndConditions";
 import Notification from "@/pages/header/Notification";
 import SpecialOffer from "@/pages/header/SpecialOffer";
+import UserProfile from "@/pages/header/UserProfile";
 import Wishlist from "@/pages/header/Wishlist";
+// import SetLoading from "@/pages/HomePage";
+import HomePage from "@/pages/HomePage";
 import LandingPage from "@/pages/LandingPage/LandingPage";
 import CreateNewPassword from "@/pages/login/CreateNewPassword";
 import ForgotPassword from "@/pages/login/ForgotPassword";
@@ -23,7 +28,11 @@ import InPersonConsultation from "@/pages/Services/Booking/Consultation/InPerson
 import VirtualConsultation from "@/pages/Services/Booking/Consultation/VirtualConsultation";
 import DesignerDetails from "@/pages/Services/DesignerDetails";
 import MostPopular from "@/pages/Services/MostPopular";
+import Address from "@/pages/Services/Order/Address";
 import Order from "@/pages/Services/Order/Order";
+import MaterialCheckout from "@/pages/Shop/MaterialCheckout";
+import MaterialDetails from "@/pages/Shop/MaterialDetails";
+import Shop from "@/pages/Shop/Shop";
 
 interface RoutDocument {
   href: string;
@@ -133,6 +142,34 @@ const ROUTES: RoutDocument[] = [
   {
     href: "OrderDetails",
     page: Order,
+  },
+  {
+    href: "Address",
+    page: Address,
+  },
+  {
+    href: "Profile",
+    page: UserProfile,
+  },
+  {
+    href: "Shop",
+    page: Shop,
+  },
+  {
+    href: "MaterialDetails",
+    page: MaterialDetails,
+  },
+  {
+    href: "MaterialCheckout",
+    page: MaterialCheckout,
+  },
+  {
+    href: "Appointments",
+    page: Appointments,
+  },
+  {
+    href: "AppointmentCancellation",
+    page: AppointmentCancellation,
   },
 ];
 

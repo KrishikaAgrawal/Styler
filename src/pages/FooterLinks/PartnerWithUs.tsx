@@ -40,25 +40,25 @@ interface Item {
 const items: Item[] = [
   {
     id: 1,
-    question: "How do I join Styler as a designer?",
+    question: "How does the partnership business work?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 2,
-    question: "How do I receive payments?",
+    question: " Is it easy to take numerous orders at once?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 3,
-    question: "Is there a fee to partner with Styler?",
+    question: "What sorts of customers will I work with?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 4,
-    question: "What support is available to me as a partner?",
+    question: "What are the financial terms and conditions for a partnership?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
@@ -66,37 +66,37 @@ const items: Item[] = [
 const items2: Item[] = [
   {
     id: 5,
-    question: "Can I set my own prices for custom designs?",
+    question: "Is there any investment required for a partnership with Styler?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 6,
-    question: "Can I offer both virtual and in-person consultations?",
+    question: "How would collaborating with Styler help our business?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 7,
-    question: "How does the platform help me manage orders?",
+    question: "How do I get my payments?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 8,
-    question: "How does Styler help promote my services?",
+    question: "How does Styler handle safety and anonymity?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 9,
-    question: "What kind of clients will I be working with?",
+    question: "How can Styler support our long-term vision?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
   {
     id: 10,
-    question: "Can I manage multiple orders at once?",
+    question: "How would Styler help me market my business?",
     content:
       "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
   },
@@ -221,8 +221,8 @@ const PartnerWithUs: React.FC = () => {
             Style with Styler.
           </h1>
           <p className="font-inter text-[#546879] text-xs md:text-xl">
-            We care about your financial achievements and thats why we help with
-            your fiancial planning
+            Cast with us for our promise to quality, detail, support, and shared
+            success.
           </p>
         </div>
         <img src={Unique} alt="" className="" />
@@ -293,7 +293,7 @@ const PartnerWithUs: React.FC = () => {
 
       {/* Grow your brand */}
       <div className="flex flex-col gap-10 py-10 px-5 md:px-10 lg:py-16 lg:px-14 lg:mx-28 lg:my-16 bg-[#DEF9FF] lg:rounded-[50px]">
-        <h1 className="text-[#025195] font-Gloock text-2xl lg:text-4xl">
+        <h1 className="text-[#025195] font-Gloock text-2xl lg:text-[32px]">
           Grow your brand and reach new heights with Styler’s global platform!
         </h1>
 
@@ -417,9 +417,8 @@ const PartnerWithUs: React.FC = () => {
                   Sign Up & Create Your Account
                 </h3>
                 <p className="text-[#546879] ">
-                  Register on the Styler platform by providing your basic
-                  details. Once verified, you'll gain access to the designer
-                  portal.
+                  Simply fill out your basic information to join our stitching
+                  community.
                 </p>
               </div>
             </div>
@@ -434,9 +433,8 @@ const PartnerWithUs: React.FC = () => {
                   Set Up Your Profile{" "}
                 </h3>
                 <p className="text-[#546879] ">
-                  Build a professional profile by showcasing your portfolio,
-                  listing your services, and adding pricing details. Highlight
-                  your unique style to attract clients.
+                  Customize your profile to draw attention to your unique
+                  stitching style and attract new customers.
                 </p>
               </div>
             </div>
@@ -451,9 +449,8 @@ const PartnerWithUs: React.FC = () => {
                   Receive Custom Requests{" "}
                 </h3>
                 <p className="text-[#546879] ">
-                  Clients will reach out to you with custom design or alteration
-                  requests. Review their specifications, provide a quote, and
-                  suggest timelines.
+                  Customers seeking certain expertise send us tailored stitching
+                  demands.
                 </p>
               </div>
             </div>
@@ -468,9 +465,8 @@ const PartnerWithUs: React.FC = () => {
                   Manage Orders & Consultations
                 </h3>
                 <p className="text-[#546879] ">
-                  Seamlessly handle orders through the platform. Schedule
-                  consultations (virtual or in-person), collaborate on design
-                  details, and track the progress of each project.
+                  Maintain records of your orders and discuss with clients to
+                  guarantee that what they want comes to fact.
                 </p>
               </div>
             </div>
@@ -485,9 +481,8 @@ const PartnerWithUs: React.FC = () => {
                   Deliver & Get Paid
                 </h3>
                 <p className="text-[#546879] ">
-                  Complete the order and arrange delivery through Styler’s
-                  system. Once the client is satisfied, receive payment securely
-                  through the platform.
+                  Finish your stitching assignments and easily be rewarded for
+                  your labor.
                 </p>
               </div>
             </div>
@@ -496,10 +491,11 @@ const PartnerWithUs: React.FC = () => {
         </div>
       </div>
 
-      {/* Success Stories */}
-      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-60 items-center bg-[#025195] ">
-        <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-2/3 text-center ">
-          Designer Success Stories – How Styler Transformed Their Business
+      {/* Our support to Entrepreneurs in expanding their businesses and their heartfelt reviews*/}
+      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-40 items-center bg-[#025195] ">
+        <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-5/6 text-center ">
+          Our support to Entrepreneurs in expanding their businesses and their
+          heartfelt reviews
         </h1>
         <div className="flex w-full items-center flex-col  md:flex-row font-inter -space-y-10 md:-space-x-14">
           <div className="flex flex-col text-[#025195] z-20 md:mr-0 mr-10 font-inter shadow-2xl bg-white lg:w-2/3 lg:p-12 p-5 rounded-2xl lg:gap-12 gap-5">
@@ -537,7 +533,7 @@ const PartnerWithUs: React.FC = () => {
       {/* FAQs */}
       <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-24 items-center bg-[#F3FDFF] ">
         <h1 className="font-Gloock text-[#025195] text-2xl lg:text-4xl lg:w-1/2 text-center ">
-          Partner FAQs – Everything You Need to Know
+          Addressing the Queries You Have – FAQs
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
           {items.map((item: Item) => (

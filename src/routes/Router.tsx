@@ -8,6 +8,7 @@ import { STNavbar } from "@/components/common";
 import HomePgNavbar from "@/components/common/HomePgNavbar";
 
 import useUserContext from "@/context/useUserContext";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 const Router: React.FC = () => {
   const { isRegistered } = useUserContext();
@@ -16,6 +17,7 @@ const Router: React.FC = () => {
     <BrowserRouter>
       {isRegistered ? <STNavbar /> : <HomePgNavbar />}
       {/* <STNavbar /> */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={React.createElement(Layout)}>
           {ROUTES.map((route, i) => (

@@ -3,6 +3,8 @@ import { BiBell, BiCart, BiHeart, BiMenu } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import STImageWithLoading from "./STImageWithLoading";
 
+import avatar from "../../assets/Navbar/avatar.png";
+
 const STNavbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState<string>("/");
 
@@ -78,7 +80,7 @@ const STNavbar: React.FC = () => {
                 ? "border-b-2 border-[#025195] pb-2"
                 : ""
             }
-            to="/consultations"
+            to="/Appointments"
             onClick={() => handleLinkClick("/consultations")}
           >
             Consultations
@@ -104,10 +106,9 @@ const STNavbar: React.FC = () => {
           {/* Profile */}
           <div className="flex gap-4 items-center">
             <div className="w-9 h-9 rounded-full overflow-hidden">
-              <STImageWithLoading
-                alt="profile"
-                src="https://res.cloudinary.com/dlxpf7d8c/image/upload/v1710854361/gje3vo4nceqb9gfpedtj.png"
-              />
+              <NavLink to="/Profile">
+                <STImageWithLoading alt="profile" src={avatar} />
+              </NavLink>
             </div>
             <div className="hidden lg:flex flex-col items-end">
               <p className="text-xs font-semibold text-[#A0A2A2]">California</p>

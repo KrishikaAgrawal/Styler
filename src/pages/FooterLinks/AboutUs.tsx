@@ -32,72 +32,72 @@ interface Item {
 const items: Item[] = [
   {
     id: 1,
-    question: "How do I join Styler as a designer?",
+    question: "What is Styler",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 2,
-    question: "How do I receive payments?",
+    question: "How does Styler work?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 3,
-    question: "Is there a fee to partner with Styler?",
+    question: "Can I order both custom and ready-to-wear garments?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 4,
-    question: "What support is available to me as a partner?",
+    question: "How do I find a designer?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
 ];
 
 const items2: Item[] = [
   {
     id: 5,
-    question: "Can I set my own prices for custom designs?",
+    question: "How are prices determined?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 6,
-    question: "Can I offer both virtual and in-person consultations?",
+    question: "How do I communicate with the designer?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 7,
-    question: "How does the platform help me manage orders?",
+    question: "Can I send my own fabric to the designer?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 8,
-    question: "How does Styler help promote my services?",
+    question: "What are the delivery options?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 9,
-    question: "What kind of clients will I be working with?",
+    question: "How do I track my order?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 10,
-    question: "Can I manage multiple orders at once?",
+    question: "How do I join Styler as a designer?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
   {
     id: 11,
-    question: "What happens if a client is not satisfied with their order?",
+    question: " Is there a minimum order quantity for fabrics?",
     content:
-      "To join, simply sign up on our platform, fill in your details, and submit your portfolio for review. Once approved, you can start showcasing your designs and managing orders.",
+      "Styler is a platform that connects clients with talented fashion designers and tailors from around the world, offering custom-made, high-quality garments tailored to individual preferences.",
   },
 ];
 
@@ -524,9 +524,10 @@ const AboutUs: React.FC = () => {
       </div>
 
       {/* Success Stories */}
-      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-60 items-center bg-[#025195] ">
-        <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-2/3 text-center ">
-          Designer Success Stories – How Styler Transformed Their Business
+      <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-40 items-center bg-[#025195] ">
+        <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-5/6 text-center ">
+          Meet our international stylers and collaborate with experts to shine
+          brighter in the world of fashion.
         </h1>
         <div className="flex w-full items-center flex-col  md:flex-row font-inter -space-y-10 md:-space-x-14">
           <div className="flex flex-col text-[#025195] z-20 md:mr-0 mr-10 font-inter shadow-2xl bg-white lg:w-2/3 lg:p-12 p-5 rounded-2xl lg:gap-12 gap-5">
@@ -563,8 +564,9 @@ const AboutUs: React.FC = () => {
 
       {/* FAQs */}
       <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-24 items-center bg-[#F3FDFF] ">
-        <h1 className="font-Gloock text-[#025195] text-2xl lg:text-4xl lg:w-1/2 text-center ">
-          Partner FAQs – Everything You Need to Know
+        <h1 className="font-Gloock text-[#025195] text-2xl lg:text-4xl lg:w-2/3 text-center ">
+          Discover FAQs, that are transforming the way we seek and share
+          knowledge!
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4">
           {items.map((item: Item) => (
@@ -654,10 +656,11 @@ const AboutUs: React.FC = () => {
       {/* Join Our Community*/}
       <div className="flex flex-col w-full bg-[#025195] text-white lg:flex-row gap-10 md:gap-16 py-10 px-10 lg:py-16 lg:px-14 font-inter">
         <div className="lg:w-2/3 flex flex-col justify-center">
-          <h1 className="text-center font-bold md:text-start text-3xl md:text-6xl mb-8 md:mb-12">
-            Join Our Community
+          <h1 className="text-center font-bold md:text-start text-xl md:text-3xl mb-8 md:mb-12">
+            Join us and explore your fashion universe, reliving each occasion
+            with the outfits you chose.
           </h1>
-          <p className="text-xs text-center md:text-start md:text-xl">
+          <p className="text-xs  text-center md:text-start md:text-xl">
             Invite visitors to join the platform, whether as clients or
             designers, highlighting the benefits of becoming part of the
             community.

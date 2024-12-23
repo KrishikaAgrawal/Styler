@@ -33,7 +33,7 @@ const PrivacyPolicy: React.FC = () => {
             <a href="#Information">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#025195] font-medium">
-                  Information We Collect
+                  Information We Glean
                 </p>
                 <FaChevronRight
                   className={`${
@@ -49,7 +49,7 @@ const PrivacyPolicy: React.FC = () => {
             <a href="#Use">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#025195] font-medium">
-                  How We Use Your Information
+                  Our Data Utilization Practices
                 </p>
                 <FaChevronRight
                   className={`${
@@ -65,7 +65,7 @@ const PrivacyPolicy: React.FC = () => {
             <a href="#Sharing">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
                 <p className="text-[#025195] font-medium">
-                  Sharing Your Information
+                  Disclosure of your data
                 </p>
                 <FaChevronRight
                   className={`${
@@ -78,12 +78,12 @@ const PrivacyPolicy: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Security">
+            <a href="#Protection">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#025195] font-medium">Data Security </p>
+                <p className="text-[#025195] font-medium">Security </p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Security"
+                    activeSection === "Protection"
                       ? "bg-[#025195] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
@@ -94,7 +94,7 @@ const PrivacyPolicy: React.FC = () => {
           <li>
             <a href="#Rights">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#025195] font-medium">Your Rights</p>
+                <p className="text-[#025195] font-medium">Your Legal Rights</p>
                 <FaChevronRight
                   className={`${
                     activeSection === "Rights"
@@ -106,14 +106,12 @@ const PrivacyPolicy: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Technologies">
+            <a href="#Security">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#025195] font-medium">
-                  Cookies and Tracking Technologies
-                </p>
+                <p className="text-[#025195] font-medium">Security</p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Technologies"
+                    activeSection === "Security"
                       ? "bg-[#025195] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
@@ -122,12 +120,12 @@ const PrivacyPolicy: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Links">
+            <a href="#Cookies">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#025195] font-medium">Third-Party Links</p>
+                <p className="text-[#025195] font-medium">Cookies Policy</p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Links"
+                    activeSection === "Cookies"
                       ? "bg-[#025195] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
@@ -136,14 +134,12 @@ const PrivacyPolicy: React.FC = () => {
             </a>
           </li>
           <li>
-            <a href="#Changes">
+            <a href="#Reach">
               <div className="flex bg-white rounded-full px-4 py-3 items-center justify-between">
-                <p className="text-[#025195] font-medium">
-                  Changes to This Privacy Policy
-                </p>
+                <p className="text-[#025195] font-medium">Reach Out to Us</p>
                 <FaChevronRight
                   className={`${
-                    activeSection === "Changes"
+                    activeSection === "Reach"
                       ? "bg-[#025195] text-[#F3F1F0]"
                       : "bg-[#F3F1F0] text-[#025195]"
                   } p-1 rounded-full w-5 h-5`}
@@ -155,39 +151,44 @@ const PrivacyPolicy: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className=" font-inter">
+      <div className=" font-inter mb-20">
         <h2 className="text-5xl mb-16 font-bold text-[#025195]">
           Privacy Policy
         </h2>
         <p className="text-[#546879] mb-7 ">
-          Styler is committed to protecting your privacy and ensuring that your
-          personal information is handled securely and responsibly. This Privacy
-          Policy outlines how we collect, use, disclose, and safeguard your
-          information when you use our platform.
+          Styler has prioritized protecting your privacy. Our privacy policy
+          outlines how we collect, use, and disclose information from our online
+          presence [Styler Website URL]. Your use of our website indicates your
+          agreement to the rules outlined here.
         </p>
 
         <section id="Information">
-          <h2 className=" font-semibold text-3xl mb-4">
-            Information We Collect
-          </h2>
+          <h2 className=" font-semibold text-3xl mb-4">Information We Glean</h2>
           <p className="text-[#546879]">
-            We may collect the following types of information:
+            Styler accumulates private necessary data to provide you with a
+            fully integrated service experience, which includes:
             <ul className="list-disc pl-5 mt-2">
               <li>
-                Personal Information: Name, email address, shipping address,
-                phone number, and payment details when you create an account,
-                place an order, or contact us.{" "}
+                For booking and communication, provide contact information,
+                including name, phone number, email, and postal address.
               </li>
               <li>
-                Usage Data: Information about how you interact with our
-                platform, including pages visited, links clicked, and actions
-                taken within the app or website.
+                Location data can help tailors arrive on time for in-person
+                appointments.
               </li>
               <li>
-                {" "}
-                Cookies and Tracking Technologies: We use cookies to collect
-                information about your browsing behavior to improve user
-                experience and provide personalized services.
+                Payment Information: Credit card and UPI information will be
+                collected for transaction processing.
+              </li>
+              <li>
+                Tailor-specific data, such as metrics, fitting priorities, and
+                design choices, are preserved to ensure customized service. Your
+                info is used primarily for reservations and consultations with
+                stylists, handling fees and creating invoices, ensuring that
+                custom clothes are delivered accurately as per your choices, and
+                enhancing our forum based on user reviews and data processing.
+                This approach ensures a unified platform while honoring your
+                confidentiality and choices in our businesses.
               </li>
             </ul>
           </p>
@@ -195,128 +196,120 @@ const PrivacyPolicy: React.FC = () => {
 
         <section id="Use">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            How We Use Your Information
+            Our Data Utilization Practices
           </h2>
           <p className="text-[#546879]">
-            We may use the information we collect for various purposes,
-            including:
-            <ul className="list-disc pl-5 mt-2">
-              <li>
-                Order Processing: To fulfill your orders, manage payments, and
-                provide customer support.
-              </li>
-              <li>
-                Personalization: To tailor recommendations and services based on
-                your preferences.
-              </li>
-              <li>
-                Communication: To send you updates, promotional offers, and
-                other relevant information related to your use of the platform.
-              </li>
-              <li>
-                Analytics: To monitor usage patterns, improve our platform, and
-                develop new features.
-              </li>
-              <li>
-                {" "}
-                Security: To protect against fraud, unauthorized access, and
-                other illegal activities.
-              </li>
-            </ul>
+            Your data is utilized exclusively for making bookings and
+            appointments with tailors, handling payments and creating invoices,
+            ensuring that custom garments are delivered accurately according to
+            your preferences, and enhancing our platform based on user feedback
+            and data analytics. This approach guarantees a smooth experience
+            while prioritizing your privacy and preferences in our services.
           </p>
         </section>
 
         <section id="Sharing">
           <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Sharing Your Information
+            Disclosure of your data
           </h2>
           <p className="text-[#546879]">
-            We do not sell your personal information. However, we may share your
-            data with:
+            We may share your data with:
             <ul className="list-disc pl-5 mt-2">
               <li>
-                Service Providers: Third-party companies that help us operate
-                the platform, such as payment processors, delivery services, and
-                analytics providers.
+                Only when required, such as for safe payment processing and
+                clothing delivery, does Styler disclose your information to
+                dependable third parties.
               </li>
               <li>
-                Designers and Tailors: When you place an order, your relevant
-                details may be shared with the designer or tailor to complete
-                your custom garment or fabric order.
+                Without your express consent, your data won't be distributed to
+                outside parties for marketing purposes.
               </li>
               <li>
-                Legal Requirements: We may disclose information if required by
-                law, regulation, or legal process, or to protect the rights,
-                property, or safety of Styler, our users, or others.
+                Per legal requirements, Styler may share your information with
+                affiliates providing related services, law enforcement, and
+                third-party suppliers for business operations.
               </li>
             </ul>
           </p>
         </section>
-        <section id="Security">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">Data Security</h2>
+
+        <section id="Protection">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">Security</h2>
           <p className="text-[#546879]">
-            We implement industry-standard security measures to protect your
-            personal information. This includes encryption, secure servers, and
-            regular audits of our systems to prevent unauthorized access, data
-            breaches, or misuse of your information.
+            To safeguard your personally identifiable information, we use
+            cryptography and security protocols that are industry standard. You
+            are also in charge of protecting your account credentials, even
+            though we take every preventive action to protect your data.
           </p>
         </section>
+
         <section id="Rights">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">Your Rights</h2>
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">
+            Your Legal Rights
+          </h2>
           <p className="text-[#546879]">
             You have the right to:
             <ul className="list-disc pl-5 mt-2">
               <li>
-                Access Your Data: Request a copy of the personal information we
-                hold about you.
+                You can obtain, alter, and remove your personal information from
+                our directory at any time.
               </li>
               <li>
-                A Update Your Information: Correct or update your personal
-                information at any time.
+                Suspend permission for data usage may impact service delivery.
               </li>
               <li>
-                Delete Your Data: Request the deletion of your personal
-                information, subject to certain legal obligations.
+                Request information regarding third-party companies with whom
+                your data has been shared.
+              </li>
+            </ul>
+            If you wish to assert these rights, kindly inform us at{" "}
+            <a href="" className=" underline text-[#025195]">
+              care@stylerapp.in.
+            </a>
+          </p>
+        </section>
+
+        <section id="Security">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">Security</h2>
+          <p className="text-[#546879]">
+            <ul className="list-disc pl-5 mt-2">
+              <li>
+                We hold necessary precautions to protect information from
+                malicious use, full transparency, deformation, and deletion of
+                data.
               </li>
               <li>
-                Opt-Out of Marketing: Unsubscribe from our promotional emails or
-                communications at any time.
+                However, neither Online transfer nor portable hard drives are
+                secure.
               </li>
             </ul>
           </p>
         </section>
-        <section id="Technologies">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Cookies and Tracking Technologies
-          </h2>
+        <section id="Cookies">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">Cookies Policy</h2>
           <p className="text-[#546879]">
-            We use cookies to enhance your experience on our platform. You can
-            control the use of cookies by adjusting your browser settings, but
-            please note that disabling cookies may limit certain features of our
-            website.
+            Cookies are used by Styler to improve your experience in two ways:
+            <ul className="list-disc pl-5 mt-2">
+              <li>
+                By analyzing user activity to improve the performance of the
+                website and by highly personalized content according to user
+                preferences.
+              </li>
+              <li>
+                In your browser's settings, you can turn off cookies, but doing
+                so might make some platform features less functional.
+              </li>
+            </ul>
           </p>
         </section>
-        <section id="Links">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Third-Party Links
-          </h2>
+        <section id="Reach">
+          <h2 className=" font-semibold text-3xl mb-4 mt-7">Reach Out to Us</h2>
           <p className="text-[#546879]">
-            Our platform may contain links to third-party websites. This Privacy
-            Policy does not apply to those external websites, and we encourage
-            you to review the privacy policies of any third-party sites you
-            visit.
-          </p>
-        </section>
-        <section id="Changes">
-          <h2 className=" font-semibold text-3xl mb-4 mt-7">
-            Changes to This Privacy Policy
-          </h2>
-          <p className="text-[#546879]">
-            We may update this Privacy Policy from time to time. Any changes
-            will be posted on this page, and we will notify you of significant
-            changes by email or through a notice on our platform. Please review
-            this policy periodically to stay informed about how we protect your
-            information.
+            For any questions concerning our information privacy policy, kindly
+            inform us here at{" "}
+            <a href="" className=" underline text-[#025195]">
+              care@stylerapp.in.
+            </a>
           </p>
         </section>
       </div>

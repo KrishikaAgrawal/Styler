@@ -437,7 +437,6 @@ const LandingPage: React.FC = () => {
       {/* Hero Section */}
       <div onClick={navigateToSpecialOffer} className="relative">
         {/* Hero Text */}
-        {/* <a href="/SpecialOffer">SpecialOffer</a> */}
         <div className="absolute inset-0 bg-black/50 w-full h-full z-10 text-white lg:p-32 py-6 px-4 flex flex-col justify-center">
           <p className="lg:text-9xl text-7xl font-bold text-st-light-brown">
             25%
