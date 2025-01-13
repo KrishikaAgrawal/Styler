@@ -27,7 +27,7 @@ const Otp: React.FC = () => {
     });
 
     setTimeout(() => {
-      navigate("/LandingPage");
+      navigate("/Dashboard");
       setIsRegistered(true);
     }, 5000);
   };
@@ -74,8 +74,8 @@ const Otp: React.FC = () => {
   };
   return (
     <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] ">
-      <div className="flex flex-col h-screen md:h-fit md:px-5 lg:w-2/3 md:flex-row bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
-        <div className="flex flex-col py-5 md:w-1/4 ">
+      <div className="flex flex-col h-screen md:h-fit p-5 lg:w-2/3 md:flex-row bg-white gap-5 lg:gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
+        <div className="flex flex-col">
           {/*Enter OTP code  */}
           <div className="flex gap-4 pb-5">
             <a href="/Profile2">

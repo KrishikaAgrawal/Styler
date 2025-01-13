@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
-import CalendarModal from "../Booking/Consultation/Calendar";
+import CalendarModal from "../../Booking/Consultation/Calendar";
 import { useFormData } from "@/context/FormDataContext";
 
 import { PiPencilFill } from "react-icons/pi";

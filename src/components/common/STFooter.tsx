@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { BsSpotify, BsYoutube } from "react-icons/bs";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { MdOutlineCall } from "react-icons/md";
+import { LuClock } from "react-icons/lu";
 
 const STFooter: React.FC = () => {
   // State to handle toggling dropdown for small screens
@@ -25,17 +29,9 @@ const STFooter: React.FC = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <div className="bg-[#DEF9FF] lg:px-16 px-4 py-8">
-      {/* Logo and Newsletter */}
-      <div className="flex flex-col lg:flex-row w-full justify-between items-center gap-6 lg:gap-0">
-        {/* Logo */}
-        <div className="flex font-Gloock items-center lg:w-1/3 gap-3">
-          <p className="bg-[#025195] text-white w-16 h-16 flex justify-center items-center rounded-full text-4xl">
-            S
-          </p>
-          <p className="text-3xl lg:text-4xl">Styler.</p>
-        </div>
-
+    <div className="bg-[#DEF9FF] lg:px-16 px-4 py-8 font-inter">
+      {/* Newsletter */}
+      <div className="flex flex-col lg:flex-row w-full justify-center items-center gap-6 lg:gap-0">
         {/* Newsletter Signup */}
         <div className="bg-[#025195]/20 text-[#025195] justify-between lg:w-2/3 p-3 lg:px-5 rounded-lg">
           <div className="w-full  flex flex-col lg:flex-row gap-4 lg:gap-8  items-center justify-between">
@@ -54,8 +50,26 @@ const STFooter: React.FC = () => {
         </div>
       </div>
 
-      {/* Link Stacks - Dropdown on small screens */}
-      <div className="flex flex-col md:flex-row justify-between gap-4 mt-16 lg:px-8">
+      {/* logo, Link Stacks and Contact */}
+      <div className=" flex flex-col md:flex-row justify-between gap-6 mt-16 lg:px-8">
+        {/* Logo */}
+        <div className=" lg:w-1/3 flex flex-col gap-4">
+          <div className="flex font-Gloock items-center gap-3">
+            <p className="bg-[#025195] text-white w-16 h-16 flex justify-center items-center rounded-full text-4xl">
+              S
+            </p>
+            <p className="text-3xl lg:text-4xl">Styler.</p>
+          </div>
+          <h3 className="font-bold text-xl">
+            Your Style, Our Passion – Step Into a World of Elegance and Comfort.
+          </h3>
+          <p className="text-[10px]">
+            Explore a curated collection of footwear designed to blend fashion
+            with functionality. From everyday essentials to statement pieces,
+            find your perfect pair and stride confidently into every occasion.
+          </p>
+        </div>
+
         {/* Company Section */}
         <div className="lg:flex flex-col items-center gap-1">
           <button
@@ -65,7 +79,7 @@ const STFooter: React.FC = () => {
             Company
           </button>
           <div
-            className={`flex-col items-center gap-1 ${
+            className={`flex-col items-center gap-1 text-center ${
               openSections.company ? "flex" : "hidden"
             } lg:flex`}
           >
@@ -87,8 +101,63 @@ const STFooter: React.FC = () => {
           </div>
         </div>
 
-        {/* Products Section */}
+        {/* Legal */}
         <div className="lg:flex flex-col items-center gap-1">
+          <button
+            className="text-[#025195] font-bold lg:cursor-default"
+            onClick={() => toggleSection("legal")}
+          >
+            Legal
+          </button>
+          <div
+            className={`flex-col items-center gap-1 text-center ${
+              openSections.legal ? "flex" : "hidden"
+            } lg:flex`}
+          >
+            <Link to="/PrivacyPolicy" onClick={handleClick}>
+              Privacy Policy
+            </Link>
+            <Link to="/TermsAndConditions" onClick={handleClick}>
+              Terms & Conditions
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Cookie Policy
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Shipping & Delivery
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Returns & Refunds
+            </Link>
+            <Link to="/" onClick={handleClick}>
+              Help Center
+            </Link>
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex flex-col gap-4">
+          <h3 className=" text-xl font-bold">Contact Us Section!!</h3>
+          <div className="gap-4 flex items-center">
+            <MdOutlineMailOutline className="text-xl" />
+            <p className="text-[15px] font-bold">
+              EMAIL US: <span className="">info@techinnovators.com</span>
+            </p>
+          </div>
+          <div className="gap-4 flex items-center">
+            <MdOutlineCall className="text-xl" />
+            <p className="text-[15px] font-bold uppercase">
+              Working Hours:Monday - Friday, 08 am - 05 pm
+            </p>
+          </div>
+          <div className="gap-4 flex items-center">
+            <LuClock className="text-xl" />
+            <p className="text-[15px] font-bold">Call: 8700768057</p>
+          </div>
+        </div>
+
+        {/* Products Section */}
+        {/* <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("products")}
@@ -119,9 +188,10 @@ const STFooter: React.FC = () => {
               Payment Options
             </Link>
           </div>
-        </div>
+        </div> */}
+
         {/* Customer Service Section */}
-        <div className="lg:flex flex-col items-center gap-1">
+        {/* <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("customer")}
@@ -152,10 +222,10 @@ const STFooter: React.FC = () => {
               Payment Options
             </Link>
           </div>
-        </div>
+        </div> */}
 
         {/* Partner With Us */}
-        <div className="lg:flex flex-col items-center gap-1">
+        {/* <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("partner")}
@@ -183,41 +253,10 @@ const STFooter: React.FC = () => {
               Join as a Partner
             </Link>
           </div>
-        </div>
-
-        {/* Legal */}
-        <div className="lg:flex flex-col items-center gap-1">
-          <button
-            className="text-[#025195] font-bold lg:cursor-default"
-            onClick={() => toggleSection("legal")}
-          >
-            Legal
-          </button>
-          <div
-            className={`flex-col items-center gap-1 ${
-              openSections.legal ? "flex" : "hidden"
-            } lg:flex`}
-          >
-            <Link to="/PrivacyPolicy" onClick={handleClick}>
-              Privacy Policy
-            </Link>
-            <Link to="/TermsAndConditions" onClick={handleClick}>
-              Terms & Conditions
-            </Link>
-            <Link to="/" onClick={handleClick}>
-              Cookie Policy
-            </Link>
-            <Link to="/" onClick={handleClick}>
-              Accessibility Statement
-            </Link>
-            <Link to="/" onClick={handleClick}>
-              Intellectual Property
-            </Link>
-          </div>
-        </div>
+        </div> */}
 
         {/* Our Services */}
-        <div className="lg:flex flex-col items-center gap-1">
+        {/* <div className="lg:flex flex-col items-center gap-1">
           <button
             className="text-[#025195] font-bold lg:cursor-default"
             onClick={() => toggleSection("services")}
@@ -245,7 +284,7 @@ const STFooter: React.FC = () => {
               Fabric Dyeing & Printing
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Social Media Icons */}

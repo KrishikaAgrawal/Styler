@@ -31,7 +31,7 @@ const Past: React.FC = () => {
       loc: "312, Fashion Street, Mumbai",
       booking: "Rescheduled Booking",
       bookingColor: "#546879",
-      bookingLink: "abc",
+      bookingLink: "GiveFeedback",
     },
     {
       id: "#56783",
@@ -45,7 +45,7 @@ const Past: React.FC = () => {
       loc: "312, Fashion Street, Mumbai",
       booking: "Rescheduled Booking",
       bookingColor: "#546879",
-      bookingLink: "abc",
+      bookingLink: "GiveFeedback",
     },
     {
       id: "#56782",
@@ -59,7 +59,7 @@ const Past: React.FC = () => {
       loc: "312, Fashion Street, Mumbai",
       booking: "Rescheduled Booking",
       bookingColor: "#546879",
-      bookingLink: "abc",
+      bookingLink: "GiveFeedback",
     },
   ];
   return (

@@ -1,18 +1,19 @@
 // import HomePage from "@/pages";
 // import HomePage from "@/pages";
+import Sidebar from "@/components/common/Sidebar";
 import AppointmentCancellation from "@/pages/Appointment/AppointmentCancellation";
 import Appointments from "@/pages/Appointment/Appointments";
-import AboutUs from "@/pages/FooterLinks/AboutUs";
-import PartnerWithUs from "@/pages/FooterLinks/PartnerWithUs";
-import PrivacyPolicy from "@/pages/FooterLinks/PrivacyPolicy";
-import TermsAndConditions from "@/pages/FooterLinks/TermsAndConditions";
-import Notification from "@/pages/header/Notification";
-import SpecialOffer from "@/pages/header/SpecialOffer";
-import UserProfile from "@/pages/header/UserProfile";
-import Wishlist from "@/pages/header/Wishlist";
+import AboutUs from "@/pages/Onboarding/FooterLinks/AboutUs";
+import PartnerWithUs from "@/pages/Onboarding/FooterLinks/PartnerWithUs";
+import PrivacyPolicy from "@/pages/Onboarding/FooterLinks/PrivacyPolicy";
+import TermsAndConditions from "@/pages/Onboarding/FooterLinks/TermsAndConditions";
+import Notification from "@/pages/Dashboard/header/Notification";
+import SpecialOffer from "@/pages/Dashboard/header/SpecialOffer";
+import UserProfile from "@/pages/Dashboard/header/UserProfile";
+import Wishlist from "@/pages/Dashboard/header/Wishlist";
 // import SetLoading from "@/pages/HomePage";
-import HomePage from "@/pages/HomePage";
-import LandingPage from "@/pages/LandingPage/LandingPage";
+import HomePage from "@/pages/Onboarding/HomePage";
+import Dashboard from "@/pages/Dashboard/Dashboard";
 import CreateNewPassword from "@/pages/login/CreateNewPassword";
 import ForgotPassword from "@/pages/login/ForgotPassword";
 import ForgotPwOtp from "@/pages/login/ForgotPwOtp";
@@ -22,17 +23,26 @@ import Profile1 from "@/pages/login/Profile1";
 import Profile2 from "@/pages/login/Profile2";
 import Signin from "@/pages/login/Signin";
 import Signup from "@/pages/login/Signup";
-import AddMeasurements from "@/pages/Services/Booking/AddMeasurements";
-import Booking from "@/pages/Services/Booking/Booking";
-import InPersonConsultation from "@/pages/Services/Booking/Consultation/InPersonConsultation";
-import VirtualConsultation from "@/pages/Services/Booking/Consultation/VirtualConsultation";
-import DesignerDetails from "@/pages/Services/DesignerDetails";
-import MostPopular from "@/pages/Services/MostPopular";
-import Address from "@/pages/Services/Order/Address";
+import AddMeasurements from "@/pages/Booking/AddMeasurements";
+import Booking from "@/pages/Booking/Booking";
+import Checkout from "@/pages/Booking/Checkout";
+import InPersonConsultation from "@/pages/Booking/Consultation/InPersonConsultation";
+import VirtualConsultation from "@/pages/Booking/Consultation/VirtualConsultation";
+import DesignerDetails from "@/pages/Consultation/DesignerDetails";
+import MostPopular from "@/pages/Consultation/MostPopular";
+import Address from "@/pages/Booking/Address/Address";
 import Order from "@/pages/Services/Order/Order";
 import MaterialCheckout from "@/pages/Shop/MaterialCheckout";
 import MaterialDetails from "@/pages/Shop/MaterialDetails";
 import Shop from "@/pages/Shop/Shop";
+import SetNewAddress from "@/pages/Booking/Address/SetNewAddress";
+import InPersonConsultationConfirm from "@/pages/Booking/Consultation/InPersonConsultationConfirm";
+import GiveFeedback from "@/pages/Appointment/GiveFeedback";
+import Blog from "@/pages/Onboarding/Blog/Blog";
+import BlogDetail from "@/pages/Onboarding/Blog/BlogDetail";
+import ContactUs from "@/pages/Onboarding/Contact/ContactUs";
+import AddCoupon from "@/pages/Booking/AddCoupon";
+import MyOrders from "@/pages/Orders/MyOrders";
 
 interface RoutDocument {
   href: string;
@@ -45,8 +55,8 @@ const ROUTES: RoutDocument[] = [
     page: HomePage,
   },
   {
-    href: "LandingPage",
-    page: LandingPage,
+    href: "Dashboard",
+    page: Dashboard,
   },
 
   {
@@ -120,7 +130,7 @@ const ROUTES: RoutDocument[] = [
     page: DesignerDetails,
   },
   {
-    href: "MostPopular",
+    href: "Consultation",
     page: MostPopular,
   },
   {
@@ -170,6 +180,47 @@ const ROUTES: RoutDocument[] = [
   {
     href: "AppointmentCancellation",
     page: AppointmentCancellation,
+  },
+  {
+    href: "Sidebar",
+    page: Sidebar,
+  },
+
+  {
+    href: "Checkout",
+    page: Checkout,
+  },
+  {
+    href: "SetNewAddress",
+    page: SetNewAddress,
+  },
+  {
+    href: "InPersonConsultationConfirm",
+    page: InPersonConsultationConfirm,
+  },
+  {
+    href: "GiveFeedback",
+    page: GiveFeedback,
+  },
+  {
+    href: "Blog",
+    page: Blog,
+  },
+  {
+    href: "BlogDetail",
+    page: BlogDetail,
+  },
+  {
+    href: "ContactUs",
+    page: ContactUs,
+  },
+  {
+    href: "AddCoupon",
+    page: AddCoupon,
+  },
+  {
+    href: "MyOrders",
+    page: MyOrders,
   },
 ];
 

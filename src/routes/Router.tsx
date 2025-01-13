@@ -4,18 +4,20 @@ import { ROUTES } from "./constants";
 import Layout from "@/layouts/Layout";
 // import HomePgNavbar from "@/components/common/HomePgNavbar";
 import STFooter from "@/components/common/STFooter";
-import { STNavbar } from "@/components/common";
+// import { STNavbar } from "@/components/common";
 import HomePgNavbar from "@/components/common/HomePgNavbar";
 
 import useUserContext from "@/context/useUserContext";
 import ScrollToTop from "@/components/common/ScrollToTop";
+import Sidebar from "@/components/common/Sidebar";
 
 const Router: React.FC = () => {
   const { isRegistered } = useUserContext();
   console.log(isRegistered);
   return (
     <BrowserRouter>
-      {isRegistered ? <STNavbar /> : <HomePgNavbar />}
+      {/* {isRegistered ? <STNavbar /> : <HomePgNavbar />} */}
+      {isRegistered ? <Sidebar /> : <HomePgNavbar />}
       {/* <STNavbar /> */}
       <ScrollToTop />
       <Routes>
@@ -29,7 +31,8 @@ const Router: React.FC = () => {
           ))}
         </Route>
       </Routes>
-      <STFooter />
+      {isRegistered ? <></> : <STFooter />}
+      {/* <STFooter /> */}
     </BrowserRouter>
   );
 };

@@ -8,14 +8,17 @@ const HomePgNavbar: React.FC = () => {
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
+    if (isMenuOpen) {
+      setIsMenuOpen(false); // Close the menu when a link is clicked in mobile view
+    }
   };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log("Menu Toggled:", isMenuOpen);
   };
 
   return (
-    <nav className="lg:px-32 px-4 h-[60px] bg-white shadow-md relative">
+    <nav className="lg:px-24 px-4 h-[60px] bg-white shadow-md relative">
       <div className="flex justify-between items-center h-full">
         {/* Logo */}
         <div className="flex font-Gloock items-center gap-2">
@@ -54,17 +57,7 @@ const HomePgNavbar: React.FC = () => {
           >
             About Us
           </NavLink>
-          <NavLink
-            className={
-              activeLink === "/mostpopular"
-                ? "border-b-2 border-[#025195] pb-2"
-                : ""
-            }
-            to="/mostpopular"
-            onClick={() => handleLinkClick("/mostpopular")}
-          >
-            Services
-          </NavLink>
+
           <NavLink
             className={
               activeLink === "/Blog" ? "border-b-2 border-[#025195] pb-2" : ""
@@ -80,7 +73,7 @@ const HomePgNavbar: React.FC = () => {
                 ? "border-b-2 border-[#025195] pb-2"
                 : ""
             }
-            to="/Contact_Us"
+            to="/ContactUs"
             onClick={() => handleLinkClick("/Contact_Us")}
           >
             ContactUs
@@ -104,21 +97,45 @@ const HomePgNavbar: React.FC = () => {
 
       {/* Mobile Navigation Links */}
       {isMenuOpen && (
-        <div className="lg:hidden flex flex-col gap-4  font-Gloock bg-white shadow-md p-4 rounded-b-md absolute top-full left-0 right-0 z-50">
-          <NavLink to="/" className="block">
+        <div className="lg:hidden flex flex-col items-center gap-8 pb-10 font-Gloock bg-white shadow-md p-4 rounded-b-md absolute top-full left-0 right-0 z-50">
+          <NavLink
+            to="/"
+            onClick={() => handleLinkClick("/")}
+            className="block"
+          >
             Home
           </NavLink>
-          <NavLink to="/AboutUs" className="block">
+          <NavLink
+            to="/AboutUs"
+            onClick={() => handleLinkClick("/AboutUs")}
+            className="block"
+          >
             About
           </NavLink>
-          <NavLink to="/MostPopular" className="block">
-            Services
-          </NavLink>
-          <NavLink to="/Blog" className="block">
+          <NavLink
+            to="/Blog"
+            onClick={() => handleLinkClick("/Blog")}
+            className="block"
+          >
             Blog
           </NavLink>
-          <NavLink to="/Contact_Us" className="block">
+          <NavLink
+            to="/ContactUs"
+            onClick={() => handleLinkClick("/ContactUs")}
+            className="block"
+          >
             Contact Us
+          </NavLink>
+
+          <NavLink to="/Login" onClick={() => handleLinkClick("/Login")}>
+            <button className="py-2 font-bold px-8 rounded-full border border-[#025195] text-[#025195]">
+              Login
+            </button>
+          </NavLink>
+          <NavLink to="/Signup" onClick={() => handleLinkClick("/Signup")}>
+            <button className="py-2 px-8  rounded-full bg-[#025195] text-white">
+              Sign Up
+            </button>
           </NavLink>
         </div>
       )}

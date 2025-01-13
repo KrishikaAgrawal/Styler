@@ -70,11 +70,11 @@ const Profile1: React.FC = () => {
   };
 
   return (
-    <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] ">
-      <div className="flex flex-col h-screen md:h-fit md:px-5 lg:w-2/3 md:flex-row bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
+    <div className=" md:flex justify-center items-center md:h-screen bg-[#F4F0F0] ">
+      <div className="flex flex-col h-screen md:h-fit p-5 lg:w-2/3 md:flex-row bg-white gap-5 lg:gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
         {/* Page image */}
-        <div className="flex flex-col py-5 md:w-1/4 ">
-          <div className="flex gap-4 pb-5">
+        <div className="flex flex-col   ">
+          <div className="flex gap-4 lg:pb-5 items-center">
             <a href="/Signup">
               <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
@@ -91,9 +91,9 @@ const Profile1: React.FC = () => {
         </div>
 
         {/* form */}
-        <div className="flex flex-col p-5 justify-center items-center md:w-2/3 ">
+        <div className="flex flex-col lg:px-5 justify-center items-center md:w-2/3 ">
           {/* profile image */}
-          <div className="flex justify-center items-center mb-8">
+          <div className="flex justify-center items-center mb-5">
             <label className="relative">
               <input
                 type="file"
@@ -102,7 +102,7 @@ const Profile1: React.FC = () => {
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer "
               />
               <div
-                className={`w-32 h-32 bg-[#F5F5F5] rounded-full flex justify-center items-center overflow-hidden ${
+                className={`w-28 h-28 bg-[#F5F5F5] rounded-full flex justify-center items-center overflow-hidden ${
                   selectedImage ? "border-2 border-gray-300" : ""
                 }`}
                 style={{

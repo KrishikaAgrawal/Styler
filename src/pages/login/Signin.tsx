@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useUserContext from "@/context/useUserContext";
 
 import "../../index.css";
 
@@ -16,6 +18,15 @@ const Signin: React.FC = () => {
     setPasswordVisible(!passwordVisible);
   };
 
+  // change navbar when user login
+  const navigate = useNavigate();
+  const { setIsRegistered } = useUserContext();
+  const handleSignin = () => {
+    setTimeout(() => {
+      navigate("/Dashboard");
+      setIsRegistered(true);
+    }, 1000);
+  };
   return (
     <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0]">
       <div className="flex flex-col h-screen md:h-5/6 md:px-10 lg:w-2/3 md:flex-row-reverse bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
@@ -31,13 +42,13 @@ const Signin: React.FC = () => {
         <div className="flex flex-col p-5  justify-center items-center md:w-1/2 ">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-[#025195] text-white rounded-full text-7xl font-Gloock w-20 h-20 flex justify-center items-center">
+            <div className="bg-[#025195] text-white rounded-full text-5xl font-Gloock w-16 h-16 flex justify-center items-center">
               S
             </div>
             <div className="text-5xl font-Gloock">Styler.</div>
           </div>
           {/* Create your account */}
-          <h1 className="text-3xl mt-3 mb-10 font-Gloock text-center text-[#025195] ">
+          <h1 className="text-3xl  mt-2 mb-6 font-Gloock text-center text-[#025195] ">
             Login to Your Account
           </h1>
 
@@ -73,7 +84,7 @@ const Signin: React.FC = () => {
           </div>
 
           {/* Remember me */}
-          <div className="flex items-center my-6">
+          <div className="flex items-center my-4">
             <input
               id="rememberMe"
               type="checkbox"
@@ -88,11 +99,14 @@ const Signin: React.FC = () => {
           </div>
 
           {/* sign up button */}
-          <a href="/LandingPage" className="w-full">
-            <button className="flex p-4 items-center justify-center w-full bg-[#025195] gap-4 rounded-full">
-              <p className=" font-inter font-semibold text-white">Sign in</p>
-            </button>
-          </a>
+          {/* <a href="/Dashboard" className="w-full"> */}
+          <button
+            onClick={handleSignin}
+            className="flex p-4 items-center justify-center w-full bg-[#025195] gap-4 rounded-full"
+          >
+            <p className=" font-inter font-semibold text-white">Sign in</p>
+          </button>
+          {/* </a> */}
 
           <a
             href="/ForgotPassword"
@@ -102,7 +116,7 @@ const Signin: React.FC = () => {
           </a>
 
           {/* or continue with */}
-          <div className="relative flex items-center my-4 w-full">
+          <div className="relative flex items-center my-2 w-full">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-[#EFEEEE] bottom-5 "></div>
             </div>
@@ -125,7 +139,7 @@ const Signin: React.FC = () => {
           </div>
 
           {/* sign in option */}
-          <p className="text-[#A0A2A2] text-center font-medium pt-3 ">
+          <p className="text-[#A0A2A2] text-center font-medium pt-2 ">
             Don’t have an account?
             <a
               href="/SignUp"

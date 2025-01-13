@@ -16,10 +16,10 @@ const ForgotPassword: React.FC = () => {
 
   return (
     <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] font-inter ">
-      <div className="flex flex-col h-screen md:h-fit md:px-5 lg:w-2/3 md:flex-row bg-white gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
-        <div className="flex flex-col py-5 md:w-1/4 ">
+      <div className="flex flex-col h-screen md:h-fit p-5 md:px-5 lg:w-2/3 md:flex-row bg-white gap-8  lg:border md:rounded-2xl lg:shadow-2xl ">
+        <div className="flex flex-col  ">
           {/*Forgot password  */}
-          <div className="flex gap-4 pb-5">
+          <div className="flex gap-4 pb-5 items-center">
             <a href="/Signin">
               <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
@@ -27,7 +27,7 @@ const ForgotPassword: React.FC = () => {
           </div>
 
           {/* Page image */}
-          <div className="md:flex flex-col h-[500px] hidden ">
+          <div className="md:flex flex-col h-[480px] hidden ">
             <img
               src={Profile}
               alt=""
@@ -36,7 +36,7 @@ const ForgotPassword: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col p-5 justify-center items-center md:w-2/3 gap-3">
+        <div className="flex flex-col justify-center items-center md:w-2/3 gap-3">
           <p className="text-[#A0A2A2] text-center py-6  text-lg ">
             Select which contact details should we use to reset your password
           </p>
