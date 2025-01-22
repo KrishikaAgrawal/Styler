@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -22,6 +23,12 @@ interface DuePayment {
 const DuePaymentCard: React.FC<{ DuePaymentData: DuePayment }> = ({
   DuePaymentData,
 }) => {
+  const navigate = useNavigate();
+  const handleDetails = () => {
+    navigate("/DuePaymentOrderViewDetails", {
+      state: { order: DuePaymentData },
+    });
+  };
   return (
     <div className="font-inter rounded-lg border flex flex-col gap-3 p-4 shadow-custom-shadow mb-6">
       {/* order id and status */}
@@ -110,10 +117,13 @@ const DuePaymentCard: React.FC<{ DuePaymentData: DuePayment }> = ({
         </p>
       </div>
       {/* details button */}
-      <div className="flex rounded-full bg-[#025195] gap-5 text-white font-semibold text-xs w-full items-center p-4 justify-center">
+      <button
+        onClick={handleDetails}
+        className="flex rounded-full bg-[#025195] gap-5 text-white font-semibold text-xs w-full items-center p-4 justify-center"
+      >
         <p>View Details</p>
         <FaArrowRightLong />
-      </div>
+      </button>
     </div>
   );
 };

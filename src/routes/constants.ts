@@ -43,6 +43,14 @@ import BlogDetail from "@/pages/Onboarding/Blog/BlogDetail";
 import ContactUs from "@/pages/Onboarding/Contact/ContactUs";
 import AddCoupon from "@/pages/Booking/AddCoupon";
 import MyOrders from "@/pages/Orders/MyOrders";
+import OrderViewDetails from "@/pages/Orders/OrderViewDetails";
+import DuePaymentOrderViewDetails from "@/pages/Orders/DuePaymentOrderViewDetails";
+import CancelledOrderPage from "@/pages/Orders/CancelledOrderPage";
+import CancelledOrderViewPage from "@/pages/Orders/CancelledOrderViewPage";
+import PaymentOverview from "@/pages/Payment/PaymentOverview";
+import TransactionHistory from "@/pages/Payment/TransactionHistory";
+import Quotation from "@/pages/Quotation/Quotation";
+import QuotationPayment from "@/pages/Quotation/QuotationPayment";
 
 interface RoutDocument {
   href: string;
@@ -221,6 +229,38 @@ const ROUTES: RoutDocument[] = [
   {
     href: "MyOrders",
     page: MyOrders,
+  },
+  {
+    href: "OrderViewDetails",
+    page: OrderViewDetails,
+  },
+  {
+    href: "DuePaymentOrderViewDetails",
+    page: DuePaymentOrderViewDetails,
+  },
+  {
+    href: "CancelledOrderPage",
+    page: CancelledOrderPage,
+  },
+  {
+    href: "CancelledOrderViewPage",
+    page: CancelledOrderViewPage,
+  },
+  {
+    href: "PaymentOverview",
+    page: PaymentOverview,
+  },
+  {
+    href: "TransactionHistory",
+    page: TransactionHistory,
+  },
+  {
+    href: "Quotation",
+    page: Quotation,
+  },
+  {
+    href: "QuotationPayment",
+    page: QuotationPayment,
   },
 ];
 

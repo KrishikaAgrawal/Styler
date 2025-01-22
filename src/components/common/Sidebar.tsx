@@ -198,7 +198,7 @@ const Sidebar: React.FC = () => {
                 ? " rounded-r-full bg-[#025195] text-white"
                 : ""
             }`}
-            to="/Payment"
+            to="/PaymentOverview"
             onClick={() => handleLinkClick("/Payment")}
           >
             <IoWalletSharp className="text-2xl" />
