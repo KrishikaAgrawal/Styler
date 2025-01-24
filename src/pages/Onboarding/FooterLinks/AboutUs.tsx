@@ -371,9 +371,9 @@ const AboutUs: React.FC = () => {
                 her innovative ideas.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -388,9 +388,9 @@ const AboutUs: React.FC = () => {
                 and reliability.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -404,9 +404,9 @@ const AboutUs: React.FC = () => {
                 her technical expertise with an eye for intuitive design.{" "}
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -420,9 +420,9 @@ const AboutUs: React.FC = () => {
                 every system he builds is robust, secure, and scalable.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -436,9 +436,9 @@ const AboutUs: React.FC = () => {
                 sure every interface is engaging, functional, and responsive.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -452,9 +452,9 @@ const AboutUs: React.FC = () => {
                 help her craft dependable and efficient software solutions.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -468,9 +468,9 @@ const AboutUs: React.FC = () => {
                 experiences with a perfect balance of design and functionality.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -484,9 +484,9 @@ const AboutUs: React.FC = () => {
                 application runs smoothly and scales effortlessly.
               </p>
               <div className="flex gap-2 pt-2">
-                <FiFacebook className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiInstagram className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
-                <FiTwitter className="w-10 h-10 p-3 text-white bg-[#025195] rounded-full" />
+                <FiFacebook className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiInstagram className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
+                <FiTwitter className="lg:w-10 lg:h-10 lg:p-3 w-8 h-8 p-2 text-white bg-[#025195] rounded-full" />
               </div>
             </div>
           </div>
@@ -552,13 +552,13 @@ const AboutUs: React.FC = () => {
             <img
               src={Vision}
               alt=""
-              className="w-1/2 lg:rounded-tr-[80px] rounded-tr-[50px] lg:rounded-bl-[80px] rounded-bl-[50px]"
+              className="w-1/2 lg:rounded-tr-[80px] rounded-tr-[50px] lg:rounded-bl-[80px] rounded-bl-[50px] object-cover"
             />
             <div className="flex flex-col gap-3">
               <img
                 src={Vision}
                 alt=""
-                className="h-1/2 lg:rounded-tl-[80px] rounded-tl-[50px] lg:rounded-br-[80px] rounded-br-[50px]"
+                className="h-1/2 lg:rounded-tl-[80px] rounded-tl-[50px] lg:rounded-br-[80px] rounded-br-[50px] object-cover"
               />
               <img
                 src={Vision}
@@ -570,7 +570,7 @@ const AboutUs: React.FC = () => {
         </div>
       </div>
 
-      {/* Success Stories */}
+      {/* Meet our international stylers */}
       <div className="flex flex-col gap-10 md:gap-20 lg:gap-28 py-10 px-5 md:px-16 lg:py-16 lg:px-40 items-center bg-[#025195] ">
         <h1 className="font-Gloock text-white text-2xl lg:text-4xl lg:w-5/6 text-center ">
           Meet our international stylers and collaborate with experts to shine
@@ -588,7 +588,7 @@ const AboutUs: React.FC = () => {
                 <img
                   src={Profile1}
                   alt=""
-                  className="w-14 rounded-full h-14 object-cover"
+                  className="lg:w-14 w-12 rounded-full lg:h-14 h-12 object-cover"
                 />
                 <div className="flex flex-col ">
                   <p className="md:text-[22px] text-lg font-bold">

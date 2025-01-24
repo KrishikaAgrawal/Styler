@@ -9,12 +9,12 @@ import facebook from "../../assets/Login/facebook.png";
 const Login: React.FC = () => {
   return (
     <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0]">
-      <div className="flex flex-col h-screen md:h-5/6 md:px-10 lg:w-2/3 md:flex-row-reverse bg-white lg:border md:rounded-2xl lg:shadow-2xl ">
-        <div className="flex flex-col md:py-10 w-full md:w-1/2 h-2/5 md:h-full">
+      <div className="flex flex-col md:h-fit md:px-5 lg:w-2/3 md:flex-row-reverse bg-white gap-4 md:gap-8 lg:border md:rounded-2xl lg:shadow-2xl items-center ">
+        <div className="flex flex-col md:py-5 w-full md:w-1/2 h-[200px] md:h-[580px]">
           <img
             src={boarding}
             alt=""
-            className="rounded-2xl w-full h-full object-cover"
+            className="md:rounded-2xl w-full h-full object-cover"
           />
         </div>
 

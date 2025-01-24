@@ -124,7 +124,7 @@ const Otp: React.FC = () => {
                 value={value}
                 onChange={(e) => handleChange(e, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
-                className={`w-24 h-12 text-center text-xl border border-[#025195] rounded-lg ${
+                className={`lg:w-24 w-16 h-12 text-center text-xl border border-[#025195] rounded-lg ${
                   isMasked[index] && value ? "otp-mask" : ""
                 }`}
                 maxLength={1}

@@ -31,7 +31,7 @@ const appointmentData: Appointment[] = [
   },
   {
     id: "#56784",
-    status: "Cmpleted",
+    status: "Cancelled",
     name: "Arjun Verma",
     img: appointment1,
     topic: "Custom Tailoring Consultation",

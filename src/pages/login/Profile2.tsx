@@ -25,7 +25,7 @@ const Profile2: React.FC = () => {
           </div>
         </div>
         {/* form */}
-        <div className="flex flex-col p-5 justify-center items-center md:w-2/3 gap-3">
+        <div className="flex flex-col lg:px-5 justify-center items-center md:w-2/3 gap-3 ">
           {/* Address 1 */}
           <input
             type="text"
