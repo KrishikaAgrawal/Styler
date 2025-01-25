@@ -51,7 +51,6 @@ import PaymentOverview from "@/pages/Payment/PaymentOverview";
 import TransactionHistory from "@/pages/Payment/TransactionHistory";
 import Quotation from "@/pages/Quotation/Quotation";
 import QuotationPayment from "@/pages/Quotation/QuotationPayment";
-import { VendorOnboarding } from "@/pages/VendorOnboarding/VerdorOnboarding";
 
 interface RoutDocument {
   href: string;
@@ -262,10 +261,6 @@ const ROUTES: RoutDocument[] = [
   {
     href: "QuotationPayment",
     page: QuotationPayment,
-  },
-  {
-    href: "VendorOnboarding",
-    page: VendorOnboarding,
   },
 ];
 
