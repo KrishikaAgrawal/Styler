@@ -8,7 +8,13 @@ import pic4 from "../../../assets/Services/services/pic4.png";
 
 import { IoIosArrowDown } from "react-icons/io";
 
-const Services: React.FC = () => {
+interface ComponentProps {
+  id: string | undefined;
+}
+
+const Services: React.FC<ComponentProps> = ({ id }) => {
+  console.log("id", id);
+
   interface Item {
     img: string;
     title: string;

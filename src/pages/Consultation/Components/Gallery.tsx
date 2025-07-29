@@ -7,7 +7,13 @@ import gallery3 from "../../../assets/Services/gallery3.png";
 import gallery4 from "../../../assets/Services/gallery4.png";
 import gallery5 from "../../../assets/Services/gallery5.png";
 
-const Gallery: React.FC = () => {
+interface ComponentProps {
+  id: string | undefined;
+}
+
+const Gallery: React.FC<ComponentProps> = ({ id }) => {
+  console.log("id", id);
+  
   const navigate = useNavigate();
   const navigateToBooking = () => {
     navigate("/Booking");
