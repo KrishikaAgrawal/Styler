@@ -19,8 +19,8 @@ import ForgotPassword from "@/pages/login/ForgotPassword";
 import ForgotPwOtp from "@/pages/login/ForgotPwOtp";
 import Login from "@/pages/login/Login";
 import Otp from "@/pages/login/Otp";
-import Profile1 from "@/pages/login/Profile1";
-import Profile2 from "@/pages/login/Profile2";
+// import Profile1 from "@/pages/login/Profile1";
+// import Profile2 from "@/pages/login/Profile2";
 import Signin from "@/pages/login/Signin";
 import Signup from "@/pages/login/Signup";
 import AddMeasurements from "@/pages/Booking/AddMeasurements";
@@ -117,14 +117,14 @@ const ROUTES: RoutDocument[] = [
     href: "Otp",
     page: Otp,
   },
-  {
-    href: "Profile1",
-    page: Profile1,
-  },
-  {
-    href: "Profile2",
-    page: Profile2,
-  },
+  // {
+  //   href: "Profile1",
+  //   page: Profile1,
+  // },
+  // {
+  //   href: "Profile2",
+  //   page: Profile2,
+  // },
   {
     href: "Signin",
     page: Signin,
@@ -134,7 +134,7 @@ const ROUTES: RoutDocument[] = [
     page: Signup,
   },
   {
-    href: "DesignerDetails",
+    href: "DesignerDetails/:id",
     page: DesignerDetails,
   },
   {

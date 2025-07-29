@@ -1,39 +1,20 @@
 import "../../index.css";
+import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-import useUserContext from "@/context/useUserContext";
-
+import Profile from "../../assets/Login/Profile.png";
+import { FaArrowRight } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Profile from "../../assets/Login/Profile.png";
-import { FaArrowRight } from "react-icons/fa";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 const Otp: React.FC = () => {
-  const navigate = useNavigate();
-  const { setIsRegistered } = useUserContext();
-  const notify = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    event.preventDefault();
-    toast.success(" Successfully Registered !!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
-
-    setTimeout(() => {
-      navigate("/Dashboard");
-      setIsRegistered(true);
-    }, 5000);
-  };
-
   const [otp, setOtp] = useState<string[]>(Array(4).fill(""));
   const [isMasked, setIsMasked] = useState<boolean[]>(Array(4).fill(false));
+  const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -72,24 +53,59 @@ const Otp: React.FC = () => {
       }
     }
   };
+
+  const handleSubmit = async (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    setError(null);
+    setSuccessMessage(null);
+
+    try {
+      const response = await axios.post(
+        `${SERVER_URL}/api/v1/verify-user-email`,
+        {
+          otp: otp.join(""), // Convert array to string
+        }
+      );
+
+      if (response.status >= 200 && response.status <= 205) {
+        setSuccessMessage(response.data.message);
+        toast.success("Successfully Registered!", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+
+        setTimeout(() => {
+          navigate("/Signin");
+        }, 3000);
+      }
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data?.message || "Something went wrong.");
+      } else {
+        setError("An error occurred.");
+      }
+    }
+  };
+
   return (
-    <div className=" md:flex justify-center items-center lg:h-screen bg-[#F4F0F0] ">
-      <div className="flex flex-col h-screen md:h-fit p-5 lg:w-2/3 md:flex-row bg-white gap-5 lg:gap-8 lg:border md:rounded-2xl lg:shadow-2xl ">
+    <div className="md:flex justify-center items-center lg:h-screen bg-[#F4F0F0]">
+      <div className="flex flex-col h-screen md:h-fit p-5 lg:w-2/3 md:flex-row bg-white gap-5 lg:gap-8 lg:border md:rounded-2xl lg:shadow-2xl">
         <div className="flex flex-col">
-          {/*Enter OTP code  */}
+          {/* Enter OTP code */}
           <div className="flex gap-4 pb-5">
-            <a href="/Profile2">
+            <a href="/Signin">
               <FaArrowRight className="text-[#025195] bg-[#DEF9FF] rounded-full p-2 h-7 w-7 transform rotate-180" />
             </a>
             <p className="text-2xl font-bold">Enter OTP code</p>
           </div>
 
           {/* Page image */}
-
-          <div className="md:flex flex-col h-[500px] hidden ">
+          <div className="md:flex flex-col h-[500px] hidden">
             <img
               src={Profile}
-              alt=""
+              alt="Profile"
               className="md:rounded-2xl w-full h-full object-cover"
             />
           </div>
@@ -103,10 +119,10 @@ const Otp: React.FC = () => {
             </div>
             <div className="text-5xl font-Gloock">Styler.</div>
           </div>
-          <h1 className="text-3xl mt-3 font-Gloock text-center text-[#025195] ">
+          <h1 className="text-3xl mt-3 font-Gloock text-center text-[#025195]">
             Add Your OTP Code
           </h1>
-          <p className="text-[#A0A2A2] text-center py-6  text-lg ">
+          <p className="text-[#A0A2A2] text-center py-6 text-lg">
             Please enter the
             <span className="text-[#025195] font-semibold cursor-pointer">
               {" "}
@@ -114,7 +130,8 @@ const Otp: React.FC = () => {
             </span>
             to your phone number below to verify.
           </p>
-          {/* otp */}
+
+          {/* OTP Input */}
           <div className="flex space-x-2 justify-center">
             {otp.map((value, index) => (
               <input
@@ -132,15 +149,24 @@ const Otp: React.FC = () => {
               />
             ))}
           </div>
-          <a href="" className="w-full">
-            <button
-              className="flex p-4 mt-8 items-center justify-center w-full bg-[#025195] gap-4 rounded-full"
-              onClick={notify}
-            >
-              <p className=" font-inter font-semibold text-white">Continue</p>
-            </button>
-            <ToastContainer />
-          </a>
+
+          {/* Error & Success Messages */}
+          <div className="my-2">
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+            {successMessage && (
+              <p className="text-green-500 text-sm">{successMessage}</p>
+            )}
+          </div>
+
+          {/* Submit Button */}
+          <button
+            className="flex p-4 mt-8 items-center justify-center w-full bg-[#025195] gap-4 rounded-full"
+            onClick={handleSubmit}
+          >
+            <p className="font-inter font-semibold text-white">Continue</p>
+          </button>
+
+          <ToastContainer />
         </div>
       </div>
     </div>

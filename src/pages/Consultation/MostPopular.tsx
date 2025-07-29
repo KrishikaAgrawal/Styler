@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import Fuse from "fuse.js";
+import useFetch from "@/Hooks/useFetch";
 
 import mostPopular from "../../assets/Services/MostPopular.png";
-
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { IoIosStarHalf } from "react-icons/io";
 import { IoIosStar } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -11,128 +13,76 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LuSearch } from "react-icons/lu";
 // import { IoFilterSharp } from "react-icons/io5";
 import ItemNotFound from "./ItemNotFound";
+import Loading from "../Loading/Loading";
+
+interface Service {
+  serviceName: string;
+  _id: string;
+  subService: unknown[];
+}
+
+interface Designer {
+  _id: string;
+  fullname: string;
+  country: string;
+  city: string;
+  role: string;
+  specialization: string[];
+  description: string;
+  services: Service[];
+}
 
 const MostPopular: React.FC = () => {
   const navigate = useNavigate();
-  const navigateToDesigner = () => {
-    navigate("/DesignerDetails");
+  const navigateToDesigner = (id: string) => {
+    navigate(`/DesignerDetails/${id}`);
   };
-  interface MostPopular {
-    img: string;
-    // heart: string;
-    name: string;
-    designer: string;
-    loc: string;
-    dist: string;
-    spec: string;
-    services: string;
-    discription: string;
-    orders: string;
-    rating: string;
-  }
 
-  // MostPopular Data
-  const data2: MostPopular[] = [
-    {
-      img: mostPopular,
-      name: "Aria Couture",
-      designer: "Designer",
-      loc: "NEW YORK, USA",
-      dist: "5 km",
-      spec: "High-fashion evening gowns, custom wedding dresses, and luxury bespoke tailoring.",
-      services: "Custom design consultations, garment creation, alterations.",
-      discription:
-        "Aria Couture brings elegance and sophistication to every custom piece, with a focus on intricate detailing and perfect tailoring. Ideal for clients seeking red-carpet glamour or unforgettable bridal gowns.",
-      rating: "(4.9/5)",
-      orders: "2,341 orders completed",
-    },
-    {
-      img: mostPopular,
-      name: "Bella Moda",
-      designer: "Designer",
-      loc: "PARIS, FRANCE",
-      dist: "8 km",
-      spec: "Modern casual wear, stylish office attire, and bespoke fashion.",
-      services:
-        "Style consultation, custom garment creation, wardrobe planning.",
-      discription:
-        "Bella Moda specializes in creating modern and chic designs for everyday wear. Perfect for fashion-forward individuals looking to enhance their wardrobe.",
-      rating: "(4.7/5)",
-      orders: "1,800 orders completed",
-    },
-    {
-      img: mostPopular,
-      name: "Elegance Atelier",
-      designer: "Designer",
-      loc: "MILAN, ITALY",
-      dist: "10 km",
-      spec: "Luxury evening wear, bespoke suits, and high-end bridal gowns.",
-      services:
-        "Bespoke tailoring, fabric selection consultation, fitting services.",
-      discription:
-        "Elegance Atelier is known for its luxurious designs and exceptional tailoring. Ideal for clients who desire sophistication and elegance in their attire.",
-      rating: "(4.8/5)",
-      orders: "2,000 orders completed",
-    },
-    {
-      img: mostPopular,
-      name: "Urban Chic",
-      designer: "Designer",
-      loc: "TOKYO, JAPAN",
-      dist: "6 km",
-      spec: "Contemporary streetwear, unique fashion statements, and urban apparel.",
-      services:
-        "Custom streetwear design, limited edition collections, style advice.",
-      discription:
-        "Urban Chic offers cutting-edge streetwear and urban fashion. Perfect for those who want to make a bold fashion statement.",
-      rating: "(4.6/5)",
-      orders: "1,500 orders completed",
-    },
-    {
-      img: mostPopular,
-      name: "Royal Garb",
-      designer: "Designer",
-      loc: "LONDON, UK",
-      dist: "3 km",
-      spec: "Classic British tailoring, royal-themed costumes, and formal wear.",
-      services: "Tailoring services, costume design, alteration services.",
-      discription:
-        "Royal Garb provides high-quality British tailoring and formal wear. Ideal for clients seeking classic and timeless fashion.",
-      rating: "(4.9/5)",
-      orders: "2,500 orders completed",
-    },
-    {
-      img: mostPopular,
-      name: "Vogue Virtuoso",
-      designer: "Designer",
-      loc: "LOS ANGELES, USA",
-      dist: "12 km",
-      spec: "Red carpet dresses, luxury casual wear, and innovative fashion design.",
-      services: "Red carpet styling, fashion design, personal shopping.",
-      discription:
-        "Vogue Virtuoso is famous for its red carpet and luxury casual wear. Ideal for those who want to stand out with innovative and trendy designs.",
-      rating: "(4.8/5)",
-      orders: "2,200 orders completed",
-    },
-  ];
-
-  // search functionality
+  const [designerData, setDesignerData] = useState<Designer[]>([]);
+  const [filteredData, setFilteredData] = useState<Designer[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredData, setFilteredData] = useState<MostPopular[]>(data2);
+  const [liked, setLiked] = useState(false);
+  const { data, loading, error } = useFetch<{ partners: Designer[] }>(
+    "get/partners"
+  );
+
+  useEffect(() => {
+    if (data?.partners) {
+      const designers = data.partners.map((partner) => ({
+        _id: partner._id,
+        fullname: partner.fullname,
+        country: partner.country,
+        city: partner.city,
+        role: partner.role,
+        specialization: partner.specialization || [],
+        description: partner.description,
+        services: partner.services || [],
+      }));
+      setDesignerData(designers);
+      setFilteredData(designers);
+    }
+  }, [data]);
 
   // Initialize Fuse.js
-  const fuse = new Fuse(data2, {
-    keys: ["spec"],
-  });
+  const fuse = useMemo(() => {
+    return new Fuse(designerData, {
+      keys: ["specialization", "fullname", "role", "services.serviceName"],
+      threshold: 0.3, // Adjust for sensitivity
+    });
+  }, [designerData]);
 
   useEffect(() => {
     if (searchTerm.trim()) {
       const results = fuse.search(searchTerm);
       setFilteredData(results.map((result) => result.item));
     } else {
-      setFilteredData(data2);
+      setFilteredData(designerData);
     }
-  }, [searchTerm]);
+  }, [searchTerm, designerData, fuse]);
+
+  // if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading />;
+  if (error) return <p className="text-red-500">Error: {error}</p>;
 
   return (
     <div className="p-5 md:p-12 font-inter">
@@ -159,68 +109,83 @@ const MostPopular: React.FC = () => {
       {/* cards */}
       {filteredData.length > 0 ? (
         <div className="grid lg:grid-cols-3 gap-4">
-          {filteredData.map((MostPopular, index) => (
+          {filteredData.map((Partner) => (
             <div
-              onClick={navigateToDesigner}
-              key={index}
+              key={Partner._id}
               className=" cursor-pointer p-3 rounded-2xl border border-black"
             >
-              <img
-                src={MostPopular.img}
-                alt=""
-                className="rounded-2xl h-52 bg-cover w-full "
-              />
+              <div className="relative">
+                <img
+                  src={mostPopular}
+                  alt=""
+                  className="rounded-2xl h-52  w-full object-cover "
+                />
+                <button
+                  onClick={() => setLiked(!liked)}
+                  className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
+                >
+                  {liked ? (
+                    <FaHeart className="w-6 h-6 text-[#025195]" />
+                  ) : (
+                    <FaRegHeart className="w-6 h-6 text-[#025195]" />
+                  )}
+                </button>
+              </div>
               <div className="flex  mt-4 items-center justify-between">
                 <a href="/DesignerDetails">
                   <h1 className=" leading-none text-3xl lg:text-4xl text-[#025195] font-Gloock  ">
-                    {MostPopular.name}
+                    {Partner.fullname}
                   </h1>
                 </a>
                 <p className=" border-2 rounded-lg py-2 px-2 font-semibold text-[#0B1957] bg-[#D9E0FF] border-[#0B1957]">
-                  {MostPopular.designer}
+                  {Partner.role}
                 </p>
               </div>
               <div className="flex items-center my-3 justify-between">
                 <p className="   px-8 py-2 rounded-lg text-[#025195] border border-[#025195] bg-[#DEF9FF] font-bold">
-                  {MostPopular.loc}
+                  {Partner.city}, {Partner.country}
                 </p>
-                <div className="flex items-center gap-1">
-                  <IoLocationOutline className="w-7" />
-                  <div className="font-bold text-[#025195] text-lg">
-                    {MostPopular.dist}
+                <div className="flex  text-[#025195] items-center gap-1">
+                  <IoLocationOutline className="text-xl" />
+                  <div className="font-bold text-lg">
+                    {/* {Partner.dist} */}5 Km
                   </div>
                 </div>
               </div>
               <p className="font-bold leading-4 text-sm text-[#025195]">
-                Specialization:
+                Specialization:{" "}
                 <span className="font-normal text-[#7C7C7C]">
-                  {MostPopular.spec}
+                  {/* {Partner.spec} */}
+                  {Partner.specialization.join(", ") || "N/A"}
                 </span>
               </p>
               <p className="font-bold text-sm leading-4 my-3 text-[#025195]">
-                Services:
+                Services:{" "}
                 <span className="font-normal text-[#7C7C7C]">
-                  {MostPopular.services}
+                  {/* {Partner.services} */}
+                  {Partner.services
+                    .map((service) => service.serviceName)
+                    .join(", ") || "N/A"}
                 </span>
               </p>
               <p className="font-bold text-sm leading-4 text-[#025195]">
-                Description:
+                Description:{" "}
                 <span className="font-normal text-[#7C7C7C]">
-                  {MostPopular.discription}
+                  {Partner.description}
                 </span>
               </p>
               <div className="flex gap-3 my-5">
-                <div className="flex justify-center w-1/2 py-3 text-sm text-[#75C44C] italic border border-[#75C44C] rounded-xl">
+                <div className="flex justify-center text-center w-1/2 py-3 text-sm text-[#75C44C] italic border border-[#75C44C] rounded-xl">
                   2,341 orders completed
                 </div>
-                <div className="flex justify-center w-1/2 py-3 text-[#F21F61] border border-[#F21F61] rounded-xl">
+                <div className="flex justify-center items-center w-1/2 py-3 text-[#F21F61] border border-[#F21F61] rounded-xl">
                   Set appointment
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <div className="flex gap-3">
+                <div className="flex gap-3 items-center">
                   <p className=" font-bold leading-none">
-                    {MostPopular.rating}
+                    {/* {Partner.rating} */}(4.5/5)
                   </p>
                   <div className="flex gap-1 mr-14">
                     <IoIosStar className="w-5 h-5 text-[#025195]" />
@@ -229,7 +194,10 @@ const MostPopular: React.FC = () => {
                     <IoIosStarHalf className="w-5 text-[#025195] h-5" />
                   </div>
                 </div>
-                <div className="border border-[#025195] bg-white p-[2px] rounded-full inline-flex items-center justify-center">
+                <div
+                  onClick={() => navigateToDesigner(Partner._id)}
+                  className="border border-[#025195] bg-white p-[2px] rounded-full inline-flex items-center justify-center"
+                >
                   <FaArrowRightLong className="bg-[#025195] text-white rounded-full p-2 h-8 w-8 md:h-10 md:w-10" />
                 </div>
               </div>

@@ -21,6 +21,7 @@ const BlogDetail: React.FC = () => {
   const location = useLocation();
   const { state } = location;
   const { img, topic, author, date, largeDescription } = state;
+  // const { _id, img, topic, author, date, largeDescription } = state;
 
   // recent blog
   const navigate = useNavigate();
@@ -146,6 +147,9 @@ const BlogDetail: React.FC = () => {
           <p className="text-[#718096]">{date}</p>
         </div>
         <div className="text-[#718096]">
+          <p>{largeDescription}</p>
+        </div>
+        {/* <div className="text-[#718096]">
           <p>{largeDescription.text1}</p>
           <br />
           <p>{largeDescription.text2}</p>
@@ -155,7 +159,7 @@ const BlogDetail: React.FC = () => {
           </h2>
           <br />
           <p>{largeDescription.text3}</p>
-        </div>
+        </div> */}
       </div>
       {/* Other recent blog */}
       <h1 className=" my-10 text-[#025195] font-bold text-3xl lg:text-5xl">

@@ -1,19 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // image
 import BlogHero from "../../../assets/Blog/BlogHero.png";
 import Recent1 from "../../../assets/Blog/Recent1.png";
-import Recent2 from "../../../assets/Blog/Recent2.png";
-import Recent3 from "../../../assets/Blog/Recent3.png";
+// import Recent2 from "../../../assets/Blog/Recent2.png";
+// import Recent3 from "../../../assets/Blog/Recent3.png";
 import Trendy1 from "../../../assets/Blog/Trendy1.png";
 import Trendy2 from "../../../assets/Blog/Trendy2.png";
 import Trendy3 from "../../../assets/Blog/Trendy3.png";
-import Latest1 from "../../../assets/Blog/Latest1.png";
-import Latest2 from "../../../assets/Blog/Latest2.png";
-import Latest3 from "../../../assets/Blog/Latest3.png";
-import Fashion1 from "../../../assets/Blog/Fashion1.png";
-import Fashion2 from "../../../assets/Blog/Fashion2.png";
-import Fashion3 from "../../../assets/Blog/Fashion3.png";
+
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 // icons
 import { FaRegCalendarDays } from "react-icons/fa6";
@@ -26,6 +23,42 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Blog: React.FC = () => {
+  const [recentBlogs, setRecentBlogs] = useState<RecentB[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get(`${SERVER_URL}/api/v1/recent-blogs`);
+        if (response.data && response.data.blogs) {
+          console.log(response.data.blogs);
+
+          const recentBlogs = response.data.blogs.map(
+            (recentBlog: RecentB) => ({
+              id: recentBlog._id,
+              title: recentBlog.title,
+              authorName: recentBlog.authorName,
+              content: recentBlog.content,
+              createdAt: new Date(recentBlog.createdAt).toLocaleDateString(
+                "en-US",
+                {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }
+              ),
+            })
+          );
+
+          console.log(recentBlogs);
+          setRecentBlogs(recentBlogs); // Store in state
+        }
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
   const navigate = useNavigate();
 
   // RECENT BLOGS
@@ -36,72 +69,81 @@ const Blog: React.FC = () => {
     text3: string;
   }
   // Recent datatype
-  interface Recent {
-    img: string;
-    date: string;
-    author: string;
-    topic: string;
-    description: string;
-    largeDescription: LargeDescription;
+  // interface Recent {
+  //   img: string;
+  //   date: string;
+  //   author: string;
+  //   topic: string;
+  //   description: string;
+  //   largeDescription: LargeDescription;
+  // }
+  interface RecentB {
+    _id: string;
+    // img: string;
+    createdAt: string;
+    authorName: string;
+    title: string;
+    content: string;
+    // largeDescription: LargeDescription;
   }
 
   // Recent data
-  const data: Recent[] = [
-    {
-      img: Recent1,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Transforming Style: Exploring the Future of Fashion Design Platforms",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-    {
-      img: Recent2,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Innovative Fashion Design Platforms: Shaping the Next Generation of Trends",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-    {
-      img: Recent3,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Crafting Your Fashion Vision: Top Platforms for Designers in 2024",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-  ];
+  // const data: Recent[] = [
+  //   {
+  //     img: Recent1,
+  //     date: "October 19, 2022",
+  //     author: "By admin",
+  //     topic:
+  //       "Transforming Style: Exploring the Future of Fashion Design Platforms",
+  //     description:
+  //       "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
+  //     largeDescription: {
+  //       text1:
+  //         'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
+  //       text2:
+  //         ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
+  //       heading1: "Section 1.10.33",
+  //       text3:
+  //         '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
+  //     },
+  //   },
+  //   {
+  //     img: Recent2,
+  //     date: "October 19, 2022",
+  //     author: "By admin",
+  //     topic:
+  //       "Innovative Fashion Design Platforms: Shaping the Next Generation of Trends",
+  //     description:
+  //       "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
+  //     largeDescription: {
+  //       text1:
+  //         'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
+  //       text2:
+  //         ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
+  //       heading1: "Section 1.10.33",
+  //       text3:
+  //         '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
+  //     },
+  //   },
+  //   {
+  //     img: Recent3,
+  //     date: "October 19, 2022",
+  //     author: "By admin",
+  //     topic:
+  //       "Crafting Your Fashion Vision: Top Platforms for Designers in 2024",
+  //     description:
+  //       "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
+  //     largeDescription: {
+  //       text1:
+  //         'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
+  //       text2:
+  //         ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
+  //       heading1: "Section 1.10.33",
+  //       text3:
+  //         '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
+  //     },
+  //   },
+  // ];
 
   // Recent carousel settings
   const settings1 = {
@@ -243,215 +285,7 @@ const Blog: React.FC = () => {
     ],
   };
 
-  // LATEST BLOGS
 
-  // Latest datatype
-  interface Latest {
-    img: string;
-    date: string;
-    author: string;
-    topic: string;
-    description: string;
-    largeDescription: LargeDescription;
-  }
-
-  // Latest data
-  const dataLatest: Latest[] = [
-    {
-      img: Latest1,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Transforming Style: Exploring the Future of Fashion Design Platforms",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-    {
-      img: Latest2,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Innovative Fashion Design Platforms: Shaping the Next Generation of Trends",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-    {
-      img: Latest3,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Crafting Your Fashion Vision: Top Platforms for Designers in 2024",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-  ];
-
-  // Latest carousel settings
-  const settingsLatest = {
-    dots: true,
-    infinite: true,
-    speed: 400,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 850,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  // FASHION TRENDS
-
-  // Fashion datatype
-  interface Fashion {
-    img: string;
-    date: string;
-    author: string;
-    topic: string;
-    description: string;
-    largeDescription: LargeDescription;
-  }
-
-  // Fashion data
-  const dataFashion: Fashion[] = [
-    {
-      img: Fashion1,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Transforming Style: Exploring the Future of Fashion Design Platforms",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-    {
-      img: Fashion2,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Innovative Fashion Design Platforms: Shaping the Next Generation of Trends",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-    {
-      img: Fashion3,
-      date: "October 19, 2022",
-      author: "By admin",
-      topic:
-        "Crafting Your Fashion Vision: Top Platforms for Designers in 2024",
-      description:
-        "Lorem Ipsum is simply dummy text the printing and typese Lorem Ipsum",
-      largeDescription: {
-        text1:
-          'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-        text2:
-          ' 1914 translation by H. Rackham "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"',
-        heading1: "Section 1.10.33",
-        text3:
-          '"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."',
-      },
-    },
-  ];
-
-  // Fashion carousel settings
-  const settingsFashion = {
-    dots: true,
-    infinite: true,
-    speed: 400,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 850,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   return (
     <div className="font-inter w-full">
@@ -479,10 +313,13 @@ const Blog: React.FC = () => {
           </h1>
           <div className="">
             <Slider {...settings1} className="">
-              {data.map((Recent, index) => (
-                <div key={index} className="rounded-2xl border overflow-hidden">
+              {recentBlogs.map((recentBlog) => (
+                <div
+                  key={recentBlog._id}
+                  className="rounded-2xl zborder overflow-hidden"
+                >
                   <img
-                    src={Recent.img}
+                    src={Recent1}
                     alt=""
                     className="h-64 object-cover w-full"
                   />
@@ -490,26 +327,41 @@ const Blog: React.FC = () => {
                     <div className="flex justify-between">
                       <div className="flex gap-2 items-center">
                         <FaRegCalendarDays className="text-xs" />
-                        <p className="text-[#546879]">{Recent.date}</p>
+                        <p className="text-[#546879]">{recentBlog.createdAt}</p>
                       </div>
                       <div className="flex gap-2 items-center">
                         <IoPersonOutline className="text-sm" />
-                        <p className="text-[#546879]">{Recent.author}</p>
+                        <p className="text-[#546879]">
+                          {" "}
+                          by {recentBlog.authorName}
+                        </p>
                       </div>
                     </div>
                     <h3 className="text-[#025195] mt-4 lg:mt-6 mb-3 font-bold">
-                      {Recent.topic}
+                      {recentBlog.title}
                     </h3>
-                    <p className="text-[#546879]">{Recent.description}</p>
+                    <p className="text-[#546879]">{recentBlog.content}</p>
                     <div
+                      // onClick={() =>
+                      //   navigate("/BlogDetail", {
+                      //     state: {
+                      //       img: Recent.img,
+                      //       topic: Recent.topic,
+                      //       author: Recent.author,
+                      //       date: Recent.date,
+                      //       largeDescription: Recent.largeDescription,
+                      //     },
+                      //   })
+                      // }
                       onClick={() =>
                         navigate("/BlogDetail", {
                           state: {
-                            img: Recent.img,
-                            topic: Recent.topic,
-                            author: Recent.author,
-                            date: Recent.date,
-                            largeDescription: Recent.largeDescription,
+                            _id: recentBlog._id,
+                            img: Recent1,
+                            topic: recentBlog.title,
+                            author: recentBlog.authorName,
+                            date: recentBlog.createdAt,
+                            largeDescription: recentBlog.content,
                           },
                         })
                       }
@@ -565,116 +417,6 @@ const Blog: React.FC = () => {
                             author: Trendy.author,
                             date: Trendy.date,
                             largeDescription: Trendy.largeDescription,
-                          },
-                        })
-                      }
-                      className="flex items-center mt-5 lg:mt-7 gap-2 cursor-pointer"
-                    >
-                      <p className="text-[#025195] font-semibold text-sm">
-                        Read More
-                      </p>
-                      <FaArrowRightLong className="text-[#025195]" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-
-        {/* Latest Blogs */}
-        <div className="">
-          <h1 className=" mb-10 text-[#025195] font-bold text-3xl lg:text-5xl">
-            Latest Blogs
-          </h1>
-          <div>
-            <Slider {...settingsLatest} className="">
-              {dataLatest.map((Latest, index) => (
-                <div key={index} className="rounded-2xl border overflow-hidden">
-                  <img
-                    src={Latest.img}
-                    alt=""
-                    className="h-64 object-cover w-full"
-                  />
-                  <div className="flex flex-col p-7 pt-5 lg:px-10 lg:pt-7 lg:pb-10">
-                    <div className="flex justify-between">
-                      <div className="flex gap-2 items-center">
-                        <FaRegCalendarDays className="text-xs" />
-                        <p className="text-[#546879]">{Latest.date}</p>
-                      </div>
-                      <div className="flex gap-2 items-center">
-                        <IoPersonOutline className="text-sm" />
-                        <p className="text-[#546879]">{Latest.author}</p>
-                      </div>
-                    </div>
-                    <h3 className="text-[#025195] mt-4 lg:mt-6 mb-3 font-bold">
-                      {Latest.topic}
-                    </h3>
-                    <p className="text-[#546879]">{Latest.description}</p>
-                    <div
-                      onClick={() =>
-                        navigate("/BlogDetail", {
-                          state: {
-                            img: Latest.img,
-                            topic: Latest.topic,
-                            author: Latest.author,
-                            date: Latest.date,
-                            largeDescription: Latest.largeDescription,
-                          },
-                        })
-                      }
-                      className="flex items-center mt-5 lg:mt-7 gap-2 cursor-pointer"
-                    >
-                      <p className="text-[#025195] font-semibold text-sm">
-                        Read More
-                      </p>
-                      <FaArrowRightLong className="text-[#025195]" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-
-        {/* Fashion Trends */}
-        <div className="">
-          <h1 className=" mb-10 text-[#025195] font-bold text-3xl lg:text-5xl">
-            Fashion Blogs
-          </h1>
-          <div>
-            <Slider {...settingsFashion} className="">
-              {dataFashion.map((Fashion, index) => (
-                <div key={index} className="rounded-2xl border overflow-hidden">
-                  <img
-                    src={Fashion.img}
-                    alt=""
-                    className="h-64 object-cover w-full"
-                  />
-                  <div className="flex flex-col p-7 pt-5 lg:px-10 lg:pt-7 lg:pb-10">
-                    <div className="flex justify-between">
-                      <div className="flex gap-2 items-center">
-                        <FaRegCalendarDays className="text-xs" />
-                        <p className="text-[#546879]">{Fashion.date}</p>
-                      </div>
-                      <div className="flex gap-2 items-center">
-                        <IoPersonOutline className="text-sm" />
-                        <p className="text-[#546879]">{Fashion.author}</p>
-                      </div>
-                    </div>
-                    <h3 className="text-[#025195] mt-4 lg:mt-6 mb-3 font-bold">
-                      {Fashion.topic}
-                    </h3>
-                    <p className="text-[#546879]">{Fashion.description}</p>
-                    <div
-                      onClick={() =>
-                        navigate("/BlogDetail", {
-                          state: {
-                            img: Fashion.img,
-                            topic: Fashion.topic,
-                            author: Fashion.author,
-                            date: Fashion.date,
-                            largeDescription: Fashion.largeDescription,
                           },
                         })
                       }

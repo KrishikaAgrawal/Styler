@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import useFetch from "@/Hooks/useFetch";
 import ourDesigner from "../../../assets/Services/ourDesigner.png";
 
 // for carousel
@@ -7,112 +7,65 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const OurDesigner: React.FC = () => {
-  // Designer datatype
-  interface Designer {
-    img: string;
-    name: string;
-    post: string;
-    exp: string;
-    desc: string;
-  }
+interface ComponentProps {
+  id: string | undefined;
+}
+// API Response Interface
+interface ApiResponse {
+  partner?: {
+    ourAdditionalDesigners?: Designer[];
+  };
+}
+// Designer interface
+interface Designer {
+  _id: string;
+  name: string;
+  role: string;
+  about: string;
+  link: string;
+}
 
-  // Designer data
-  const data: Designer[] = [
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-    {
-      img: ourDesigner,
-      name: "Alexa Montague",
-      post: "Lead Fashion Designer",
-      exp: "12 years ",
-      desc: "Alexa specializes in luxury apparel and has a keen eye for blending traditional craftsmanship with modern trends. She leads the design team with creativity and passion.",
-    },
-  ];
+// Component
+const OurDesigner: React.FC<ComponentProps> = ({ id }) => {
+  const { data, loading, error } = useFetch<ApiResponse>(
+    `/get-partner-details-by-id/${id}`
+  ); // Adjust the endpoint as needed
+  const [designers, setDesigners] = useState<Designer[]>([]);
 
-  // designers carousel settings
+    useEffect(() => {
+    if (data?.partner?.ourAdditionalDesigners) {
+      setDesigners(data.partner.ourAdditionalDesigners);
+    }
+  }, [data]);
+
+  // Carousel settings
   const settings1 = {
     dots: true,
     infinite: true,
     speed: 400,
-    slidesToShow: 6,
+    slidesToShow: 4, // Default to 3 on large screens (desktop)
     slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          infinite: true,
+          slidesToShow: 6, // Show 4 items on medium desktop screens
+          slidesToScroll: 2,
+          // infinite: true,
           dots: true,
         },
       },
       {
         breakpoint: 850,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 3, // Show 3 items on tablets
           slidesToScroll: 1,
-          //   initialSlide: 2,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, // Show 2 items on small screens
           slidesToScroll: 1,
         },
       },
@@ -124,30 +77,42 @@ const OurDesigner: React.FC = () => {
       <h1 className=" text-2xl lg:text-4xl text-[#025195] font-Gloock ">
         Our Designers
       </h1>
-      <div>
+
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p className="text-red-500">Error fetching designers</p>
+      ) : designers.length > 0 ? (
         <Slider {...settings1} className="my-6">
-          {data.map((designer, index) => (
+          {designers.map((designer) => (
             <div
-              key={index}
+              key={designer._id}
               className=" m-0 lg:p-2 p-1 rounded-2xl lg:border-2 border border-[#025195]"
             >
-              <img src={designer.img} alt="" className="rounded-2xl w-full" />
-              <h1 className=" mt-2 leading-none text-sm lg:text-xl text-[#025195] font-bold">
+              <img src={ourDesigner} alt="" className="rounded-2xl w-full" />
+              <h1 className="mt-2 leading-none text-sm lg:text-xl text-[#025195] font-bold">
                 {designer.name}
               </h1>
-              <p className=" font-medium text-[13px] lg:text-sm text-[#6B7280]">
-                {designer.post}
-              </p>
-              <p className="font-bold text-[10px] lg:text-sm  text-[#025195]">
-                {designer.exp}
+              <p className="font-medium text-xs lg:text-sm text-[#6B7280]">
+                {designer.role}
               </p>
               <p className="text-[8px] lg:text-[10px] leading-2 text-[#6B7280]">
-                {designer.desc}
+                {designer.about}
               </p>
+              <a
+                href={designer.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-[#025195] text-[10px] font-semibold"
+              >
+                View Portfolio
+              </a>
             </div>
           ))}
         </Slider>
-      </div>
+      ) : (
+        <p>No designers available.</p>
+      )}
     </div>
   );
 };

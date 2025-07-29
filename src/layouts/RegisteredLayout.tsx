@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Sidebar } from "semantic-ui-react";
+import Sidebar from "../components/common/Sidebar";
 
 const RegisteredLayout: React.FC = () => {
   return (

@@ -7,17 +7,15 @@ interface SuccessCardProps {
 const SuccessCard: React.FC<SuccessCardProps> = ({ onClose }) => {
   return (
     <>
-      {/* Dark Overlay (Clicking this will close the card) */}
       <div
         className="fixed inset-0 bg-black bg-opacity-50 z-10"
         onClick={onClose}
       ></div>
 
-      {/* Success Card (Clicking inside should NOT close the card) */}
       <div className="fixed inset-0 flex justify-center items-center z-20">
         <div
           className="bg-white p-6 rounded-[50px] shadow-lg text-center lg:w-2/5 w-11/12 flex flex-col items-center gap-6 font-inter"
-          onClick={(e) => e.stopPropagation()} // Prevent click from closing card
+          onClick={(e) => e.stopPropagation()} 
         >
           <img src={success} alt="" className="w-1/2 " />
           <div className="">
